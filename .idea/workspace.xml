@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="demo:war" />
+      <artifact name="demo:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../biblioteca/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/libraries/ops4j_pax_jdbc_mysql.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/libraries/password4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/biblioteca_v1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/basedatos/conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/basedatos/conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/flujos/PrestamoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/flujos/PrestamoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/flujos/SalaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/flujos/SalaMenu.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../biblioteca" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="32WiuNWJlbnVGCP3BWz6ozkR74r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
+      <recent name="C:\Users\cardo\IdeaProjects\demo\target\demo-1.0-SNAPSHOT\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean compile" />
+      <command value="mvn compile" />
+      <command value="mvn dependency:purge-local-repository -DmanualInclude=&quot;com.example:biblioteca&quot;" />
+      <command value="mvn clean compile -U" />
+      <command value="mvn package" />
+      <command value="mvn clean" />
+      <command value="mvn dependency:tree" />
+      <command value="mvn dependency:purge-local-repository -DmanualInclude=&quot;mysql:*,com.mysql:*&quot;" />
+      <command value="mvn dependency:tree | findstr mysql" />
+      <command value="mvn clean install -U" />
+      <command value="mvn clean package" />
+      <command value="mvn clean install" />
+      <command value="mvn clean package -U" />
+    </option>
+  </component>
+  <component name="RunAnythingContextRecentDirectoryCache">
+    <option name="paths">
+      <recentPaths value="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+          <value>
+            <map>
+              <entry key="Tomcat 10.1.45" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="demo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/demo_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="a7fcdea5-289a-4b4c-a065-6159823ab526" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59540" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="demo:war exploded" />
+          <artifact name="demo:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="" />
+      <created>1757542955862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757542955862</updated>
+      <workItem from="1757542957627" duration="9732000" />
+      <workItem from="1757615133411" duration="189000" />
+      <workItem from="1759360775798" duration="2576000" />
+      <workItem from="1759446329490" duration="262000" />
+      <workItem from="1759448661806" duration="32000" />
+      <workItem from="1759450448503" duration="3106000" />
+      <workItem from="1759495931988" duration="7399000" />
+      <workItem from="1759553295958" duration="1926000" />
+      <workItem from="1759607394234" duration="13989000" />
+      <workItem from="1759697895361" duration="10540000" />
+      <workItem from="1759715273674" duration="669000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
