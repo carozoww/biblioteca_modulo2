@@ -23,6 +23,10 @@
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/basedatos/conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/basedatos/conexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/flujos/PrestamoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/flujos/PrestamoMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/flujos/SalaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/flujos/SalaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +276,10 @@
       <workItem from="1759553295958" duration="1926000" />
       <workItem from="1759607394234" duration="13989000" />
       <workItem from="1759697895361" duration="10540000" />
-      <workItem from="1759715273674" duration="669000" />
+      <workItem from="1759715273674" duration="2254000" />
+      <workItem from="1759717589448" duration="281000" />
+      <workItem from="1759938852609" duration="135000" />
+      <workItem from="1759939021497" duration="316000" />
     </task>
     <servers />
   </component>
