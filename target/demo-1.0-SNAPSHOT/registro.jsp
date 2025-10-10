@@ -15,7 +15,7 @@
 %>
 
 <h1>Bienvenido <%=nombreUsuario %></h1>
-<% response.setIntHeader("Refresh",1); %>
+
 
 <%
 }else{
@@ -26,7 +26,7 @@
 </head>
 <body>
 <form action="register" method="post">
-    <% if(request.getParameter("existeLector") != null) {
+    <% if(request.getAttribute("existeLector") != null) {
         existeLector = (Boolean) request.getAttribute("existeLector");
     } %>
 
@@ -35,6 +35,8 @@
     <% }%>
 
     <h1><%= existeLector %> </h1>
+
+
 
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre">

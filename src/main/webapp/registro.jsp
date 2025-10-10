@@ -26,7 +26,7 @@
 </head>
 <body>
 <form action="register" method="post">
-    <% if(request.getParameter("existeLector") != null) {
+    <% if(request.getAttribute("existeLector") != null) {
         existeLector = (Boolean) request.getAttribute("existeLector");
     } %>
 

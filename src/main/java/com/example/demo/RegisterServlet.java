@@ -52,9 +52,5 @@ public class RegisterServlet extends HttpServlet {
         request.setAttribute("existeLector",existe);
 
 
-
-
-        request.getRequestDispatcher("registro.jsp").forward(request, response);
-
     }
 }
