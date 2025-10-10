@@ -1,10 +1,12 @@
 package com.example.demo;
 
+import dao.AdministradorDAO;
 import dao.LectorDAO;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import models.Administrador;
 import models.Lector;
 
 import java.io.IOException;
@@ -54,11 +56,27 @@ public class UserServlet extends HttpServlet {
 
             // Aquí iría la lógica para guardar en BD
 
-            request.setAttribute("exito", true);
-            request.setAttribute("nombreUsuario", nombre.toUpperCase());
-            request.getSession().setAttribute("logueado", nombre);
+            String correo = request.getParameter("correo");
+            String contrasenia = request.getParameter("pass");
 
-            request.getRequestDispatcher("registro.jsp").forward(request, response);
+            List<Lector> lector = new LectorDAO().inicioSesion(correo,contrasenia);
+            if(lector.isEmpty()){
+                System.out.println("Administradores no encontrado");
+            }else{
+                System.out.println("Existe administrador");
+            }
+
+            List<Lector> lectores2 = new LectorDAO().listarLectores();
+            List<String> nombres2 = new ArrayList<>();
+
+            lectores2.forEach( lector1 -> {
+                nombres2.add(lector1.getNombre());
+            });
+
+            request.setAttribute("listaLectores", nombres2);
+
+
+            request.getRequestDispatcher("login.jsp").forward(request, response);
 
         } catch (Exception e) {
             e.printStackTrace();

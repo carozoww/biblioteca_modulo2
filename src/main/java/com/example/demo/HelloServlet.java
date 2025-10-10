@@ -1,10 +1,14 @@
 package com.example.demo;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
+import dao.LectorDAO;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import models.Lector;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
@@ -18,8 +22,6 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
 
         try{
-
-
 
             ServletContext contexto = getServletContext();
 

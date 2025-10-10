@@ -1,3 +1,4 @@
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,6 +8,10 @@
 
 <%@include file="WEB-INF/components/header.jsp"%>
 
+<%  String correo = (String) request.getParameter("correo");  %>
+
+<%  String pass = (String) request.getParameter("pass"); %>
+
 <h1>Iniciar Sesión / Registrarse</h1>
 
 <%-- Mensaje de error si existe --%>
@@ -15,13 +20,8 @@
 <% } %>
 
 <form action="users" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-
-    <br>
-
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" required>
+    <label for="correo">Correo electronico:</label>
+    <input type="text" id="correo" name="correo" required>
 
     <br>
 
@@ -34,6 +34,7 @@
 </form>
 
 <p><a href="users">Ver lista de usuarios (sin login)</a></p>
+<a href="register">Registro</a>
 
 </body>
 </html>
