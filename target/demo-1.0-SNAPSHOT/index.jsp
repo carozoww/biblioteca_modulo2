@@ -13,7 +13,7 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="login-lector">Hello Servlet</a>
 <button type="button" class="btn btn-primary">Primary</button>
 
 <%@include file="/WEB-INF/components/footer.jsp"%>

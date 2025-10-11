@@ -1,40 +1,56 @@
 <%@ page import="java.util.List" %>
+<%@ page import="models.Lector" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Login</title>
+    <style><%@include file="./WEB-INF/estilo/stiloform.css"%></style>
 </head>
 <body>
 
-<%@include file="WEB-INF/components/header.jsp"%>
 
-<%  String correo = (String) request.getParameter("correo");  %>
+<% Boolean existeCedula = false;
+    Lector usuarioLogueado = (Lector) session.getAttribute("authUser");
+    if (usuarioLogueado != null) {
+        response.sendRedirect(request.getContextPath() + "/dashboard");
+        return;
+    }
+%>
 
-<%  String pass = (String) request.getParameter("pass"); %>
+<div id="encabezado">
+    <h1>Biblioteca</h1>
+</div>
+<div  id="camposytitulo">
+    <h2>Inicio de Sesion</h2>
+    <div class="formulario">
+        <form action="login-lector" method="post">
+            <div id="campoynombre">
+                <label for="cedula">Cedula:</label>
+                <input type="number" id="campo" name="cedula" required >
+            </div>
 
-<h1>Iniciar Sesión / Registrarse</h1>
+            <div id="campoynombre">
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="campo" name="pass" required>
+            </div>
 
-<%-- Mensaje de error si existe --%>
-<% if(request.getParameter("error") != null) { %>
-<div style="color: red;">Error en el login</div>
-<% } %>
+            <div id="campoynombre">
+                <button type="submit">Login</button>
+            </div>
+            <% if(request.getAttribute("cedulaRegistrada") != null) {
+                existeCedula = (Boolean) request.getAttribute("cedulaRegistrada");
+            } %>
 
-<form action="users" method="post">
-    <label for="correo">Correo electronico:</label>
-    <input type="text" id="correo" name="correo" required>
+            <% if(existeCedula && existeCedula != null){ %>
+            <p>Contraseña incorrecta</p>
+            <% }%>
+        </form>
 
-    <br>
+        <a href="register">Registro</a>
 
-    <label for="pass">Contraseña:</label>
-    <input type="password" id="pass" name="pass" required>
+    </div>
+</div>
 
-    <br>
-
-    <button type="submit">Registrarse / Login</button>
-</form>
-
-<p><a href="users">Ver lista de usuarios (sin login)</a></p>
-<a href="register">Registro</a>
 
 </body>
 </html>

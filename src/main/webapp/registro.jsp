@@ -1,85 +1,90 @@
-<p>Ingrese sus datos en el LOGIN</p>
+<%@ page import="models.Lector" %>
+<link>
+
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    Boolean exito = (Boolean) request.getAttribute("exito");
 
-    String nombreUsuario = (String) request.getParameter("nombre");
     Boolean existeLector = false;
 
+    Lector usuarioLogueado = (Lector) session.getAttribute("authUser");
+    if (usuarioLogueado != null) {
+        response.sendRedirect(request.getContextPath() + "/dashboard");
+        return;
+    }
+
 %>
 
-<%
-    if(exito != null && exito){
-%>
-
-<h1>Bienvenido <%=nombreUsuario %></h1>
-
-
-<%
-}else{
-%>
 <html>
 <head>
     <title>Title</title>
+    <style><%@include file="./WEB-INF/estilo/stiloform.css"%></style>
+
 </head>
 <body>
-<form action="register" method="post">
-    <% if(request.getAttribute("existeLector") != null) {
-        existeLector = (Boolean) request.getAttribute("existeLector");
-    } %>
+<div id="encabezado">
+    <h1>Biblioteca</h1>
+</div>
+<div id="camposytitulo">
+    <h2>Registro de nuevo lector</h2>
+    <div class="formulario">
+        <form action="register" method="post">
 
-    <% if(existeLector && existeLector != null){ %>
-    <h1>Ya existe un lector con esa cedula!!!!</h1>
-    <% }%>
+            <div id="campos">
 
-    <h1><%= existeLector %> </h1>
+                <div id="campoynombre">
+                    <label for="ced">Cédula</label>
+                    <input type="text" name="ced" id="campo">
+                </div>
+                <div id="campoynombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="campo">
+                </div>
+
+                <div id="campoynombre">
+                    <label for="correo">Email</label>
+                    <input type="text" name="correo" id="campo">
+                </div>
+
+                <div id="campoynombre">
+                    <label for="tele">Teléfono</label>
+                    <input type="text" name="tele" id="campo">
+                </div>
+
+                <div id="campoynombre">
+                    <label for="dir">Dirección</label>
+                    <textarea name="dir" id="campo" rows="5" cols="40"></textarea>
+                </div>
+
+                <div id="campoynombre">
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <br>
+                    <input type="date" name="fecha">
+                </div>
+
+                <div id="campoynombre">
+                    <button type="submit">click</button>
+                </div>
 
 
+            </div>
 
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre">
+            <% if(request.getAttribute("existeLector") != null) {
+                existeLector = (Boolean) request.getAttribute("existeLector");
+            } %>
 
-    <br>
+            <% if(existeLector && existeLector != null){ %>
+            <p>Ya existe un lector con esa cedula!!!!</p>
+            <% }%>
 
-    <label for="cedula">cedula</label>
-    <input type="number" name="ced">
+        </form>
+    </div>
 
-    <br>
+</div>
 
-    <label for="tele">Telefono</label>
-    <input type="text" name="tele">
-
-    <br>
-
-    <label for="tele">Dirección</label>
-    <textarea for="dir" name="dir"></textarea>
-
-    <br>
-
-    <label for="fecha">Fecha</label>
-    <input type="date" name="fecha">
-
-    <br>
-
-    <label for="correo">Correo Electronico</label>
-    <input type="text" name="correo">
-
-    <br>
-
-    <label for="pass">Contraseña</label>
-    <input type="password" name="pass">
-
-    <br>
-
-    <button type="submit">Click</button>
-</form>
 
 
 </body>
 </html>
 
-<%
-    }
-%>
