@@ -6,8 +6,30 @@
         return;
     }
 %>
+<html>
 
-<h1>Bienvenido, <%= usuario.getNombre() %></h1>
-<p>Cedula: <%= usuario.getCedula() %></p>
 
-<a href="logout">Cerrar Sesión</a>
+<header>
+
+</header>
+<body>
+    <div id="header">
+        <div>
+            <a>
+                <img src="logo.jpg" width="100px" height="100px">
+            </a>
+            <h1>Biblio-Tech-a</h1>
+        </div>
+
+    </div>
+    <h1>Bienvenido, <%= usuario.getNombre() %></h1>
+    <p>Cedula: <%= usuario.getCedula() %></p>
+
+
+
+    <a href="logout">Cerrar Sesión</a>
+</body>
+
+
+
+</html>
