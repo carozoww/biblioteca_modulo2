@@ -23,8 +23,8 @@ if (usuario == null) {
 %>
 
 <div id="camposytitulo">
+    <button><a href="salas">Volver</a></button>
     <h2>Reservar sala </h2>
-
     <%
     Sala salaInfo = (Sala) request.getAttribute("sala");
     List<Reserva> reservasInfo = (List<Reserva>) request.getAttribute("listaReservas");
