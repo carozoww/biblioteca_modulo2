@@ -10,7 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="" />
+    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/biblioteca_jar/biblioteca.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca_v2/db.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
