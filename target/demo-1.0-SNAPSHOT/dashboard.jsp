@@ -48,7 +48,7 @@
 </aside>
 <main>
     <h1>Libros</h1>
-    <div class="contenedor-libros">
+    <div class="contenedor-libros" id="containerLibro">
         <div class="libro">
             <h1>primer libro</h1>
             <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
@@ -88,6 +88,7 @@
     </div>
 </main>
 <footer>pie de pagina</footer>
+<script src="libroapp.js"></script>
 <script>
     const sidebar = document.getElementById("sidebar");
 
