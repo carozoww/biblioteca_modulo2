@@ -42,50 +42,23 @@
         </div>
         <div>
             <img src="imgs/room.png" alt="" width="50px" height="50px">
-            <a href="">Salas</a>
+            <a href="salas">Salas</a>
         </div>
     </div>
 </aside>
 <main>
+    <div>
+        <h1>Seccion de filtros y buscador</h1>
+    </div>
     <h1>Libros</h1>
     <div class="contenedor-libros" id="containerLibro">
-        <div class="libro">
-            <h1>primer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>Este es el mejor libro de todos los libros </p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>segundo libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
+
     </div>
+    <div id="paginacion">
+        <button id="anterior">Anterior</button>
+        <button id="siguiente">Siguiente</button>
+    </div>
+
 </main>
 <footer>pie de pagina</footer>
 <script src="libroapp.js"></script>

@@ -135,8 +135,41 @@ main>h1 {
     justify-content: center;
 }
 
+#containerLibro {
+    transition: opacity 0.3s ease;
+}
+
+#containerLibro.fade-out {
+    opacity: 0;
+}
+
+#containerLibro.fade-in {
+    opacity: 1;
+}
+
 .libro {
     width: 300px;
+}
+
+
+
+#paginacion {
+    display: flex;
+    margin: 20px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+#paginacion button {
+    background-color: #BF5656;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 footer{
