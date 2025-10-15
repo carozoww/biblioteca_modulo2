@@ -46,7 +46,6 @@
             <% }%>
         </form>
 
-        <p><a href="users">Ver lista de usuarios (sin login)</a></p>
         <a href="register">Registro</a>
 
     </div>

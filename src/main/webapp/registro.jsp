@@ -70,6 +70,11 @@
                 </div>
 
                 <div id="campoynombre">
+                    <label for="pass">Contrasenia</label>
+                    <input type="password" name="pass">
+                </div>
+
+                <div id="campoynombre">
                     <button type="submit">click</button>
                 </div>
 
