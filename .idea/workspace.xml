@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="demo:war" />
       <artifact name="demo:war exploded" />
     </artifacts-to-build>
   </component>
@@ -10,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" afterDir="false" />
@@ -33,7 +35,6 @@
         <option value="Class" />
         <option value="Jsp File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -98,9 +99,9 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/pagina__principal&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/main/webapp/imgs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -116,14 +117,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\imgs" />
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\components" />
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
       <recent name="C:\Users\cardo\IdeaProjects\demo\target\demo-1.0-SNAPSHOT\WEB-INF\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\estilo" />
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\imgs" />
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -287,11 +284,7 @@
       <workItem from="1760052048863" duration="8198000" />
       <workItem from="1760135892452" duration="768000" />
       <workItem from="1760194094283" duration="6642000" />
-      <workItem from="1760217429660" duration="3452000" />
-      <workItem from="1760226315214" duration="4774000" />
-      <workItem from="1760387942794" duration="1095000" />
-      <workItem from="1760469835771" duration="413000" />
-      <workItem from="1760546974200" duration="658000" />
+      <workItem from="1760217429660" duration="3127000" />
     </task>
     <servers />
   </component>
