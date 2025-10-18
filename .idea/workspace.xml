@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="demo:war" />
       <artifact name="demo:war exploded" />
     </artifacts-to-build>
   </component>
@@ -16,19 +17,33 @@
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/EditorialDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/EditorialDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PrestamoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloslibros.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/libros.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/misPrestamos.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DashboardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/DashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/DashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/biblioteca.iml" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +60,22 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_COMMON_BRANCH" value="main" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/biblio 1510/biblioteca" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pilarperezs"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/carozoww/biblioteca_modulo2.git",
+    "accountId": "081e0e33-1679-402f-8ef5-b5bd1d0dfbd4"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -73,54 +102,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/filtrado&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Maven. [clean,install].executor": "Run",
+    "Maven. [clean].executor": "Run",
+    "Maven.biblioteca [clean,compile,-U].executor": "Run",
+    "Maven.biblioteca [clean,compile].executor": "Run",
+    "Maven.biblioteca [clean,install,-U].executor": "Run",
+    "Maven.biblioteca [clean,install].executor": "Run",
+    "Maven.biblioteca [clean,package,-U].executor": "Run",
+    "Maven.biblioteca [clean,package].executor": "Run",
+    "Maven.biblioteca [clean].executor": "Run",
+    "Maven.biblioteca [compile].executor": "Run",
+    "Maven.biblioteca [dependency:purge-local-repository...].executor": "Run",
+    "Maven.biblioteca [package].executor": "Run",
+    "Maven.demo [clean,compile,-U].executor": "Run",
+    "Maven.demo [clean,package,-U].executor": "Run",
+    "Maven.demo [clean,package].executor": "Run",
+    "Maven.demo [clean].executor": "Run",
+    "Maven.demo [dependency:purge-local-repository...].executor": "Run",
+    "Maven.demo [dependency:tree,|,findstr,mysql].executor": "Run",
+    "Maven.demo [dependency:tree].executor": "Run",
+    "Maven.demo [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.45.executor": "Run",
+    "git-widget-placeholder": "cambiosss",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5873563",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
@@ -170,10 +200,16 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="demo:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/demo_war_exploded" />
+          </settings>
+        </artifact>
+        <artifact name="demo:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/demo_war" />
           </settings>
         </artifact>
       </deployment>
@@ -260,8 +296,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -291,11 +327,7 @@
       <workItem from="1760135892452" duration="768000" />
       <workItem from="1760194094283" duration="6642000" />
       <workItem from="1760217429660" duration="3127000" />
-      <workItem from="1760569218447" duration="181000" />
-      <workItem from="1760661278740" duration="10690000" />
-      <workItem from="1760727307291" duration="6068000" />
-      <workItem from="1760736364608" duration="5213000" />
-      <workItem from="1760753137820" duration="3488000" />
+      <workItem from="1760550125614" duration="8180000" />
     </task>
     <servers />
   </component>
