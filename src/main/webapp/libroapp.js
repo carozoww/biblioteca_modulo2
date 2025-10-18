@@ -1,11 +1,23 @@
 let misLibros = [];
+let librosFiltrados = [];
 let offset = 0;
 const limit = 6;
 const divLibros = document.getElementById('containerLibro');
 const botonSiguiente = document.getElementById('siguiente');
 const botonAnterior = document.getElementById('anterior');
+const buscador = document.getElementById('inputBuscador')
 
 
+buscador.addEventListener('input', (e) => {
+    const termino = e.target.value.toLowerCase().trim();
+
+    librosFiltrados = misLibros.filter(libro =>
+        libro.titulo.toLowerCase().includes(termino)
+    );
+
+    offset = 0;
+    mostrarLibros();
+});
 
 
 
@@ -16,18 +28,21 @@ async function cargarLibros(){
             throw new Error('Error en la respuesta del servidor');
         }
         misLibros = await response.json();
+        librosFiltrados = [...misLibros];
         mostrarLibros();
+
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
 function mostrarLibros(){
+    checkBotones();
     divLibros.classList.add('fade-out');
 
     setTimeout(()=>{
         limpiarLibros();
-        const librosPagina = misLibros.slice(offset * limit, (offset * limit) + limit);
+        const librosPagina = librosFiltrados.slice(offset * limit, (offset * limit) + limit);
         librosPagina.forEach(libro =>{
             const libroDiv = document.createElement('div');
             libroDiv.className = 'libro';
@@ -39,6 +54,8 @@ function mostrarLibros(){
             `;
             divLibros.appendChild(libroDiv);
         });
+
+
         // Agregar fade-in después de agregar los elementos
         divLibros.classList.remove('fade-out');
         divLibros.classList.add('fade-in');
@@ -50,14 +67,34 @@ function mostrarLibros(){
 }
 
 
+
+
+
+function checkBotones(){
+    if(offset === 0){
+        botonAnterior.style.visibility = 'hidden';
+    }else{
+        botonAnterior.style.visibility = 'visible';
+    }
+
+    if((offset*limit) >= (librosFiltrados.length - limit)){
+        botonSiguiente.style.visibility = 'hidden';
+    }else{
+        botonSiguiente.style.visibility = 'visible';
+    }
+}
+
+
 function limpiarLibros(){
     divLibros.innerHTML = '';
 }
 
 botonSiguiente.addEventListener('click', () =>{
     offset++;
+    console.log(offset);
     limpiarLibros();
     mostrarLibros();
+    checkBotones();
 })
 
 botonAnterior.addEventListener('click', () =>{
@@ -65,12 +102,19 @@ botonAnterior.addEventListener('click', () =>{
         return;
     }
     offset--;
+    console.log(misLibros.length);
+    console.log(offset);
     limpiarLibros();
     mostrarLibros();
+    checkBotones();
 })
 
 document.addEventListener('DOMContentLoaded', function() {
     cargarLibros();
+    if(offset === 0){
+        botonAnterior.style.visibility = 'hidden';
+    }
 });
+
 
 
