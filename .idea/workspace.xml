@@ -11,15 +11,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroAutorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroEditorialServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroGeneroServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/EditorialDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/EditorialDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroAutorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/dao/LibroGeneroDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PrestamoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloslibros.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/libros.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/misPrestamos.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/DashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/DashboardServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/biblioteca.iml" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +135,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.45.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "cambiosss",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib",
     "list.type.of.created.stylesheet": "CSS",
@@ -123,7 +147,6 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5873563",
-    "service.view.auto.scroll.to.source": "true",
     "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
