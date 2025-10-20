@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #D9D9D9;
+}
+
+#encabezado{
+    display: flex;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: #BF5656;
+
+}
+
+#encabezado h1{
+    margin-left: 15px;
+    font-family:'Trebuchet MS';
+}
+
+#camposytitulo {
+    background: white;
+    width: 500px;
+    padding: 26px;
+    margin: 50px auto 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+}
+
+#camposytitulo h2{
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+#campoynombre{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+#campo{
+    width: 100%;
+    padding: 6px;
+}
+
+textarea{
+    resize: none;
+}
