@@ -1,0 +1,2006 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"demo:war\" />\r\n      <artifact name=\"demo:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"744865e6-0767-4452-9eeb-bcc054d272e0\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/demo/PerfilServlet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/perfil.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/db.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/db.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/db.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/db.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/login.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/login.jsp\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Jsp File\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"KubernetesApiPersistence\">{}</component>\r\n  <component name=\"KubernetesApiProvider\">{\r\n  &quot;isMigrated&quot;: true\r\n}</component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"32WiuNWJlbnVGCP3BWz6ozkR74r\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/li-am/OneDrive/Escritorio/modulo2/biblioteca_modulo2&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\cardo\\IdeaProjects\\demo\\src\\main\\webapp\\WEB-INF\\lib\" />\r\n      <recent name=\"C:\\Users\\cardo\\IdeaProjects\\demo\\target\\demo-1.0-SNAPSHOT\\WEB-INF\\lib\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\cardo\\IdeaProjects\\demo\\src\\main\\webapp\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.example.demo\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"mvn clean compile\" />\r\n      <command value=\"mvn compile\" />\r\n      <command value=\"mvn dependency:purge-local-repository -DmanualInclude=&quot;com.example:biblioteca&quot;\" />\r\n      <command value=\"mvn clean compile -U\" />\r\n      <command value=\"mvn package\" />\r\n      <command value=\"mvn clean\" />\r\n      <command value=\"mvn dependency:tree\" />\r\n      <command value=\"mvn dependency:purge-local-repository -DmanualInclude=&quot;mysql:*,com.mysql:*&quot;\" />\r\n      <command value=\"mvn dependency:tree | findstr mysql\" />\r\n      <command value=\"mvn clean install -U\" />\r\n      <command value=\"mvn clean package\" />\r\n      <command value=\"mvn clean install\" />\r\n      <command value=\"mvn clean package -U\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunAnythingContextRecentDirectoryCache\">\r\n    <option name=\"paths\">\r\n      <recentPaths value=\"$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationStatuses\">\r\n      <map>\r\n        <entry key=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\">\r\n          <value>\r\n            <map>\r\n              <entry key=\"Tomcat 10.1.45\" value=\"STOPPED\" />\r\n            </map>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Tomcat 10.1.45\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 10.1.45\" ALTERNATIVE_JRE_ENABLED=\"false\">\r\n      <deployment>\r\n        <artifact name=\"demo:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/demo_war_exploded\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"a7fcdea5-289a-4b4c-a065-6159823ab526\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"59540\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"demo:war exploded\" />\r\n          <artifact name=\"demo:war\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"744865e6-0767-4452-9eeb-bcc054d272e0\" name=\"Changes\" comment=\"\" />\r\n      <created>1757542955862</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1757542955862</updated>\r\n      <workItem from=\"1757542957627\" duration=\"9732000\" />\r\n      <workItem from=\"1757615133411\" duration=\"189000\" />\r\n      <workItem from=\"1759360775798\" duration=\"2576000\" />\r\n      <workItem from=\"1759446329490\" duration=\"262000\" />\r\n      <workItem from=\"1759448661806\" duration=\"32000\" />\r\n      <workItem from=\"1759450448503\" duration=\"3106000\" />\r\n      <workItem from=\"1759495931988\" duration=\"7399000\" />\r\n      <workItem from=\"1759553295958\" duration=\"1926000\" />\r\n      <workItem from=\"1759607394234\" duration=\"13989000\" />\r\n      <workItem from=\"1759697895361\" duration=\"10540000\" />\r\n      <workItem from=\"1759715273674\" duration=\"2254000\" />\r\n      <workItem from=\"1759717589448\" duration=\"281000\" />\r\n      <workItem from=\"1759938852609\" duration=\"135000\" />\r\n      <workItem from=\"1759939021497\" duration=\"14284000\" />\r\n      <workItem from=\"1760019750054\" duration=\"7026000\" />\r\n      <workItem from=\"1760052048863\" duration=\"8198000\" />\r\n      <workItem from=\"1760135892452\" duration=\"768000\" />\r\n      <workItem from=\"1760194094283\" duration=\"6642000\" />\r\n      <workItem from=\"1760217429660\" duration=\"3127000\" />\r\n      <workItem from=\"1760455674352\" duration=\"9106000\" />\r\n      <workItem from=\"1760538440373\" duration=\"7624000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.idea/workspace.xml	(date 1760624325637)
+@@ -11,21 +11,51 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PerfilServlet.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PrestamoServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ReservaServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SalaServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloslibros.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/otrocss.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/iconouser.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/libro.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/logo.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/prestamo.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/resenia.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/imgs/room.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/libros.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/misPrestamos.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/reservarSala.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/error_prone_annotations-2.41.0.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/gson-2.13.2.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/iconouser.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/libro.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/logo.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/prestamo.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/resenia.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/room.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/biblioteca_jar/biblioteca.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/biblioteca_v2/db.properties" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/login.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,15 +65,29 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Class" />
++        <option value="Jsp File" />
+         <option value="CSS File" />
+-        <option value="Jsp File" />
+-        <option value="Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_COMMON_BRANCH" value="main" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="ROOT_SYNC" value="SYNC" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;pilarperezs&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/carozoww/biblioteca_modulo2.git&quot;,
++    &quot;accountId&quot;: &quot;081e0e33-1679-402f-8ef5-b5bd1d0dfbd4&quot;
++  }
++}</component>
+   <component name="KubernetesApiPersistence">{}</component>
+   <component name="KubernetesApiProvider">{
+   &quot;isMigrated&quot;: true
+@@ -70,54 +114,55 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/li-am/OneDrive/Escritorio/modulo2/biblioteca_modulo2&quot;,
+-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
++    "Downloaded.Files.Path.Enabled": "false",
++    "Maven. [clean,install].executor": "Run",
++    "Maven. [clean].executor": "Run",
++    "Maven.biblioteca [clean,compile,-U].executor": "Run",
++    "Maven.biblioteca [clean,compile].executor": "Run",
++    "Maven.biblioteca [clean,install,-U].executor": "Run",
++    "Maven.biblioteca [clean,install].executor": "Run",
++    "Maven.biblioteca [clean,package,-U].executor": "Run",
++    "Maven.biblioteca [clean,package].executor": "Run",
++    "Maven.biblioteca [clean].executor": "Run",
++    "Maven.biblioteca [compile].executor": "Run",
++    "Maven.biblioteca [dependency:purge-local-repository...].executor": "Run",
++    "Maven.biblioteca [package].executor": "Run",
++    "Maven.demo [clean,compile,-U].executor": "Run",
++    "Maven.demo [clean,package,-U].executor": "Run",
++    "Maven.demo [clean,package].executor": "Run",
++    "Maven.demo [clean].executor": "Run",
++    "Maven.demo [dependency:purge-local-repository...].executor": "Run",
++    "Maven.demo [dependency:tree,|,findstr,mysql].executor": "Run",
++    "Maven.demo [dependency:tree].executor": "Run",
++    "Maven.demo [package].executor": "Run",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Tomcat Server.Tomcat 10.1.45.executor": "Run",
++    "git-widget-placeholder": "Merging main",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib",
++    "list.type.of.created.stylesheet": "CSS",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Artifacts",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.5873563",
++    "settings.editor.selected.configurable": "MavenSettings",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
+@@ -167,12 +212,18 @@
+   </component>
+   <component name="RunManager">
+     <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false">
++      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+       <deployment>
+         <artifact name="demo:war exploded">
+           <settings>
+             <option name="CONTEXT_PATH" value="/demo_war_exploded" />
+           </settings>
+         </artifact>
++        <artifact name="demo:war">
++          <settings>
++            <option name="CONTEXT_PATH" value="/demo_war" />
++          </settings>
++        </artifact>
+       </deployment>
+       <server-settings>
+         <option name="BASE_DIRECTORY_NAME" value="a7fcdea5-289a-4b4c-a065-6159823ab526" />
+@@ -288,8 +339,6 @@
+       <workItem from="1760135892452" duration="768000" />
+       <workItem from="1760194094283" duration="6642000" />
+       <workItem from="1760217429660" duration="3127000" />
+-      <workItem from="1760455674352" duration="9106000" />
+-      <workItem from="1760538440373" duration="7624000" />
+     </task>
+     <servers />
+   </component>
+Index: target/demo-1.0-SNAPSHOT/libroapp.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/demo-1.0-SNAPSHOT/libroapp.js b/target/demo-1.0-SNAPSHOT/libroapp.js
+new file mode 100644
+--- /dev/null	(date 1760623706231)
++++ b/target/demo-1.0-SNAPSHOT/libroapp.js	(date 1760623706231)
+@@ -0,0 +1,33 @@
++let misLibros = [];
++let offset = 0;
++const limit = 6;
++const divLibros = document.getElementById('containerLibro');
++
++document.addEventListener('DOMContentLoaded', function() {
++    cargarLibros();
++});
++
++function cargarLibros(){
++    fetch('libros')
++        .then(response =>{
++            if (!response.ok) {
++                throw new Error('Error en la respuesta del servidor');
++            }
++            return response.json();
++        })
++        .then(libros => {
++            misLibros = libros;
++            const libros2 = misLibros.slice(offset, limit);
++            libros2.forEach(libro =>{
++                const bookElement = document.createElement('div');
++                bookElement.className = 'libro';
++                bookElement.innerHTML = `
++                    <h1>${libro.titulo}</h1>
++                    <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++                    <p>${libro.fechaPublicacion}</p>
++                    <button>ver mas</button>
++                `;
++                divLibros.appendChild(bookElement);
++            })
++        })
++}
+\ No newline at end of file
+Index: src/main/webapp/libros.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/libros.jsp b/src/main/webapp/libros.jsp
+new file mode 100644
+--- /dev/null	(date 1760623706219)
++++ b/src/main/webapp/libros.jsp	(date 1760623706219)
+@@ -0,0 +1,75 @@
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<%@ page import="java.util.List" %>
++<%@ page import="models.Libro" %>
++
++<%
++    List<Libro> libros = (List<Libro>) request.getAttribute("libros");
++    List<String> estados = (List<String>) request.getAttribute("estados");
++    if (libros == null) libros = new java.util.ArrayList<>();
++    if (estados == null) estados = new java.util.ArrayList<>();
++
++    String msg = request.getParameter("msg");
++
++    Boolean tienePrestamo = (Boolean) request.getAttribute("tienePrestamo");
++    if (tienePrestamo == null) tienePrestamo = false;
++%>
++
++
++
++
++<!DOCTYPE html>
++<html>
++<head>
++    <meta charset="UTF-8">
++    <title>Catálogo de Libros</title>
++    <style><%@include file="./WEB-INF/estilo/estiloslibros.css"%></style></head>
++<body>
++
++<h2 style="text-align:center;">Catálogo de Libros</h2>
++
++<% if ("ok".equals(msg)) { %>
++<div class="mensaje" style="color:green;">Operación realizada con éxito</div>
++<% } else if ("error".equals(msg)) { %>
++<div class="mensaje" style="color:red;">Ocurrió un error</div>
++<% } %>
++
++<table>
++    <tr>
++        <th>Título</th>
++        <th>ISBN</th>
++        <th>Estado</th>
++        <th>Acción</th>
++    </tr>
++    <% for (int i = 0; i < libros.size(); i++) {
++        Libro libro = libros.get(i);
++        String estado = estados.get(i);
++    %>
++    <tr>
++        <td><%= libro.getTitulo() %></td>
++        <td><%= libro.getIsbn() %></td>
++        <td class="<%= "DISPONIBLE".equals(estado) ? "disponible" : "no-disponible" %>">
++            <%= estado %>
++        </td>
++        <td>
++            <%
++                boolean disponible = "DISPONIBLE".equals(estado);
++                boolean desactivar = tienePrestamo || !disponible;
++            %>
++            <form action="prestamos" method="post">
++                <input type="hidden" name="accion" value="reservar">
++                <input type="hidden" name="idLibro" value="<%= libro.getIdLibro() %>">
++                <button type="submit" <%= desactivar ? "disabled style='color:gray;'" : "" %>>
++                    <%= desactivar ? "No disponible" : "Reservar" %>
++                </button>
++            </form>
++        </td>
++    </tr>
++    <% } %>
++</table>
++
++<div style="text-align:center; margin-top:20px;">
++    <a href="prestamos?accion=listar">Ver mis préstamos</a>
++</div>
++
++</body>
++</html>
+Index: src/main/webapp/misPrestamos.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/misPrestamos.jsp b/src/main/webapp/misPrestamos.jsp
+new file mode 100644
+--- /dev/null	(date 1760623706220)
++++ b/src/main/webapp/misPrestamos.jsp	(date 1760623706220)
+@@ -0,0 +1,86 @@
++<%@ page contentType="text/html; charset=UTF-8" %>
++<%@ page import="java.util.List" %>
++<%@ page import="models.Prestamo" %>
++<%@ page import="models.Libro" %>
++<%@ page import="dao.LibroDAO" %>
++<%@ page import="models.Lector" %>
++
++<%
++    // Verificar sesión del usuario
++    Lector usuario = (Lector) session.getAttribute("authUser");
++    if (usuario == null) {
++        response.sendRedirect(request.getContextPath() + "/login-lector");
++        return;
++    }
++
++    String msg = request.getParameter("msg");
++    List<Prestamo> prestamos = (List<Prestamo>) request.getAttribute("prestamos");
++    LibroDAO libroDAO = new LibroDAO();
++%>
++
++<!DOCTYPE html>
++<html lang="es">
++<head>
++    <meta charset="UTF-8">
++    <title>Mis Préstamos</title>
++    <style><%@include file="./WEB-INF/estilo/estiloslibros.css"%></style>
++</head>
++<body>
++
++<h1>Mis Préstamos</h1>
++
++<% if ("ya_tiene_prestamo".equals(msg)) { %>
++<p style="color:red;">Ya tienes un préstamo activo. No puedes reservar otro libro hasta finalizarlo.</p>
++<% } else if ("ok".equals(msg)) { %>
++<p style="color:green;">Acción realizada correctamente.</p>
++<% } else if ("error".equals(msg)) { %>
++<p style="color:red;">Ocurrió un error al procesar la acción.</p>
++<% } %>
++
++<a href="prestamos?accion=catalogo">Ver Catálogo</a>
++<br><br>
++<table>
++    <thead>
++    <tr>
++        <th>ID</th>
++        <th>Título del Libro</th>
++        <th>Fecha Préstamo</th>
++        <th>Estado</th>
++        <th>Acción</th>
++    </tr>
++    </thead>
++    <tbody>
++    <%
++        if (prestamos != null && !prestamos.isEmpty()) {
++            for (Prestamo p : prestamos) {
++                Libro libro = libroDAO.buscarPorId(p.getIdLibro());
++    %>
++    <tr>
++        <td><%= p.getIdPrestamo() %></td>
++        <td><%= (libro != null) ? libro.getTitulo() : "Desconocido" %></td>
++        <td><%= p.getFechaPrestamo() %></td>
++        <td><%= p.getEstado() %></td>
++        <td>
++            <% if ("PENDIENTE".equals(p.getEstado())) { %>
++            <form action="prestamos" method="post" style="display:inline;">
++                <input type="hidden" name="accion" value="cancelar">
++                <input type="hidden" name="idPrestamo" value="<%= p.getIdPrestamo() %>">
++                <input type="hidden" name="idLibro" value="<%= p.getIdLibro() %>">
++                <button type="submit" class="btnCancelar">Cancelar</button>
++            </form>
++            <% } else { %>
++            <span>-</span>
++            <% } %>
++        </td>
++    </tr>
++    <%
++        }
++    } else {
++    %>
++    <tr><td colspan="5">No tienes préstamos registrados.</td></tr>
++    <% } %>
++    </tbody>
++</table>
++
++</body>
++</html>
+Index: target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Manifest-Version: 1.0\r\nCreated-By: IntelliJ IDEA\r\nBuilt-By: li-am\r\nBuild-Jdk: Oracle OpenJDK 24.0.2\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF b/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+--- a/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF	(date 1760624246308)
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+ Created-By: IntelliJ IDEA
+-Built-By: li-am
++Built-By: cardo
+ Build-Jdk: Oracle OpenJDK 24.0.2
+ 
+Index: target/demo-1.0-SNAPSHOT/registro.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"models.Lector\" %>\r\n<link>\r\n\r\n\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n\r\n<%\r\n\r\n    Boolean existeLector = false;\r\n\r\n    Lector usuarioLogueado = (Lector) session.getAttribute(\"authUser\");\r\n    if (usuarioLogueado != null) {\r\n        response.sendRedirect(request.getContextPath() + \"/dashboard\");\r\n        return;\r\n    }\r\n\r\n%>\r\n\r\n<html>\r\n<head>\r\n    <title>Title</title>\r\n    <style><%@include file=\"./WEB-INF/estilo/stiloform.css\"%></style>\r\n\r\n</head>\r\n<body>\r\n<div id=\"encabezado\">\r\n    <h1>Biblioteca</h1>\r\n</div>\r\n<div id=\"camposytitulo\">\r\n    <h2>Registro de nuevo lector</h2>\r\n    <div class=\"formulario\">\r\n        <form action=\"register\" method=\"post\">\r\n\r\n            <div id=\"campos\">\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"ced\">Cédula</label>\r\n                    <input type=\"text\" name=\"ced\" id=\"campo\">\r\n                </div>\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"nombre\">Nombre</label>\r\n                    <input type=\"text\" name=\"nombre\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"correo\">Email</label>\r\n                    <input type=\"text\" name=\"correo\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"tele\">Teléfono</label>\r\n                    <input type=\"text\" name=\"tele\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"dir\">Dirección</label>\r\n                    <textarea name=\"dir\" id=\"campo\" rows=\"5\" cols=\"40\"></textarea>\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"fecha\">Fecha de Nacimiento</label>\r\n                    <br>\r\n                    <input type=\"date\" name=\"fecha\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <button type=\"submit\">click</button>\r\n                </div>\r\n\r\n\r\n            </div>\r\n\r\n            <% if(request.getAttribute(\"existeLector\") != null) {\r\n                existeLector = (Boolean) request.getAttribute(\"existeLector\");\r\n            } %>\r\n\r\n            <% if(existeLector && existeLector != null){ %>\r\n            <p>Ya existe un lector con esa cedula!!!!</p>\r\n            <% }%>\r\n\r\n        </form>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/demo-1.0-SNAPSHOT/registro.jsp b/target/demo-1.0-SNAPSHOT/registro.jsp
+--- a/target/demo-1.0-SNAPSHOT/registro.jsp	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/target/demo-1.0-SNAPSHOT/registro.jsp	(date 1760623706232)
+@@ -63,6 +63,11 @@
+                     <input type="date" name="fecha">
+                 </div>
+ 
++                <div id="campoynombre">
++                    <label for="pass">Contrasenia</label>
++                    <input type="password" name="pass">
++                </div>
++
+                 <div id="campoynombre">
+                     <button type="submit">click</button>
+                 </div>
+Index: target/demo-1.0-SNAPSHOT/dashboard.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"models.Lector\" %>\r\n<%\r\n    Lector usuario = (Lector) session.getAttribute(\"authUser\");\r\n    if (usuario == null) {\r\n        response.sendRedirect(request.getContextPath() + \"/login-lector\");\r\n        return;\r\n    }\r\n%>\r\n\r\n<h1>Bienvenido, <%= usuario.getNombre() %></h1>\r\n<p>Cedula: <%= usuario.getCedula() %></p>\r\n\r\n<a href=\"logout\">Cerrar Sesión</a>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/demo-1.0-SNAPSHOT/dashboard.jsp b/target/demo-1.0-SNAPSHOT/dashboard.jsp
+--- a/target/demo-1.0-SNAPSHOT/dashboard.jsp	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/target/demo-1.0-SNAPSHOT/dashboard.jsp	(date 1760623706227)
+@@ -6,8 +6,98 @@
+         return;
+     }
+ %>
++<html>
++
++
++<head>
++    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
++
++</head>
++
++<body>
++<nav>
++    <div id="logoynombre">
++        <button onclick="abrirBarra()" id="botton-barra"> click</button>
++        <img src="imgs/logo.jpg" width="100px" height="100px">
++        <h1>Biblio-Tech-a</h1>
++    </div>
++    <div id="elementos_derecha">
++        <a href="">Cuenta</a>
++        <a href="logout">Cerrar sesion</a>
++    </div>
++</nav>
++<aside id="sidebar">
++    <div id="columna_contenido">
++        <div>
++            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
++            <a href="">Usuarios</a>
++        </div>
++        <div>
++            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
++            <a href="">Reseñas</a>
++        </div>
++        <div>
++            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
++            <a href="prestamos?accion=catalogo">Prestamos</a>
++        </div>
++        <div>
++            <img src="imgs/room.png" alt="" width="50px" height="50px">
++            <a href="">Salas</a>
++        </div>
++    </div>
++</aside>
++<main>
++    <h1>Libros</h1>
++    <div class="contenedor-libros" id="containerLibro">
++        <div class="libro">
++            <h1>primer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>Este es el mejor libro de todos los libros </p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>segundo libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++    </div>
++</main>
++<footer>pie de pagina</footer>
++<script src="libroapp.js"></script>
++<script>
++    const sidebar = document.getElementById("sidebar");
+ 
+-<h1>Bienvenido, <%= usuario.getNombre() %></h1>
+-<p>Cedula: <%= usuario.getCedula() %></p>
++    function abrirBarra(){
++        sidebar.classList.toggle('show')
++    }
++</script>
++</body>
++
++
+ 
+-<a href="logout">Cerrar Sesión</a>
+\ No newline at end of file
++</html>
+\ No newline at end of file
+Index: src/main/webapp/WEB-INF/estilo/estiloslibros.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/WEB-INF/estilo/estiloslibros.css b/src/main/webapp/WEB-INF/estilo/estiloslibros.css
+new file mode 100644
+--- /dev/null	(date 1760623706214)
++++ b/src/main/webapp/WEB-INF/estilo/estiloslibros.css	(date 1760623706214)
+@@ -0,0 +1,128 @@
++/* generales */
++body {
++    font-family: "Segoe UI", Roboto, Arial, sans-serif;
++    background-color: #f7f9fc;
++    margin: 0;
++    padding: 0;
++    color: #333;
++}
++
++h1, h2 {
++    text-align: center;
++    margin-top: 30px;
++    color: #2b2d42;
++}
++
++a {
++    color: #1d72b8;
++    text-decoration: none;
++}
++
++a:hover {
++    text-decoration: underline;
++}
++
++/* tablas */
++table {
++    width: 85%;
++    margin: 30px auto;
++    border-collapse: collapse;
++    background-color: white;
++    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
++    border-radius: 10px;
++    overflow: hidden;
++}
++
++th, td {
++    padding: 12px 15px;
++    text-align: left;
++}
++
++th {
++    background-color: #e9eef6;
++    color: #2b2d42;
++    font-weight: 600;
++    text-transform: uppercase;
++    font-size: 14px;
++}
++
++tr:nth-child(even) {
++    background-color: #f7f9fc;
++}
++
++tr:hover {
++    background-color: #f0f4fa;
++}
++
++/* estados */
++.disponible {
++    color: #2ecc71;
++    font-weight: bold;
++}
++
++.no-disponible {
++    color: #e74c3c;
++    font-weight: bold;
++}
++
++/* botones */
++button, .btnCancelar {
++    background-color: #1d72b8;
++    color: white;
++    border: none;
++    border-radius: 6px;
++    padding: 8px 14px;
++    cursor: pointer;
++    transition: background-color 0.2s ease, transform 0.1s ease;
++}
++
++button:hover, .btnCancelar:hover {
++    background-color: #155d91;
++    transform: scale(1.03);
++}
++
++button[disabled] {
++    background-color: #ccc !important;
++    color: #666 !important;
++    cursor: not-allowed;
++    transform: none;
++}
++
++/* mensajes */
++.mensaje, p[style*="color:"] {
++    text-align: center;
++    font-weight: bold;
++    margin: 10px auto;
++    font-size: 16px;
++}
++
++.mensaje.success {
++    color: #2ecc71;
++}
++
++.mensaje.error {
++    color: #e74c3c;
++}
++
++/* enlaces principales */
++.nav-links {
++    text-align: center;
++    margin-top: 20px;
++}
++
++/* responsive */
++@media (max-width: 768px) {
++    table {
++        width: 95%;
++        font-size: 14px;
++    }
++
++    th, td {
++        padding: 10px;
++    }
++
++    button {
++        padding: 6px 10px;
++        font-size: 13px;
++    }
++}
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>target/\r\n.idea/\r\n*.iml\r\n*.war\r\nsrc/main/resources\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-16LE
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.gitignore	(date 1760624207517)
+@@ -1,5 +1,6 @@
+ target/
++out/
+ .idea/
+ *.iml
+ *.war
+-src/main/resources
++src/main/resources/db.properties
+Index: src/main/java/com/example/demo/PrestamoServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/PrestamoServlet.java b/src/main/java/com/example/demo/PrestamoServlet.java
+new file mode 100644
+--- /dev/null	(date 1760623706213)
++++ b/src/main/java/com/example/demo/PrestamoServlet.java	(date 1760623706213)
+@@ -0,0 +1,124 @@
++package com.example.demo;
++
++import dao.LibroDAO;
++import dao.PrestamoDAO;
++import jakarta.servlet.annotation.WebServlet;
++import jakarta.servlet.http.HttpServlet;
++import jakarta.servlet.http.HttpServletRequest;
++import jakarta.servlet.http.HttpServletResponse;
++import jakarta.servlet.http.HttpSession;
++import models.Lector;
++import models.Libro;
++import models.Prestamo;
++
++import java.io.IOException;
++import java.time.LocalDateTime;
++import java.util.ArrayList;
++import java.util.List;
++
++@WebServlet(name = "PrestamoServlet", value = "/prestamos")
++public class PrestamoServlet extends HttpServlet {
++
++    private PrestamoDAO prestamoDAO = new PrestamoDAO();
++
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        response.setContentType("text/html");
++        try {
++            String accion = request.getParameter("accion");
++            HttpSession sesion = request.getSession();
++            Integer idLector = (Integer) sesion.getAttribute("idLector");
++
++            if (idLector == null) {
++                Lector lector = (Lector) sesion.getAttribute("authUser");
++                if (lector != null) {
++                    idLector = lector.getID();
++                    sesion.setAttribute("idLector", idLector);
++                }
++            }
++
++            switch (accion) {
++                case "listar": // mostrar los prestamos del lector
++                    List<Prestamo> prestamos = prestamoDAO.listarPrestamosPorLector(idLector);
++                    request.setAttribute("prestamos", prestamos);
++                    request.getRequestDispatcher("misPrestamos.jsp").forward(request, response);
++                    break;
++
++                case "catalogo": // mostrar todos los libros con disponibilidad
++                    LibroDAO libroDAO = new LibroDAO();
++                    List<models.Libro> libros = libroDAO.listarLibros(); // todos los libros
++                    List<String> estados = new ArrayList<>();
++
++                    //  ver si el lector ya tiene un prestamo activo
++                    boolean tienePrestamo = prestamoDAO.prestamoActivoPorLector(idLector);
++
++                    // ver la disponibilidad de cada libro
++                    for (Libro libro : libros) {
++                        boolean activo = prestamoDAO.prestamoActivoPorLibro(libro.getIdLibro());
++                        if (activo) {
++                            estados.add("NO DISPONIBLE");
++                        } else {
++                            estados.add("DISPONIBLE");
++                        }
++                    }
++
++                    //  Pasamos la info al JSP
++                    request.setAttribute("libros", libros);
++                    request.setAttribute("estados", estados);
++                    request.setAttribute("tienePrestamo", tienePrestamo);
++                    request.getRequestDispatcher("libros.jsp").forward(request, response);
++
++                default:
++                    response.sendRedirect("libros.jsp");
++            }
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++
++
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        try {
++            String accion = request.getParameter("accion");
++            HttpSession sesion = request.getSession();
++            Integer idLector = (Integer) sesion.getAttribute("idLector");
++
++            boolean exito = false;
++
++            if ("reservar".equals(accion)) {
++                int idLibro = Integer.parseInt(request.getParameter("idLibro"));
++
++                // 🔍 verificar si el lector ya tiene un prestamo activo
++                boolean tienePrestamoActivo = prestamoDAO.prestamoActivoPorLector(idLector);
++
++                if (tienePrestamoActivo) {
++                    // ya tiene uno, no permitir nuevo prestamo
++                    response.sendRedirect("prestamos?accion=listar&msg=ya_tiene_prestamo");
++                    return;
++                }
++
++                // crear prestamo en estado PENDIENTE
++                prestamoDAO.crearPrestamo(idLector, idLibro, LocalDateTime.now(), "PENDIENTE");
++                exito = true;
++
++            } else if ("cancelar".equals(accion)) {
++                int idPrestamo = Integer.parseInt(request.getParameter("idPrestamo"));
++                // finalizar prestamo (cambia fecha de devolucion y estado en la tabla prestamo)
++                prestamoDAO.finalizarPrestamo(idPrestamo, LocalDateTime.now());
++                exito = true;
++            }
++
++            if (exito) {
++                response.sendRedirect("prestamos?accion=listar&msg=ok");
++            } else {
++                response.sendRedirect("prestamos?accion=listar&msg=error");
++            }
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++
++}
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.idea/encodings.xml	(date 1760623706210)
+@@ -3,5 +3,7 @@
+   <component name="Encoding">
+     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++    <file url="file://$USER_HOME$/Documents/biblio 1510/biblioteca/src" charset="UTF-8" />
++    <file url="file://$USER_HOME$/Documents/biblio 1510/biblioteca/src/main/resources" charset="UTF-8" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/webapp/libroapp.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/libroapp.js b/src/main/webapp/libroapp.js
+new file mode 100644
+--- /dev/null	(date 1760623706219)
++++ b/src/main/webapp/libroapp.js	(date 1760623706219)
+@@ -0,0 +1,33 @@
++let misLibros = [];
++let offset = 0;
++const limit = 6;
++const divLibros = document.getElementById('containerLibro');
++
++document.addEventListener('DOMContentLoaded', function() {
++    cargarLibros();
++});
++
++function cargarLibros(){
++    fetch('libros')
++        .then(response =>{
++            if (!response.ok) {
++                throw new Error('Error en la respuesta del servidor');
++            }
++            return response.json();
++        })
++        .then(libros => {
++            misLibros = libros;
++            const libros2 = misLibros.slice(offset, limit);
++            libros2.forEach(libro =>{
++                const bookElement = document.createElement('div');
++                bookElement.className = 'libro';
++                bookElement.innerHTML = `
++                    <h1>${libro.titulo}</h1>
++                    <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++                    <p>${libro.fechaPublicacion}</p>
++                    <button>ver mas</button>
++                `;
++                divLibros.appendChild(bookElement);
++            })
++        })
++}
+\ No newline at end of file
+Index: src/main/java/com/example/demo/SalaServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/SalaServlet.java b/src/main/java/com/example/demo/SalaServlet.java
+new file mode 100644
+--- /dev/null	(date 1760623706213)
++++ b/src/main/java/com/example/demo/SalaServlet.java	(date 1760623706213)
+@@ -0,0 +1,71 @@
++package com.example.demo;
++
++import dao.SalaDAO;
++import jakarta.servlet.annotation.WebServlet;
++import jakarta.servlet.http.HttpServlet;
++import jakarta.servlet.http.HttpServletRequest;
++import jakarta.servlet.http.HttpServletResponse;
++import models.Sala;
++
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.List;
++
++@WebServlet(name = "SalaServlet", value = "/salas")
++public class SalaServlet extends HttpServlet {
++
++    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        response.setContentType("text/html");
++
++        try {
++            // Obtener salas de la base de datos
++            List<Sala> salas = new SalaDAO().listarSalas();
++            // Agregar datos al request
++            request.setAttribute("listaSalas", salas);
++
++            // Solo UN forward
++            request.getRequestDispatcher("salas.jsp").forward(request, response);
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        try {
++            String tipoDato = request.getParameter("tipoDato");
++            String buscando = request.getParameter("buscando");
++            List<Sala> salas;
++            boolean valorValido = true;
++            if (tipoDato != null && !tipoDato.equals("ubicacion") && buscando != null && !buscando.isEmpty()) {
++                try{
++                    Integer.parseInt(buscando);
++                }catch(Exception e){
++                    valorValido = false;
++                }
++            }
++            if (valorValido) {
++                if (tipoDato != null && !tipoDato.isEmpty() && buscando != null && !buscando.isEmpty()) {
++                    // Obtener salas de la base de datos
++                    System.out.println("mitad");
++                    salas = new SalaDAO().listarSalas(tipoDato, buscando);
++                }else{
++                    // Obtener salas de la base de datos
++                    System.out.println("completa");
++                    salas = new SalaDAO().listarSalas();
++                }
++            }else{
++                salas = new ArrayList<>();
++            }
++
++
++            // Agregar datos al request
++            request.setAttribute("listaSalas", salas);
++
++            // Solo UN forward
++            request.getRequestDispatcher("salas.jsp").forward(request, response);
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/../biblioteca/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_24\" default=\"true\" project-jdk-name=\"openjdk-24\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.idea/misc.xml	(date 1760623706210)
+@@ -6,6 +6,7 @@
+       <list>
+         <option value="$PROJECT_DIR$/pom.xml" />
+         <option value="$PROJECT_DIR$/../biblioteca/pom.xml" />
++        <option value="$USER_HOME$/Documents/biblio 1510/biblioteca/pom.xml" />
+       </list>
+     </option>
+   </component>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"demo\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.idea/compiler.xml	(date 1760623706210)
+@@ -6,6 +6,7 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
++        <module name="biblioteca" />
+         <module name="demo" />
+       </profile>
+     </annotationProcessing>
+Index: src/main/webapp/salas.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/salas.jsp b/src/main/webapp/salas.jsp
+new file mode 100644
+--- /dev/null	(date 1760623706221)
++++ b/src/main/webapp/salas.jsp	(date 1760623706221)
+@@ -0,0 +1,64 @@
++<%@ page import="models.Sala" %>
++<%@ page import="models.Lector" %>
++<%@ page import="java.util.List" %>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++
++<html>
++<head>
++    <title>Title</title>
++    <style><%@include file="./WEB-INF/estilo/stiloform.css"%></style>
++</head>
++<body>
++<div id="encabezado">
++    <h1>Biblioteca</h1>
++</div>
++
++<%
++Lector usuario = (Lector) session.getAttribute("authUser");
++if (usuario == null) {
++    response.sendRedirect(request.getContextPath() + "/login-lector");
++    return;
++}
++
++List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
++%>
++
++<div id="camposytitulo">
++    <div>
++        <form action="salas" method="post">
++            <label for="tipoDato">Elige la opcion</label>
++            <select id="tipoDato" name="tipoDato">
++                <option value="numeroSala">Numero de sala</option>
++                <option value="maxPersonas">Maximo de personas</option>
++                <option value="ubicacion">Ubicacion</option>
++            </select>
++            <br>
++            <br>
++            <input type="text" name="buscando">
++            <button action="submit">Buscar sala</button>
++        </form>
++    </div>
++
++    <h2>Listado de salas</h2>
++
++    <% if(salasInfo != null && !salasInfo.isEmpty()) { %>
++    <ul>
++        <form action="reservar" method="post">
++            <% for (Sala sala : salasInfo) { %>
++            <li>
++                <p>Numero sala: <%= sala.getNumeroSala() %>
++                    Ubicacion: <%= sala.getUbicacion() %>
++                    Limite personas: <%= sala.getMaxPersonas() %> </p>
++                <button name="salaSeleccionada" type="submit" value="<%= sala.getNumeroSala() %>">Reservar</button>
++            </li>
++            <% } %>
++        </form>
++    </ul>
++    <% } else { %>
++    <p>No hay salas registrados</p>
++    <% } %>
++
++</div>
++</body>
++</html>
++
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0\r\n         https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>com.example</groupId>\r\n    <artifactId>demo</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <name>demo</name>\r\n    <packaging>war</packaging>\r\n\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <maven.compiler.target>17</maven.compiler.target>\r\n        <maven.compiler.source>17</maven.compiler.source>\r\n        <junit.version>5.13.2</junit.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>jakarta.servlet</groupId>\r\n            <artifactId>jakarta.servlet-api</artifactId>\r\n            <version>6.1.0</version>\r\n            <scope>provided</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-engine</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.mindrot</groupId>\r\n            <artifactId>jbcrypt</artifactId>\r\n            <version>0.4</version>\r\n        </dependency>\r\n\r\n       <!-- <dependency>\r\n            <groupId>com.example</groupId>\r\n            <artifactId>biblioteca</artifactId>\r\n            <version>1.0.0</version>\r\n        </dependency>-->\r\n        <dependency>\r\n            <groupId>com.mysql</groupId>\r\n            <artifactId>mysql-connector-j</artifactId>\r\n            <version>9.4.0</version>\r\n        </dependency>\r\n\r\n\r\n\r\n    </dependencies>\r\n\r\n\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.11.0</version>\r\n                <configuration>\r\n                    <source>17</source>\r\n                    <target>17</target>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-war-plugin</artifactId>\r\n                <version>3.3.1</version>\r\n                <configuration>\r\n                    <failOnMissingWebXml>false</failOnMissingWebXml>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/pom.xml	(date 1760623706212)
+@@ -54,6 +54,12 @@
+             <artifactId>mysql-connector-j</artifactId>
+             <version>9.4.0</version>
+         </dependency>
++        <dependency>
++            <groupId>com.google.code.gson</groupId>
++            <artifactId>gson</artifactId>
++            <version>2.13.2</version>
++        </dependency>
++
+ 
+ 
+ 
+Index: src/main/webapp/WEB-INF/estilo/otrocss.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/WEB-INF/estilo/otrocss.css b/src/main/webapp/WEB-INF/estilo/otrocss.css
+new file mode 100644
+--- /dev/null	(date 1760623706214)
++++ b/src/main/webapp/WEB-INF/estilo/otrocss.css	(date 1760623706214)
+@@ -0,0 +1,164 @@
++*{
++    margin: 0;
++    padding: 0;
++}
++
++body{
++    min-height: 100vh;
++    display: grid;
++    grid-template-columns: 300px 1fr;
++    grid-template-rows: auto 1fr auto;
++    grid-template-areas: 
++    "navbar navbar"
++    "sidebar main"
++    "sidebar footer";
++}
++
++nav{
++    display: flex;
++    top: 0;
++    position: sticky;
++    grid-area: navbar;
++    background-color: #BF5656;
++    color: white;
++    padding: 1em;
++    justify-content: space-between;
++    align-items: center;
++
++}
++
++nav #logoynombre {
++    display: flex;
++    align-items: center;
++}
++
++nav a {
++    float: left;
++    color: white;
++    text-align: center;
++    padding: 12px;
++    text-decoration: none;
++    font-size: 25px;
++    line-height: 25px;
++    border-radius: 4px;
++}
++
++nav a:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++
++
++#botton-barra{
++        visibility: hidden;
++    }
++
++aside{
++    height: calc(100vh - 132.6px);
++    top: 132px;
++    position: sticky;
++    align-self: start;
++    grid-area: sidebar;
++    border: 1px black solid;
++    width: 300px;
++    background-color: #FEACAC;
++}
++
++aside a {
++    margin-left: 20px;
++    padding: 12px;
++    font-size: 25px;
++    color: black;
++    text-decoration: none;
++
++}
++
++#columna_contenido {
++    display: grid;
++    margin-top: 20px;
++    row-gap: 20px;
++}
++
++#columna_contenido>div {
++    display: flex;
++    align-items: center;
++    padding: 12px;
++    margin-left: 20px;
++    gap: 10px;
++}
++
++#columna_contenido>div:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++
++#columna_contenido>a {
++    display: flex;
++    align-items: center;
++    padding: 12px;
++    margin-left: 20px;
++}
++
++#columna_contenido>a:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++main{
++    grid-area: main;
++    max-width: 1100px;
++    margin: 0 auto;
++    margin: 15px;
++    background-color: white;
++    border-radius: 15px;
++    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
++    padding: 30px;
++    border: solid black 1px;
++}
++
++
++main>h1 {
++    text-align: center;
++    color: #333;
++    margin-bottom: 30px;
++    font-size: 2.5rem;
++    border-bottom: 2px solid #ddd;
++    padding-bottom: 10px;
++}
++
++.contenedor-libros {
++    display: flex;
++    flex-wrap: wrap;
++    gap: 20px;
++    justify-content: center;
++}
++
++.libro {
++    width: 300px;
++}
++
++footer{
++    grid-area: footer;
++    background-color: black;
++}
++
++@media(max-width: 800px){
++    body{
++        grid-template-columns: 1fr;
++    }
++    aside{
++        position: fixed;
++        width: 300px;
++        display: none;
++    }
++    .show{
++        display: block;
++    }
++
++    #botton-barra{
++        visibility: visible;
++    }
++
++}
+\ No newline at end of file
+Index: src/main/webapp/dashboard.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"models.Lector\" %>\r\n<%\r\n    Lector usuario = (Lector) session.getAttribute(\"authUser\");\r\n    if (usuario == null) {\r\n        response.sendRedirect(request.getContextPath() + \"/login-lector\");\r\n        return;\r\n    }\r\n%>\r\n\r\n<h1>Bienvenido, <%= usuario.getNombre() %></h1>\r\n<p>Cedula: <%= usuario.getCedula() %></p>\r\n\r\n<a href=\"logout\">Cerrar Sesión</a>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/dashboard.jsp b/src/main/webapp/dashboard.jsp
+--- a/src/main/webapp/dashboard.jsp	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/src/main/webapp/dashboard.jsp	(date 1760623706215)
+@@ -6,8 +6,98 @@
+         return;
+     }
+ %>
++<html>
++
++
++<head>
++    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
++
++</head>
++
++<body>
++<nav>
++    <div id="logoynombre">
++        <button onclick="abrirBarra()" id="botton-barra"> click</button>
++        <img src="imgs/logo.jpg" width="100px" height="100px">
++        <h1>Biblio-Tech-a</h1>
++    </div>
++    <div id="elementos_derecha">
++        <a href="">Cuenta</a>
++        <a href="logout">Cerrar sesion</a>
++    </div>
++</nav>
++<aside id="sidebar">
++    <div id="columna_contenido">
++        <div>
++            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
++            <a href="">Usuarios</a>
++        </div>
++        <div>
++            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
++            <a href="">Reseñas</a>
++        </div>
++        <div>
++            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
++            <a href="prestamos?accion=catalogo">Prestamos</a>
++        </div>
++        <div>
++            <img src="imgs/room.png" alt="" width="50px" height="50px">
++            <a href="">Salas</a>
++        </div>
++    </div>
++</aside>
++<main>
++    <h1>Libros</h1>
++    <div class="contenedor-libros" id="containerLibro">
++        <div class="libro">
++            <h1>primer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>Este es el mejor libro de todos los libros </p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>segundo libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++        <div class="libro">
++            <h1>tercer libro</h1>
++            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
++            <p>hdwq8dgwqd9gwqd</p>
++            <button>ver mas</button>
++        </div>
++    </div>
++</main>
++<footer>pie de pagina</footer>
++<script src="libroapp.js"></script>
++<script>
++    const sidebar = document.getElementById("sidebar");
+ 
+-<h1>Bienvenido, <%= usuario.getNombre() %></h1>
+-<p>Cedula: <%= usuario.getCedula() %></p>
++    function abrirBarra(){
++        sidebar.classList.toggle('show')
++    }
++</script>
++</body>
++
++
+ 
+-<a href="logout">Cerrar Sesión</a>
+\ No newline at end of file
++</html>
+\ No newline at end of file
+Index: src/main/webapp/reservarSala.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/reservarSala.jsp b/src/main/webapp/reservarSala.jsp
+new file mode 100644
+--- /dev/null	(date 1760623706221)
++++ b/src/main/webapp/reservarSala.jsp	(date 1760623706221)
+@@ -0,0 +1,106 @@
++<%@ page import="models.Sala" %>
++<%@ page import="models.Lector" %>
++<%@ page import="models.Reserva" %>
++<%@ page import="java.util.List" %>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++
++<html>
++<head>
++    <title>Title</title>
++    <style><%@include file="./WEB-INF/estilo/stiloform.css"%></style>
++</head>
++<body>
++<div id="encabezado">
++    <h1>Biblioteca</h1>
++</div>
++
++<%
++Lector usuario = (Lector) session.getAttribute("authUser");
++if (usuario == null) {
++    response.sendRedirect(request.getContextPath() + "/login-lector");
++    return;
++}
++%>
++
++<div id="camposytitulo">
++    <button><a href="salas">Volver</a></button>
++    <h2>Reservar sala </h2>
++    <%
++    Sala salaInfo = (Sala) request.getAttribute("sala");
++    List<Reserva> reservasInfo = (List<Reserva>) request.getAttribute("listaReservas");
++    String fechaSeleccionada = (String) request.getAttribute("fechaSeleccionada");
++    Integer numeroSala = (int) request.getAttribute("salaSeleccionada");
++    %>
++
++    <% if(salaInfo != null) { %>
++    <ul>
++        <li>
++            <p>Numero sala: <%= salaInfo.getNumeroSala() %>
++                Ubicacion: <%= salaInfo.getUbicacion() %>
++                Limite personas: <%= salaInfo.getMaxPersonas() %> </p>
++        </li>
++    </ul>
++    <% } else {
++    response.sendRedirect(request.getContextPath() + "/salas");
++    } %>
++
++    <div>
++        <form action="reservar" method="post">
++            <input type="hidden" name="salaSeleccionada" value="<%= numeroSala %>">
++            <label for="fecha">Seleccionar fecha</label>
++            <input type="date" id="fecha" name="fecha" value="<%= fechaSeleccionada %>" required>
++            <button action="submit"> Seleccionar</button>
++        </form>
++    </div>
++    <p>Horarios ocupados: </p>
++    <% if(fechaSeleccionada != null) { %>
++    <% if(reservasInfo != null && !reservasInfo.isEmpty()) { %>
++    <ul>
++        <% for(Reserva reserva : reservasInfo) { %>
++        <li>
++            <form action="reservar" method="post">
++                <p>Hora inicio: <%= reserva.getHora_in() %>
++                    Hora Fin: <%= reserva.getHora_fin() %>
++                    <% if(reserva.getId_Reserva() != 0) { %>
++                    <input type="hidden" name="salaSeleccionada" value="<%= numeroSala %>">
++                    <input type="hidden" name="id-reserva" value="<%= reserva.getId_Reserva() %>" required>
++                    <button action="submit"> Cancelar reserva</button>
++                </p>
++            </form>
++
++            <% } %>
++        </li>
++        <% } %>
++    </ul>
++    <% } else { %>
++    <p>No hay reservas</p>
++    <% } %>
++
++    <p>Seleccionar hora de Reserva: </p>
++
++    <form action="reservar" method="post">
++        <div id="campos">
++            <input type="hidden" name="salaSeleccionada" value="<%= numeroSala %>">
++            <input type="hidden" name="fecha" value="<%= fechaSeleccionada %>">
++            <div>
++                <label for="hora-inicio">Seleccionar hora inicio</label>
++                <br>
++                <input type="time" id="hora-inicio" name="hora-inicio" required>
++            </div>
++            <div>
++                <label for="hora-fin">Seleccionar hora fin</label>
++                <br>
++                <input type="time" id="hora-fin" name="hora-fin" required>
++            </div>
++        </div>
++        <br>
++        <button action="submit"> Reservar</button>
++    </form>
++
++    <% } else { %>
++    <p>Fecha no seleccionada</p>
++    <% } %>
++</div>
++</body>
++</html>
++
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$/../../biblio v2/biblioteca\" vcs=\"Git\" />\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/.idea/vcs.xml	(date 1760624279045)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/../../biblio v2/biblioteca" vcs="Git" />
+     <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="$USER_HOME$/Documents/biblio 1510/biblioteca" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/com/example/demo/LibroServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/LibroServlet.java b/src/main/java/com/example/demo/LibroServlet.java
+new file mode 100644
+--- /dev/null	(date 1760623706212)
++++ b/src/main/java/com/example/demo/LibroServlet.java	(date 1760623706212)
+@@ -0,0 +1,44 @@
++package com.example.demo;
++
++import com.google.gson.Gson;
++import dao.LibroDAO;
++import jakarta.servlet.ServletContext;
++import jakarta.servlet.annotation.WebServlet;
++import jakarta.servlet.http.HttpServlet;
++import jakarta.servlet.http.HttpServletRequest;
++import jakarta.servlet.http.HttpServletResponse;
++import jakarta.servlet.http.HttpSession;
++import models.Libro;
++
++import java.io.IOException;
++import java.util.List;
++
++@WebServlet("/libros")
++public class LibroServlet extends HttpServlet {
++    private String message;
++    private LibroDAO libroDAO = new LibroDAO();
++    private Gson gson = new Gson();
++
++    public void init() {
++        message = "Hello World!";
++    }
++
++    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        response.setContentType("application/json");
++        response.setCharacterEncoding("UTF-8");
++
++        try{
++            List<Libro> libros = libroDAO.listarLibros();
++            String jsonLibros =  gson.toJson(libros);
++            response.getWriter().println(jsonLibros);
++
++
++
++        }catch(Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    public void destroy() {
++    }
++}
+\ No newline at end of file
+Index: target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css b/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css
+new file mode 100644
+--- /dev/null	(date 1760623706223)
++++ b/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css	(date 1760623706223)
+@@ -0,0 +1,164 @@
++*{
++    margin: 0;
++    padding: 0;
++}
++
++body{
++    min-height: 100vh;
++    display: grid;
++    grid-template-columns: 300px 1fr;
++    grid-template-rows: auto 1fr auto;
++    grid-template-areas: 
++    "navbar navbar"
++    "sidebar main"
++    "sidebar footer";
++}
++
++nav{
++    display: flex;
++    top: 0;
++    position: sticky;
++    grid-area: navbar;
++    background-color: #BF5656;
++    color: white;
++    padding: 1em;
++    justify-content: space-between;
++    align-items: center;
++
++}
++
++nav #logoynombre {
++    display: flex;
++    align-items: center;
++}
++
++nav a {
++    float: left;
++    color: white;
++    text-align: center;
++    padding: 12px;
++    text-decoration: none;
++    font-size: 25px;
++    line-height: 25px;
++    border-radius: 4px;
++}
++
++nav a:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++
++
++#botton-barra{
++        visibility: hidden;
++    }
++
++aside{
++    height: calc(100vh - 132.6px);
++    top: 132px;
++    position: sticky;
++    align-self: start;
++    grid-area: sidebar;
++    border: 1px black solid;
++    width: 300px;
++    background-color: #FEACAC;
++}
++
++aside a {
++    margin-left: 20px;
++    padding: 12px;
++    font-size: 25px;
++    color: black;
++    text-decoration: none;
++
++}
++
++#columna_contenido {
++    display: grid;
++    margin-top: 20px;
++    row-gap: 20px;
++}
++
++#columna_contenido>div {
++    display: flex;
++    align-items: center;
++    padding: 12px;
++    margin-left: 20px;
++    gap: 10px;
++}
++
++#columna_contenido>div:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++
++#columna_contenido>a {
++    display: flex;
++    align-items: center;
++    padding: 12px;
++    margin-left: 20px;
++}
++
++#columna_contenido>a:hover {
++    background-color: #ddd;
++    color: black;
++}
++
++main{
++    grid-area: main;
++    max-width: 1100px;
++    margin: 0 auto;
++    margin: 15px;
++    background-color: white;
++    border-radius: 15px;
++    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
++    padding: 30px;
++    border: solid black 1px;
++}
++
++
++main>h1 {
++    text-align: center;
++    color: #333;
++    margin-bottom: 30px;
++    font-size: 2.5rem;
++    border-bottom: 2px solid #ddd;
++    padding-bottom: 10px;
++}
++
++.contenedor-libros {
++    display: flex;
++    flex-wrap: wrap;
++    gap: 20px;
++    justify-content: center;
++}
++
++.libro {
++    width: 300px;
++}
++
++footer{
++    grid-area: footer;
++    background-color: black;
++}
++
++@media(max-width: 800px){
++    body{
++        grid-template-columns: 1fr;
++    }
++    aside{
++        position: fixed;
++        width: 300px;
++        display: none;
++    }
++    .show{
++        display: block;
++    }
++
++    #botton-barra{
++        visibility: visible;
++    }
++
++}
+\ No newline at end of file
+Index: src/main/webapp/registro.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"models.Lector\" %>\r\n<link>\r\n\r\n\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n\r\n<%\r\n\r\n    Boolean existeLector = false;\r\n\r\n    Lector usuarioLogueado = (Lector) session.getAttribute(\"authUser\");\r\n    if (usuarioLogueado != null) {\r\n        response.sendRedirect(request.getContextPath() + \"/dashboard\");\r\n        return;\r\n    }\r\n\r\n%>\r\n\r\n<html>\r\n<head>\r\n    <title>Title</title>\r\n    <style><%@include file=\"./WEB-INF/estilo/stiloform.css\"%></style>\r\n\r\n</head>\r\n<body>\r\n<div id=\"encabezado\">\r\n    <h1>Biblioteca</h1>\r\n</div>\r\n<div id=\"camposytitulo\">\r\n    <h2>Registro de nuevo lector</h2>\r\n    <div class=\"formulario\">\r\n        <form action=\"register\" method=\"post\">\r\n\r\n            <div id=\"campos\">\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"ced\">Cédula</label>\r\n                    <input type=\"text\" name=\"ced\" id=\"campo\">\r\n                </div>\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"nombre\">Nombre</label>\r\n                    <input type=\"text\" name=\"nombre\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"correo\">Email</label>\r\n                    <input type=\"text\" name=\"correo\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"tele\">Teléfono</label>\r\n                    <input type=\"text\" name=\"tele\" id=\"campo\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"dir\">Dirección</label>\r\n                    <textarea name=\"dir\" id=\"campo\" rows=\"5\" cols=\"40\"></textarea>\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <label for=\"fecha\">Fecha de Nacimiento</label>\r\n                    <br>\r\n                    <input type=\"date\" name=\"fecha\">\r\n                </div>\r\n\r\n                <div id=\"campoynombre\">\r\n                    <button type=\"submit\">click</button>\r\n                </div>\r\n\r\n\r\n            </div>\r\n\r\n            <% if(request.getAttribute(\"existeLector\") != null) {\r\n                existeLector = (Boolean) request.getAttribute(\"existeLector\");\r\n            } %>\r\n\r\n            <% if(existeLector && existeLector != null){ %>\r\n            <p>Ya existe un lector con esa cedula!!!!</p>\r\n            <% }%>\r\n\r\n        </form>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/registro.jsp b/src/main/webapp/registro.jsp
+--- a/src/main/webapp/registro.jsp	(revision 4961ec8bfc33839aba11a5fa4a5741abda3a2085)
++++ b/src/main/webapp/registro.jsp	(date 1760623706220)
+@@ -63,6 +63,12 @@
+                     <input type="date" name="fecha">
+                 </div>
+ 
++
++                <div id="campoynombre">
++                    <label for="pass">Contraseña</label>
++                    <input type="password" name="pass">
++                </div>
++
+                 <div id="campoynombre">
+                     <button type="submit">click</button>
+                 </div>
+Index: src/main/java/com/example/demo/ReservaServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/ReservaServlet.java b/src/main/java/com/example/demo/ReservaServlet.java
+new file mode 100644
+--- /dev/null	(date 1760623706213)
++++ b/src/main/java/com/example/demo/ReservaServlet.java	(date 1760623706213)
+@@ -0,0 +1,134 @@
++package com.example.demo;
++
++import dao.LectorDAO;
++import dao.ReservaDAO;
++import dao.SalaDAO;
++import jakarta.servlet.annotation.WebServlet;
++import jakarta.servlet.http.HttpServlet;
++import jakarta.servlet.http.HttpServletRequest;
++import jakarta.servlet.http.HttpServletResponse;
++import jakarta.servlet.http.HttpSession;
++import models.Lector;
++import models.Reserva;
++import models.Sala;
++
++import java.io.IOException;
++import java.time.LocalDate;
++import java.time.LocalDateTime;
++import java.time.LocalTime;
++import java.util.ArrayList;
++import java.util.List;
++
++@WebServlet(name = "ReservaServlet", value = "/reservar")
++public class ReservaServlet extends HttpServlet {
++
++    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        response.setContentType("text/html");
++
++        try {
++            String valorsalaSeleccionada = request.getParameter("salaSeleccionada");
++            if (valorsalaSeleccionada == null) {
++                response.sendRedirect(request.getContextPath() + "/salas");
++                return;
++            }
++
++            int salaSeleccionada = Integer.parseInt(valorsalaSeleccionada);
++
++            // Obtener sala
++            Sala salas = new SalaDAO().buscarSalaPorNumeroSala(salaSeleccionada);
++
++            // Agregar datos al request
++            request.setAttribute("listaSalas", salas);
++
++            // Solo UN forward
++            request.getRequestDispatcher("reservarSala.jsp").forward(request, response);
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
++        try {
++            HttpSession session = request.getSession(false);
++            if (session == null || session.getAttribute("authUser") == null) {
++                response.sendRedirect(request.getContextPath() + "/login-lector");
++                return;
++            }
++
++            String valorSalaSeleccionada = request.getParameter("salaSeleccionada");
++            if (valorSalaSeleccionada == null) {
++                response.sendRedirect(request.getContextPath() + "/salas");
++                return;
++            }
++            List<Reserva> reservasMostrar = new ArrayList<>();
++            int salaSeleccionada = Integer.parseInt(valorSalaSeleccionada);
++
++            String idReserva = request.getParameter("id-reserva");
++            String fecha = request.getParameter("fecha");
++            String horaInicio = request.getParameter("hora-inicio");
++            String horaFin = request.getParameter("hora-fin");
++
++            if (idReserva != null && !idReserva.isEmpty()) {
++                Lector lector = (Lector) session.getAttribute("authUser");
++                Lector lectorCompleto = new LectorDAO().buscarPorCedula(Integer.parseInt(lector.getCedula()));
++                //Eliminar reserva
++                new ReservaDAO().eliminarReserva(Integer.parseInt(idReserva), lectorCompleto.getID());
++            }
++
++            Sala sala = new SalaDAO().buscarSalaPorNumeroSala(salaSeleccionada);
++            if (fecha != null && !fecha.isEmpty()) {
++                List<Reserva> reservas = new ReservaDAO().reservasNoTerminadasPorSalaYFecha(salaSeleccionada, fecha);
++
++                Lector lector = (Lector) session.getAttribute("authUser");
++                Lector lectorCompleto = new LectorDAO().buscarPorCedula(Integer.parseInt(lector.getCedula()));
++
++                for (Reserva r : reservas) {
++                    reservasMostrar.add(new Reserva(((lectorCompleto.getID() == r.getId_usuario()) ? r.getId_Reserva() : 0), //Mostrar id_reserva si le pertenece al lectior
++                            r.getFecha_in(), r.getFecha_fin(), 0, 0, null, null, 0));
++                }
++
++                if (horaInicio != null && horaFin != null) {
++                    boolean reservar = true;
++                    LocalDate fechaSeleccionada = LocalDate.parse(fecha);
++                    LocalTime horaInicioSeleccionada = LocalTime.parse(horaInicio);
++                    LocalTime horaFinSeleccionada = LocalTime.parse(horaFin);
++
++                    for (Reserva r : reservas) {
++                        //Evitar reservas en mismo horario
++                        if (!(!horaInicioSeleccionada.isBefore(r.getHora_fin()) || !horaFinSeleccionada.isAfter(r.getHora_in()))) {
++                            reservar = false;
++                            break;
++                        }
++                    }
++
++                    if (horaInicioSeleccionada.isAfter(horaFinSeleccionada)) {
++                        reservar = false;
++                    }
++
++                    if (reservar) {
++                        LocalDateTime fechaInicio = LocalDateTime.of(fechaSeleccionada, horaInicioSeleccionada);
++                        LocalDateTime fechaFin = LocalDateTime.of(fechaSeleccionada, horaFinSeleccionada);
++
++                        //Completar reserva
++                        new ReservaDAO().agregarReserva(sala.getIdSala(), lectorCompleto.getID(), fechaInicio, fechaFin);
++                    }
++
++                }
++            }
++            // Agregar datos al request
++            if (fecha != null && !fecha.isEmpty()) request.setAttribute("fechaSeleccionada", fecha);
++            request.setAttribute("salaSeleccionada", salaSeleccionada);
++            request.setAttribute("sala", sala);
++            request.setAttribute("listaReservas", reservasMostrar);
++
++            // Solo UN forward
++            request.getRequestDispatcher("reservarSala.jsp").forward(request, response);
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/out/production/biblioteca_v2/db.properties b/out/production/biblioteca_v2/db.properties
+deleted file mode 100644

@@ -10,33 +10,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EditarPerfilServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EliminarPerfilServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloPerfil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editarPerfil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="perfil de usuario, editar, y eliminar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LectorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LectorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/EditorialDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/EditorialDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroAutorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroAutorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroGeneroDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroGeneroDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/PrestamoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/PrestamoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/ReservaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/ReservaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/SalaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/SalaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/flujos/SalaMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/SalaMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/models/Reserva.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Reserva.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/flujos/EditorialMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/EditorialMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/flujos/LibroMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/LibroMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/perfil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_COMMON_BRANCH" value="main" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../biblio v2/biblioteca" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -86,6 +67,9 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -325,7 +309,17 @@
       <workItem from="1760704277903" duration="13379000" />
       <workItem from="1760891662584" duration="16543000" />
       <workItem from="1760967188065" duration="16617000" />
+      <workItem from="1761059767302" duration="2839000" />
     </task>
+    <task id="LOCAL-00001" summary="perfil de usuario, editar, y eliminar">
+      <option name="closed" value="true" />
+      <created>1761060087036</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761060087036</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,10 +330,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_ROOT_NAMES" value="true" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="perfil de usuario, editar, y eliminar" />
+    <option name="LAST_COMMIT_MESSAGE" value="perfil de usuario, editar, y eliminar" />
   </component>
 </project>
