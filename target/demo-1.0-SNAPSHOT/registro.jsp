@@ -63,8 +63,9 @@
                     <input type="date" name="fecha">
                 </div>
 
+
                 <div id="campoynombre">
-                    <label for="pass">Contrasenia</label>
+                    <label for="pass">Contraseña</label>
                     <input type="password" name="pass">
                 </div>
 

@@ -11,27 +11,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PrestamoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloslibros.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/libros.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/misPrestamos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EditarPerfilServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EliminarPerfilServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloPerfil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/editarPerfil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/biblioteca.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../biblio v2/biblioteca/src/models/Libro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LectorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LectorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroAutorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroAutorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroGeneroDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroGeneroDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/PrestamoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/PrestamoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/ReservaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/ReservaDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/dao/SalaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/SalaDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/flujos/SalaMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/SalaMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/models/Reserva.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Reserva.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/perfil.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/registro.jsp" afterDir="false" />
-      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/biblioteca.iml" beforeDir="false" />
-      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/resources/db.properties" afterDir="false" />
-      <change beforePath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" beforeDir="false" afterPath="$USER_HOME$/Documents/biblio 1510/biblioteca/src/dao/PrestamoDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,29 +46,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_COMMON_BRANCH" value="main" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/biblio 1510/biblioteca" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pilarperezs"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pilarperezs&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/carozoww/biblioteca_modulo2.git",
-    "accountId": "081e0e33-1679-402f-8ef5-b5bd1d0dfbd4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/carozoww/biblioteca_modulo2.git&quot;,
+    &quot;accountId&quot;: &quot;081e0e33-1679-402f-8ef5-b5bd1d0dfbd4&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -90,61 +95,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Maven. [clean,install].executor": "Run",
-    "Maven. [clean].executor": "Run",
-    "Maven.biblioteca [clean,compile,-U].executor": "Run",
-    "Maven.biblioteca [clean,compile].executor": "Run",
-    "Maven.biblioteca [clean,install,-U].executor": "Run",
-    "Maven.biblioteca [clean,install].executor": "Run",
-    "Maven.biblioteca [clean,package,-U].executor": "Run",
-    "Maven.biblioteca [clean,package].executor": "Run",
-    "Maven.biblioteca [clean].executor": "Run",
-    "Maven.biblioteca [compile].executor": "Run",
-    "Maven.biblioteca [dependency:purge-local-repository...].executor": "Run",
-    "Maven.biblioteca [package].executor": "Run",
-    "Maven.demo [clean,compile,-U].executor": "Run",
-    "Maven.demo [clean,package,-U].executor": "Run",
-    "Maven.demo [clean,package].executor": "Run",
-    "Maven.demo [clean].executor": "Run",
-    "Maven.demo [dependency:purge-local-repository...].executor": "Run",
-    "Maven.demo [dependency:tree,|,findstr,mysql].executor": "Run",
-    "Maven.demo [dependency:tree].executor": "Run",
-    "Maven.demo [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.45.executor": "Run",
-    "git-widget-placeholder": "cambiosss",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5873563",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Maven. [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/main/webapp/WEB-INF/lib&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5873563&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
       <recent name="C:\Users\cardo\IdeaProjects\demo\target\demo-1.0-SNAPSHOT\WEB-INF\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\li-am\OneDrive\Escritorio\modulo2\biblioteca_modulo2\src\main\webapp\imgs" />
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -316,6 +322,9 @@
       <workItem from="1760194094283" duration="6642000" />
       <workItem from="1760217429660" duration="3127000" />
       <workItem from="1760550125614" duration="8180000" />
+      <workItem from="1760704277903" duration="13379000" />
+      <workItem from="1760891662584" duration="16543000" />
+      <workItem from="1760967188065" duration="16617000" />
     </task>
     <servers />
   </component>
