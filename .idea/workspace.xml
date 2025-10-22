@@ -10,9 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../biblioteca/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/biblioteca.iml" afterDir="false" />
-    </list>
+    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,19 +150,6 @@
   <component name="RunAnythingContextRecentDirectoryCache">
     <option name="paths">
       <recentPaths value="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib" />
-    </option>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationStatuses">
-      <map>
-        <entry key="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-          <value>
-            <map>
-              <entry key="Tomcat 10.1.45" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
     </option>
   </component>
   <component name="RunManager">
