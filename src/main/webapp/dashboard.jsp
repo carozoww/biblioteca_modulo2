@@ -22,7 +22,7 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
+        <a href="perfil">Cuenta</a>
         <a href="logout">Cerrar sesion</a>
     </div>
 </nav>

@@ -10,7 +10,111 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="" />
+    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/iconouser1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/libro1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/logo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/prestamo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/resenia1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/room1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/basedatos/conexion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/AdministradorDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/ComentarioDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/EditorialDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LectorDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroAutorDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/LibroGeneroDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/PenalizacionDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/PrestamoDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/ReservaDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/SalaDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/autorDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/dao/generoDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/AdminMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/AutorMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/EditorialMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/GeneroMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/LectorMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/LibroAutorMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/LibroGeneroMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/LibroMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/PenalizacionMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/PrestamoMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/SalaMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/leer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/flujos/menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Administrador.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Autor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Comentario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Editorial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Genero.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Lector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Libro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/LibroAutor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/LibroGenero.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Penalizacion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Prestamo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Reserva.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/models/Sala.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EditarPerfilServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/EliminarPerfilServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PerfilServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/estiloPerfil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/editarPerfil.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/perfil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DashboardServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/LibroServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/LoginLectorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/RegisterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestLectorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/demo-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/DashboardServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/LibroServlet1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LoginLectorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/RegisterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/TestLectorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/components/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/components/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/stiloform.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/biblioteca-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/error_prone_annotations-2.41.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/error_prone_annotations-2.41.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/gson-2.13.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/gson-2.13.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/jbcrypt-0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-j-9.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-4.31.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/bienvenida.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/iconouser.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/iconouser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/libro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/libro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/prestamo.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/prestamo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/resenia.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/resenia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/imgs/room.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2025_11_18_[Changes]/room.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/usuarios.jsp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,56 +172,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven. [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5873563&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Maven. [clean,install].executor": "Run",
+    "Maven. [clean].executor": "Run",
+    "Maven.biblioteca [clean,compile,-U].executor": "Run",
+    "Maven.biblioteca [clean,compile].executor": "Run",
+    "Maven.biblioteca [clean,install,-U].executor": "Run",
+    "Maven.biblioteca [clean,install].executor": "Run",
+    "Maven.biblioteca [clean,package,-U].executor": "Run",
+    "Maven.biblioteca [clean,package].executor": "Run",
+    "Maven.biblioteca [clean].executor": "Run",
+    "Maven.biblioteca [compile].executor": "Run",
+    "Maven.biblioteca [dependency:purge-local-repository...].executor": "Run",
+    "Maven.biblioteca [package].executor": "Run",
+    "Maven.demo [clean,compile,-U].executor": "Run",
+    "Maven.demo [clean,compile].executor": "Run",
+    "Maven.demo [clean,package,-U].executor": "Run",
+    "Maven.demo [clean,package].executor": "Run",
+    "Maven.demo [clean].executor": "Run",
+    "Maven.demo [dependency:purge-local-repository...].executor": "Run",
+    "Maven.demo [dependency:tree,|,findstr,mysql].executor": "Run",
+    "Maven.demo [dependency:tree].executor": "Run",
+    "Maven.demo [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat Server.Tomcat 10.1.45.executor": "Run",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cardo/IdeaProjects/demo",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/cardo/IdeaProjects/demo/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5873563",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
