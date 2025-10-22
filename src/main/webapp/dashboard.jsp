@@ -54,9 +54,9 @@
     </div>
 </aside>
 <main>
-    <div>
-        <h1>Seccion de filtros y buscador</h1>
-        <div>
+    <div id="filtros">
+        <h1>Filtrado</h1>
+        <div class="select-filtro">
             <select id="lista">
                 <option value="1">Todos los Libros</option>
                 <% for(String genero : generos){ %>
@@ -65,29 +65,20 @@
             </select>
             <button onclick="enviarGenero()" id="botonGenero">click</button>
         </div>
-        <div>
-            <select id="listaAutor">
-                <option value="todos">Todos los Autores</option>
-                <% for(Autor autor : autores1){ %>
-                <option value="<%= autor.getId_autor() %>"> <%= autor.getNombre() %> <%= autor.getApellido() %> </option>
-                <%} %>
+    </div>
+    <div id="buscador-seccion">
+        <h1>Buscador</h1>
+        <label for="genero">Titulo</label>
+        <input type="search" id="inputBuscador">
+        <div class="select-filtro">
+            <p>Seleccion de filtro para busqueda</p>
+            <select name="" id="selectTipo">
+                <option value="Titulo">Titulo</option>
+                <option value="Editorial" selected>Editorial</option>
+                <option value="Autor">Autor</option>
             </select>
-            <button onclick="enviarAutor()" id="botonAutor">click</button>
         </div>
-
-        <div>
-            <select id="listaEditorial">
-                <option value="todos">Todos las editoriales</option>
-                <% for(Editorial editorial : editoriales){ %>
-                <option value="<%= editorial.getIdEditorial() %>"> <%= editorial.getNombre() %> </option>
-                <%} %>
-            </select>
-            <button onclick="enviarEditorial()" id="botonAutor">click</button>
-        </div>
-        <div>
-            <h1>Buscador</h1>
-            <input type="search" id="inputBuscador">
-        </div>
+    </div>
 
     </div>
     <h1>Libros</h1>
@@ -100,7 +91,14 @@
     </div>
 
 </main>
-<footer>pie de pagina</footer>
+<footer>
+    <div id ="pie-pagina">
+        <h2>¿No encuentra un libro en nuestro catálogo? Aceptamos sugerencias por medio del siguiente formulario</h2>
+        <form action="sugerencia">
+            <button type="submit"> Acceder Formulario</button>
+        </form>
+    </div>
+</footer>
 <script src="libroapp.js"></script>
 <script>
 
@@ -132,58 +130,6 @@
                 offset = 0;
                 mostrarLibros();
 
-
-            })
-    }
-
-    async function enviarAutor(){
-        const autor = document.getElementById('listaAutor').value;
-        if(autor == "todos"){
-            offset = 0;
-            cargarLibros();
-            return;
-        }
-
-        fetch('librosAutor', {
-            method: 'POST',
-            headers:{
-                'Content-Type':'application/x-www-form-urlencoded',
-            },
-            body: 'autor=' + encodeURIComponent(autor)
-        })
-            .then(async response => {
-                if (!response.ok) {
-                    throw new Error('Error en la respuesta del servidor');
-                }
-                librosFiltrados = await response.json();
-                offset = 0;
-                mostrarLibros();
-
-            })
-    }
-
-    async function enviarEditorial(){
-        const ed = document.getElementById('listaEditorial').value;
-        if(ed == "todos"){
-            offset = 0;
-            cargarLibros();
-            return;
-        }
-
-        fetch('librosEditorial', {
-            method: 'POST',
-            headers:{
-                'Content-Type':'application/x-www-form-urlencoded',
-            },
-            body: 'editorial=' + encodeURIComponent(ed)
-        })
-            .then(async response => {
-                if (!response.ok) {
-                    throw new Error('Error en la respuesta del servidor');
-                }
-                librosFiltrados = await response.json();
-                offset = 0;
-                mostrarLibros();
 
             })
     }

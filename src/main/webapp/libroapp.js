@@ -8,12 +8,29 @@ const botonAnterior = document.getElementById('anterior');
 const buscador = document.getElementById('inputBuscador')
 
 
+
+
 buscador.addEventListener('input', (e) => {
     const termino = e.target.value.toLowerCase().trim();
+    var tipoSelect = document.getElementById('selectTipo');
 
-    librosFiltrados = misLibros.filter(libro =>
-        libro.titulo.toLowerCase().includes(termino)
-    );
+    console.log("Término buscado:", termino);
+    console.log("Tipo seleccionado:", tipoSelect.value);
+
+    if(tipoSelect.value=== "Titulo"){
+        librosFiltrados = misLibros.filter(libro =>
+            libro.titulo.toLowerCase().includes(termino)
+        );
+    }else if(tipoSelect.value === "Editorial"){
+        librosFiltrados = misLibros.filter(libro =>
+            libro.editorial.toLowerCase().includes(termino)
+        );
+    }else if(tipoSelect.value === "Autor"){
+        librosFiltrados = misLibros.filter(libro =>
+            libro.nombreAutor && libro.nombreAutor.toLowerCase().includes(termino)
+        );
+    }
+
 
     offset = 0;
     mostrarLibros();
