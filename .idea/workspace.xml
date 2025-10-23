@@ -9,14 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="7f7123d7-3404-4da2-afeb-f032d0a02e4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SugerenciaServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/sugerencia.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/demo/SugerenciaServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/SugerenciaServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/sugerencia.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/otrocss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/otrocss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,29 +39,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_COMMON_BRANCH" value="main" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;pilarperezs&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/carozoww/biblioteca_modulo2.git&quot;,
-    &quot;accountId&quot;: &quot;081e0e33-1679-402f-8ef5-b5bd1d0dfbd4&quot;
-  }
-}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -68,96 +67,36 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="32WiuNWJlbnVGCP3BWz6ozkR74r" />
+  <component name="ProjectId" id="34P4AmCqdnMOcpCt5dOeiZ2EG7u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven. [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.biblioteca [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,compile,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package,-U].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:purge-local-repository...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree,|,findstr,mysql].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.45.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/cardo/IdeaProjects/demo/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5873563&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "Tomcat Server.Tomcat 10.1.45.executor": "Run",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5873563",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp\WEB-INF\lib" />
-      <recent name="C:\Users\cardo\IdeaProjects\demo\target\demo-1.0-SNAPSHOT\WEB-INF\lib" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cardo\IdeaProjects\demo\src\main\webapp" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.demo" />
     </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn compile" />
-      <command value="mvn dependency:purge-local-repository -DmanualInclude=&quot;com.example:biblioteca&quot;" />
-      <command value="mvn clean compile -U" />
-      <command value="mvn package" />
-      <command value="mvn clean" />
-      <command value="mvn dependency:tree" />
-      <command value="mvn dependency:purge-local-repository -DmanualInclude=&quot;mysql:*,com.mysql:*&quot;" />
-      <command value="mvn dependency:tree | findstr mysql" />
-      <command value="mvn clean install -U" />
-      <command value="mvn clean package" />
-      <command value="mvn clean package -U" />
-      <command value="mvn clean install" />
-      <command value="mvn clean compile" />
-    </option>
-  </component>
-  <component name="RunAnythingContextRecentDirectoryCache">
-    <option name="paths">
-      <recentPaths value="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib" />
-    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationStatuses">
@@ -173,8 +112,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="update-resources" />
+    <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="demo:war exploded">
           <settings>
@@ -183,7 +122,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a7fcdea5-289a-4b4c-a065-6159823ab526" />
+        <option name="BASE_DIRECTORY_NAME" value="3dab4aa0-96da-43d5-aa41-9a03c4f785a6" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -191,7 +130,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="59540" />
+        <option name="DEBUG_PORT" value="50669" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -271,11 +210,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="744865e6-0767-4452-9eeb-bcc054d272e0" name="Changes" comment="" />
-      <created>1757542955862</created>
+      <changelist id="7f7123d7-3404-4da2-afeb-f032d0a02e4a" name="Changes" comment="" />
+      <created>1761101736802</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757542955862</updated>
+      <workItem from="1761101740304" duration="6465000" />
+      <workItem from="1761144548812" duration="9772000" />
       <workItem from="1757542957627" duration="9732000" />
       <workItem from="1757615133411" duration="189000" />
       <workItem from="1759360775798" duration="2576000" />

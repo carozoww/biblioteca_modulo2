@@ -28,7 +28,7 @@ public class LibroServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         try{
-            List<Libro> libros = libroDAO.listarLibros();
+            List<Libro> libros = libroDAO.listarLibrosCompleto();
             String jsonLibros =  gson.toJson(libros);
             response.getWriter().println(jsonLibros);
 

@@ -1,5 +1,12 @@
 <%@ page import="models.Lector" %>
+<%@ page import="java.util.List" %>
+<%@ page import="models.Autor" %>
+<%@ page import="models.Editorial" %>
 <%
+    List<String> generos = (List<String>) request.getAttribute("listaGeneros");
+    List<Autor> autores1 = (List<Autor>) request.getAttribute("listaAutores2");
+    List<Editorial> editoriales = (List<Editorial>) request.getAttribute("listaEditoriales");
+
     Lector usuario = (Lector) session.getAttribute("authUser");
     if (usuario == null) {
         response.sendRedirect(request.getContextPath() + "/login-lector");
@@ -47,54 +54,87 @@
     </div>
 </aside>
 <main>
-    <h1>Libros</h1>
-    <div class="contenedor-libros" id="containerLibro">
-        <div class="libro">
-            <h1>primer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>Este es el mejor libro de todos los libros </p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>segundo libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
-        </div>
-        <div class="libro">
-            <h1>tercer libro</h1>
-            <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
-            <p>hdwq8dgwqd9gwqd</p>
-            <button>ver mas</button>
+    <div id="filtros">
+        <h1>Filtrado</h1>
+        <div class="select-filtro">
+            <select id="lista">
+                <option value="1">Todos los Libros</option>
+                <% for(String genero : generos){ %>
+                <option value="<%= genero %>"> <%= genero %></option>
+                <%} %>
+            </select>
+            <button onclick="enviarGenero()" id="botonGenero">click</button>
         </div>
     </div>
+    <div id="buscador-seccion">
+        <h1>Buscador</h1>
+        <label for="genero">Titulo</label>
+        <input type="search" id="inputBuscador">
+        <div class="select-filtro">
+            <p>Seleccion de filtro para busqueda</p>
+            <select name="" id="selectTipo">
+                <option value="Titulo">Titulo</option>
+                <option value="Editorial" selected>Editorial</option>
+                <option value="Autor">Autor</option>
+            </select>
+        </div>
+    </div>
+
+    <h1>Libros</h1>
+    <div class="contenedor-libros" id="containerLibro">
+
+    </div>
+    <div id="paginacion">
+        <button id="anterior">Anterior</button>
+        <button id="siguiente">Siguiente</button>
+    </div>
+
 </main>
-<footer>pie de pagina</footer>
+<footer>
+    <div id ="pie-pagina">
+        <h2>¿No encuentra un libro en nuestro catálogo? Aceptamos sugerencias por medio del siguiente formulario</h2>
+        <form action="sugerencia">
+            <button type="submit"> Acceder Formulario</button>
+        </form>
+    </div>
+</footer>
 <script src="libroapp.js"></script>
 <script>
+
     const sidebar = document.getElementById("sidebar");
 
     function abrirBarra(){
         sidebar.classList.toggle('show')
     }
+    async function enviarGenero(){
+        const genero = document.getElementById('lista').value;
+        if(genero == "1"){
+            offset = 0;
+            cargarLibros();
+            return;
+        }
+
+        fetch('librosGenero', {
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/x-www-form-urlencoded',
+            },
+            body: 'genero=' + encodeURIComponent(genero)
+        })
+            .then(async response => {
+                if (!response.ok) {
+                    throw new Error('Error en la respuesta del servidor');
+                }
+                librosFiltrados = await response.json();
+                offset = 0;
+                mostrarLibros();
+
+
+            })
+    }
+
+
+
 </script>
 </body>
 

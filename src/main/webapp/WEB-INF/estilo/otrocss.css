@@ -128,6 +128,115 @@ main>h1 {
     padding-bottom: 10px;
 }
 
+#filtros {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+#filtros h1 {
+    color: #BF5656;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #BF5656;
+    padding-bottom: 10px;
+}
+
+.select-filtro {
+    margin-bottom: 15px;
+}
+
+.select-filtro p {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.select-filtro select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 0.95rem;
+    color: #495057;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.select-filtro select:focus {
+    outline: none;
+    border-color: #BF5656;
+    box-shadow: 0 0 0 3px rgba(191, 86, 86, 0.1);
+}
+
+.select-filtro select:hover {
+    border-color: #adb5bd;
+}
+
+.select-filtro button{
+    margin-top:10px;
+    padding: 6px 12px;
+    background-color: #BF5656;
+    color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#buscador-seccion {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+#buscador-seccion h1 {
+    color: #BF5656;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #BF5656;
+    padding-bottom: 10px;
+}
+
+#buscador-seccion label {
+    display: block;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+#buscador-seccion input[type="search"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #495057;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#buscador-seccion input[type="search"]:focus {
+    outline: none;
+    border-color: #BF5656;
+    box-shadow: 0 0 0 3px rgba(191, 86, 86, 0.1);
+}
+
+#buscador-seccion input[type="search"]:hover {
+    border-color: #adb5bd;
+}
+
 .contenedor-libros {
     display: flex;
     flex-wrap: wrap;
@@ -135,13 +244,123 @@ main>h1 {
     justify-content: center;
 }
 
-.libro {
-    width: 300px;
+#containerLibro {
+    transition: opacity 0.3s ease;
 }
 
-footer{
+#containerLibro.fade-out {
+    opacity: 0;
+}
+
+#containerLibro.fade-in {
+    opacity: 1;
+}
+
+.libro {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    text-align: center;
+
+}
+
+
+.libro h1 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.libro img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.libro p {
+    color: #6c757d;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.libro button {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.libro button:hover {
+    background-color: #a94444;
+    transform: translateY(-2px);
+}
+
+
+#paginacion {
+    display: flex;
+    margin: 20px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+#paginacion button {
+    background-color: #BF5656;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
     grid-area: footer;
-    background-color: black;
+    background-color: #BF5656;
+
+}
+
+#pie-pagina{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    padding: 15px;
+    align-items: center;
+}
+
+#pie-pagina h2{
+    color: white;
+    text-align: center;
+}
+
+#pie-pagina button{
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #FEACAC;
+    color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 @media(max-width: 800px){
