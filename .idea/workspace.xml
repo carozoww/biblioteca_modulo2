@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="demo:war" />
+      <artifact name="demo:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,21 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f7123d7-3404-4da2-afeb-f032d0a02e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SugerenciaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/sugerencia.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/otrocss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/estilo/otrocss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/libroapp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/LibroServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/example/demo/LibroServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/estilo/otrocss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/lib/biblioteca-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/libroapp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +61,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5873563",
+    "settings.editor.selected.configurable": "vcs.Mercurial",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -102,11 +90,16 @@
     <configuration name="Tomcat 10.1.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="demo:war">
+        <artifact name="demo:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/demo_war" />
+            <option name="CONTEXT_PATH" value="/demo_war_exploded" />
           </settings>
         </artifact>
+        <file path="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/demo_1_0_SNAPSHOT_war" />
+          </settings>
+        </file>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="3dab4aa0-96da-43d5-aa41-9a03c4f785a6" />
@@ -182,7 +175,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="demo:war" />
+          <artifact name="demo:war exploded" />
         </option>
       </method>
     </configuration>
