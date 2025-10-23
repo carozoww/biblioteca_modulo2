@@ -49,13 +49,14 @@
         </div>
         <div>
             <img src="imgs/room.png" alt="" width="50px" height="50px">
-            <a href="">Salas</a>
+            <a href="salas">Salas</a>
         </div>
     </div>
 </aside>
 <main>
     <div id="filtros">
         <h1>Filtrado</h1>
+
         <div class="select-filtro">
             <select id="lista">
                 <option value="1">Todos los Libros</option>
@@ -133,11 +134,7 @@
             })
     }
 
-
-
 </script>
 </body>
-
-
 
 </html>
