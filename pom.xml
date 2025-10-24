@@ -59,8 +59,12 @@
             <artifactId>gson</artifactId>
             <version>2.13.2</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>biblioteca</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>

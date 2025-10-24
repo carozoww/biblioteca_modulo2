@@ -1,0 +1,172 @@
+nav{
+    display: flex;
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    background-color: #BF5656;
+    color: white;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav #logoynombre {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/*#botton-barra{
+    visibility: hidden;
+}*/
+
+
+
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dcd7d7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Imagen del usuario */
+.perfil-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #BF5656;
+}
+
+/* Título */
+.perfil-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.perfil-container label{
+    display: block;
+
+}
+.perfil-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    outline: none;
+
+}
+
+/* Datos del perfil */
+.perfil-datos p {
+    background-color: #FEACAC;
+    color: #222;
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* Enlace de cierre de sesión */
+.boton {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #BF5656;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background-color: #a24a4a;
+}
+
+main{
+    grid-area: main;
+    margin: auto;
+    margin: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border: solid black 1px;
+    width: 600px;
+    max-width: 90%;
+}
+
+/* CONTENEDOR FLEX PARA LOS BOTONES */
+.botones-acciones {
+    display: flex; /* Los coloca en una fila */
+    gap: 15px; /* Espacio entre los botones */
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.botones-acciones a{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #BF5656;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+/* Pequeño ajuste visual para el botón del ojo */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: 100%;
+    padding-right: 40px; /* espacio para el botón */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.toggle-password:hover {
+    color: #BF5656;
+}

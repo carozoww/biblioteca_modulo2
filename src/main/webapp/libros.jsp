@@ -12,6 +12,11 @@
 
     Boolean tienePrestamo = (Boolean) request.getAttribute("tienePrestamo");
     if (tienePrestamo == null) tienePrestamo = false;
+
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+
 %>
 
 

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import dao.LibroAutorDAO;
 import dao.LibroDAO;
 import dao.PrestamoDAO;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import models.Autor;
 import models.Lector;
 import models.Libro;
 import models.Prestamo;
@@ -66,7 +68,22 @@ public class PrestamoServlet extends HttpServlet {
                     request.setAttribute("estados", estados);
                     request.setAttribute("tienePrestamo", tienePrestamo);
                     request.getRequestDispatcher("libros.jsp").forward(request, response);
+                    break;
+                case "detalle": // mostrar detalle de un libro
+                    int idLibro = Integer.parseInt(request.getParameter("id"));
+                    Libro libro = new LibroDAO().buscarPorId(idLibro);
+                    boolean tienePrestamos = prestamoDAO.prestamoActivoPorLector(idLector);
+                    boolean disponible = !prestamoDAO.prestamoActivoPorLector(idLector);
 
+                    LibroAutorDAO libroAutorDAO = new LibroAutorDAO();
+                    List<Autor> autores = libroAutorDAO.listarAutoresDeUnLibro(idLibro);
+
+                    request.setAttribute("libro", libro);
+                    request.setAttribute("estado", disponible ? "DISPONIBLE" : "NO DISPONIBLE");
+                    request.setAttribute("tienePrestamo", tienePrestamos);
+                    request.setAttribute("autores", autores);
+                    request.getRequestDispatcher("detalleLibro.jsp").forward(request, response);
+                    break;
                 default:
                     response.sendRedirect("libros.jsp");
             }
