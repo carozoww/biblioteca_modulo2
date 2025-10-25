@@ -66,6 +66,7 @@ public class PrestamoServlet extends HttpServlet {
                     request.setAttribute("estados", estados);
                     request.setAttribute("tienePrestamo", tienePrestamo);
                     request.getRequestDispatcher("libros.jsp").forward(request, response);
+                    break;
 
                 default:
                     response.sendRedirect("libros.jsp");
