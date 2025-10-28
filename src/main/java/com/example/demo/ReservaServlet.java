@@ -1,130 +1,75 @@
 package com.example.demo;
 
+import com.google.gson.Gson;
 import dao.LectorDAO;
 import dao.ReservaDAO;
 import dao.SalaDAO;
+
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import models.Lector;
 import models.Reserva;
 import models.Sala;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-@WebServlet(name = "ReservaServlet", value = "/reservar")
+@WebServlet(name = "ReservaServlet", value = "/reservas")
 public class ReservaServlet extends HttpServlet {
+    ReservaDAO reservaDAO = new ReservaDAO();
+    SalaDAO salaDAO = new SalaDAO();
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         try {
-            String valorsalaSeleccionada = request.getParameter("salaSeleccionada");
-            if (valorsalaSeleccionada == null) {
-                response.sendRedirect(request.getContextPath() + "/salas");
-                return;
-            }
+            LocalDate fechaSeleccionada = LocalDate.parse(request.getParameter("fecha"));
 
-            int salaSeleccionada = Integer.parseInt(valorsalaSeleccionada);
+            List<Sala> salas = salaDAO.listarSalas();
+            List<Reserva> reservasFiltradas = reservaDAO.listarReservasSinFinalizarPorFecha(fechaSeleccionada);
 
-            // Obtener sala
-            Sala salas = new SalaDAO().buscarSalaPorNumeroSala(salaSeleccionada);
+            List<Integer> horas = Arrays.asList(9,10,11,12,13,14,15,16,17);
+            List<Map<String, Object>> listaSalas = new ArrayList<>();
 
-            // Agregar datos al request
-            request.setAttribute("listaSalas", salas);
+            for (Sala col : salas) {
+                Map<String, Object> salaData = new HashMap<>();
+                salaData.put("idSala", col.getIdSala());
+                salaData.put("numeroSala", col.getNumeroSala());
 
-            // Solo UN forward
-            request.getRequestDispatcher("reservarSala.jsp").forward(request, response);
+                List<Boolean> disponibilidad = new ArrayList<>();
+                for (Integer hora : horas) {
+                    LocalDateTime horaInicio = fechaSeleccionada.atTime(hora, 0);
+                    LocalDateTime horaFin = horaInicio.plusHours(1);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
-        }
-    }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        try {
-            HttpSession session = request.getSession(false);
-            if (session == null || session.getAttribute("authUser") == null) {
-                response.sendRedirect(request.getContextPath() + "/login-lector");
-                return;
-            }
-
-            String valorSalaSeleccionada = request.getParameter("salaSeleccionada");
-            if (valorSalaSeleccionada == null) {
-                response.sendRedirect(request.getContextPath() + "/salas");
-                return;
-            }
-            List<Reserva> reservasMostrar = new ArrayList<>();
-            int salaSeleccionada = Integer.parseInt(valorSalaSeleccionada);
-
-            String idReserva = request.getParameter("id-reserva");
-            String fecha = request.getParameter("fecha");
-            String horaInicio = request.getParameter("hora-inicio");
-            String horaFin = request.getParameter("hora-fin");
-
-            if (idReserva != null && !idReserva.isEmpty()) {
-                Lector lector = (Lector) session.getAttribute("authUser");
-                Lector lectorCompleto = new LectorDAO().buscarPorCedula(Integer.parseInt(lector.getCedula()));
-                //Eliminar reserva
-                new ReservaDAO().eliminarReserva(Integer.parseInt(idReserva), lectorCompleto.getID());
-            }
-
-            Sala sala = new SalaDAO().buscarSalaPorNumeroSala(salaSeleccionada);
-            if (fecha != null && !fecha.isEmpty()) {
-                List<Reserva> reservas = new ReservaDAO().reservasNoTerminadasPorSalaYFecha(salaSeleccionada, fecha);
-
-                Lector lector = (Lector) session.getAttribute("authUser");
-                Lector lectorCompleto = new LectorDAO().buscarPorCedula(Integer.parseInt(lector.getCedula()));
-
-                for (Reserva r : reservas) {
-                    reservasMostrar.add(new Reserva(((lectorCompleto.getID() == r.getId_usuario()) ? r.getId_Reserva() : 0), //Mostrar id_reserva si le pertenece al lectior
-                            r.getFecha_in(), r.getFecha_fin(), 0, 0, null, null, 0));
+                    boolean ocupado = reservasFiltradas.stream().anyMatch(o ->
+                            o.getSala() == col.getNumeroSala() &&
+                                    o.getFecha_in().isBefore(horaFin) &&
+                                    o.getFecha_fin().isAfter(horaInicio)
+                    );
+                    disponibilidad.add(!ocupado);
                 }
 
-                if (horaInicio != null && horaFin != null) {
-                    boolean reservar = true;
-                    LocalDate fechaSeleccionada = LocalDate.parse(fecha);
-                    LocalTime horaInicioSeleccionada = LocalTime.parse(horaInicio);
-                    LocalTime horaFinSeleccionada = LocalTime.parse(horaFin);
-
-                    for (Reserva r : reservas) {
-                        //Evitar reservas en mismo horario
-                        if (!(!horaInicioSeleccionada.isBefore(r.getHora_fin()) || !horaFinSeleccionada.isAfter(r.getHora_in()))) {
-                            reservar = false;
-                            break;
-                        }
-                    }
-
-                    if (horaInicioSeleccionada.isAfter(horaFinSeleccionada)) {
-                        reservar = false;
-                    }
-
-                    if (reservar) {
-                        LocalDateTime fechaInicio = LocalDateTime.of(fechaSeleccionada, horaInicioSeleccionada);
-                        LocalDateTime fechaFin = LocalDateTime.of(fechaSeleccionada, horaFinSeleccionada);
-
-                        //Completar reserva
-                        new ReservaDAO().agregarReserva(sala.getIdSala(), lectorCompleto.getID(), fechaInicio, fechaFin);
-                    }
-
-                }
+                salaData.put("disponibilidad", disponibilidad);
+                listaSalas.add(salaData);
             }
-            // Agregar datos al request
-            if (fecha != null && !fecha.isEmpty()) request.setAttribute("fechaSeleccionada", fecha);
-            request.setAttribute("salaSeleccionada", salaSeleccionada);
-            request.setAttribute("sala", sala);
-            request.setAttribute("listaReservas", reservasMostrar);
 
-            // Solo UN forward
-            request.getRequestDispatcher("reservarSala.jsp").forward(request, response);
+            Map<String, Object> resultado = new HashMap<>();
+
+            List<String> horasFormato = new ArrayList<>();
+            for (Integer hora : horas) {
+                horasFormato.add(String.format("%02d:00", hora));
+            }
+
+            resultado.put("horas", horasFormato);
+            resultado.put("salas", listaSalas);
+
+            response.setContentType("application/json;charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.print(new Gson().toJson(resultado));
+            out.flush();
 
         } catch (Exception e) {
             e.printStackTrace();

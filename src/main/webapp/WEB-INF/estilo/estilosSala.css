@@ -1,0 +1,198 @@
+/* generales */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+main {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: left;
+    margin: 15px;
+}
+
+/* input de fecha */
+input[type="date"] {
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #BF5656;
+}
+
+/* estados */
+.disponible {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.no-disponible {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* mensajes */
+.mensaje, p[style*="color:"] {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+.mensaje.success {
+    color: #2ecc71;
+}
+
+.mensaje.error {
+    color: #e74c3c;
+}
+
+/* Para reservar */
+.mensajeReserva {
+    font-style: italic;
+    background-color: #fff5f5;
+    border-left: 4px solid #BF5656;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#camposHoras label {
+    font-weight: bold;
+    color: #333;
+}
+
+#camposHoras button {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#camposHoras button:hover {
+    background-color: #a53f3f;
+}
+
+#camposHoras select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.cancelar-boton {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancelar-boton:hover {
+     background-color: #a53f3f;
+ }
+
+/* Salas */
+.contenedorSalas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 20px 10px;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    background-color: #fff5f5;
+    border-radius: 4px;
+}
+
+
+/* Cada sala */
+.sala-item {
+    width: 100%;
+    min-width: 100px;
+    height: auto;
+    min-height: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.sala-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sala-item:hover {
+    background-color: #ffe0e0;
+}
+
+.sala-item.seleccionada {
+    border: 3px solid #BF5656;
+    background-color: #ffe0e0;
+}
+
+
+/* Tabla */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+th {
+    background-color:#BF5656;
+    color: white;
+}
+
+/* Contenedor de tabla con scroll horizontal */
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

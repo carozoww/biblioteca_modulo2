@@ -1,67 +1,94 @@
 package com.example.demo;
 
-import dao.SalaDAO;
+import dao.LectorDAO;
+import dao.ReservaDAO;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import models.Sala;
+import jakarta.servlet.http.HttpSession;
+import models.Lector;
+import models.Reserva;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @WebServlet(name = "SalaServlet", value = "/salas")
 public class SalaServlet extends HttpServlet {
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
+    ReservaDAO reservaDAO = new ReservaDAO();
+    LectorDAO lectorDAO = new LectorDAO();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         try {
-            // Obtener salas de la base de datos
-            List<Sala> salas = new SalaDAO().listarSalas();
-            // Agregar datos al request
-            request.setAttribute("listaSalas", salas);
+            HttpSession sesion = request.getSession();
+            Lector lector = (Lector) sesion.getAttribute("authUser");
+            if (lector == null) {
+                response.sendRedirect(request.getContextPath() + "/login-lector");
+                return;
+            }
+            Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
+            Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
 
-            // Solo UN forward
+            if (reservaActiva != null ) {
+                request.setAttribute("reservaActiva", reservaActiva);
+            }
             request.getRequestDispatcher("salas.jsp").forward(request, response);
-        } catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
         }
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            String tipoDato = request.getParameter("tipoDato");
-            String buscando = request.getParameter("buscando");
-            List<Sala> salas;
-            boolean valorValido = true;
-            if (tipoDato != null && !tipoDato.equals("ubicacion") && buscando != null && !buscando.isEmpty()) {
-                try{
-                    Integer.parseInt(buscando);
-                }catch(Exception e){
-                    valorValido = false;
+            String horaInicio = request.getParameter("hora-inicio");
+            String horaFin = request.getParameter("hora-fin");
+            String fecha = request.getParameter("fecha-enviar");
+            String sala = request.getParameter("sala-enviar");
+            String accion = request.getParameter("accion");
+
+            HttpSession sesion = request.getSession();
+            Lector lector = (Lector) sesion.getAttribute("authUser");
+            Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
+            boolean reservaPresente = reservaDAO.reservaActivaPorLector(lectorCompleto.getID());
+
+            if (accion.equals("reservar") && horaFin != null && !horaFin.isEmpty() && horaInicio != null && !horaInicio.isEmpty() && fecha != null && !fecha.isEmpty() && sala != null) {
+                int salaId = Integer.parseInt(sala);
+                if (reservaPresente) {
+                    request.getRequestDispatcher("salas.jsp").forward(request, response);
+                    return;
                 }
-            }
-            if (valorValido) {
-                if (tipoDato != null && !tipoDato.isEmpty() && buscando != null && !buscando.isEmpty()) {
-                    // Obtener salas de la base de datos
-                    System.out.println("mitad");
-                    salas = new SalaDAO().listarSalas(tipoDato, buscando);
-                }else{
-                    // Obtener salas de la base de datos
-                    System.out.println("completa");
-                    salas = new SalaDAO().listarSalas();
+
+                LocalDate fechaActual = LocalDate.now();
+                LocalTime horaActual = LocalTime.now();
+
+                LocalDate fechaDate = LocalDate.parse(fecha);
+                LocalTime horaInicial = LocalTime.parse(horaInicio);
+                LocalTime horaFinal = LocalTime.parse(horaFin);
+
+                if (horaInicial.isAfter(horaFinal) || fechaDate.equals(fechaActual) && horaActual.isAfter(horaInicial)) {
+                    request.setAttribute("mensaje", "Horas seleccionadas no validas");
+                    request.getRequestDispatcher("salas.jsp").forward(request, response);
+                    return;
                 }
-            }else{
-                salas = new ArrayList<>();
+
+                LocalDateTime fechaHoraInicio = fechaDate.atTime(horaInicial);
+                LocalDateTime fechaHoraFin = fechaDate.atTime(horaFinal);
+
+                reservaDAO.agregarReserva(salaId, lectorCompleto.getID(), fechaHoraInicio, fechaHoraFin);
+            } else if (accion.equals("cancelar")){
+                reservaDAO.cancelarReservaPorLector(lectorCompleto.getID());
+            } else if (accion.equals("terminar")){
+                reservaDAO.finalizarReservaPorLector(lectorCompleto.getID());
             }
 
+            Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
+            request.setAttribute("reservaActiva", null);
+            if (reservaActiva != null ) {
+                request.setAttribute("reservaActiva", reservaActiva);
+            }
 
-            // Agregar datos al request
-            request.setAttribute("listaSalas", salas);
-
-            // Solo UN forward
             request.getRequestDispatcher("salas.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
