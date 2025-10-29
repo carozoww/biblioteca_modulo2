@@ -43,7 +43,7 @@
         </div>
         <div>
             <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
-            <a href="prestamos?accion=catalogo">Prestamos</a>
+            <a href="prestamos?accion=listar">Préstamos</a>
         </div>
         <div>
             <img src="imgs/room.png" alt="" width="50px" height="50px">

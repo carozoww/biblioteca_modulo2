@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+#navbar {
+    display: flex;
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    background-color: #BF5656;
+    color: white;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoynombre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logoynombre img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+#logoynombre h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+#elementos_derecha a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+#elementos_derecha a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.main-content {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-volver {
+    background-color: #BF5656;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    background-color: #FEACAC;
+    color: #BF5656;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla th {
+    background-color: #BF5656;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #FEACAC;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #f48b8b;
+}
+
+.tabla td {
+    max-width: none;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.msg {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.msg-exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.msg-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
