@@ -77,7 +77,7 @@
 
 
     <section class="tabla-prestamos">
-        <h3>Préstamos activos o reservados</h3>
+        <h3>Préstamo pendiente o reservado</h3>
         <table class="tabla">
             <thead>
             <tr>
