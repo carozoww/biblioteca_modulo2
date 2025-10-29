@@ -19,6 +19,7 @@ import java.time.LocalTime;
 public class SalaServlet extends HttpServlet {
     ReservaDAO reservaDAO = new ReservaDAO();
     LectorDAO lectorDAO = new LectorDAO();
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         try {
@@ -31,16 +32,17 @@ public class SalaServlet extends HttpServlet {
             Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
             Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
 
-            if (reservaActiva != null ) {
+            if (reservaActiva != null) {
                 request.setAttribute("reservaActiva", reservaActiva);
             }
             request.getRequestDispatcher("salas.jsp").forward(request, response);
-        }catch(Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         try {
             String horaInicio = request.getParameter("hora-inicio");
             String horaFin = request.getParameter("hora-fin");
@@ -77,22 +79,21 @@ public class SalaServlet extends HttpServlet {
                 LocalDateTime fechaHoraFin = fechaDate.atTime(horaFinal);
 
                 reservaDAO.agregarReserva(salaId, lectorCompleto.getID(), fechaHoraInicio, fechaHoraFin);
-            } else if (accion.equals("cancelar")){
+            } else if (accion.equals("cancelar")) {
                 reservaDAO.cancelarReservaPorLector(lectorCompleto.getID());
-            } else if (accion.equals("terminar")){
+            } else if (accion.equals("terminar")) {
                 reservaDAO.finalizarReservaPorLector(lectorCompleto.getID());
             }
 
             Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
             request.setAttribute("reservaActiva", null);
-            if (reservaActiva != null ) {
+            if (reservaActiva != null) {
                 request.setAttribute("reservaActiva", reservaActiva);
             }
 
             request.getRequestDispatcher("salas.jsp").forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error: " + e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 }
