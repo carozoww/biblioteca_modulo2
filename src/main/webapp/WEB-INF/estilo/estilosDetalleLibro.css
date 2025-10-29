@@ -1,0 +1,146 @@
+body {
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#navbar {
+    display: flex;
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    background-color: #BF5656;
+    color: white;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoynombre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logoynombre img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+#logoynombre h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+#elementos_derecha a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+#elementos_derecha a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#detalle-libro {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.titulo-libro {
+    font-size: 2rem;
+    color: #BF5656;
+    margin-bottom: 60px;
+
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.info-libro {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.info-libro p {
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.info-libro b {
+    color: #BF5656;
+}
+
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-reservar {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #FEACAC;
+    color: #BF5656;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: not-allowed;
+}
+
+.btn-volver {
+    text-decoration: none;
+    color: #BF5656;
+    font-weight: bold;
+    border: 2px solid #BF5656;
+    border-radius: 12px;
+    padding: 8px 20px;
+    transition: 0.2s ease;
+}
+
+.btn-volver:hover {
+    background-color: #BF5656;
+    color: white;
+}

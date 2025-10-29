@@ -21,11 +21,11 @@
     <h1>Biblioteca</h1>
 </div>
 <div  id="camposytitulo">
-    <h2>Inicio de Sesion</h2>
+    <h2>Inicio de Sesión</h2>
     <div class="formulario">
         <form action="login-lector" method="post">
             <div id="campoynombre">
-                <label for="cedula">Cedula:</label>
+                <label for="cedula">Cédula:</label>
                 <input type="number" id="campo" name="cedula" required >
             </div>
 
