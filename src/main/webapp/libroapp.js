@@ -69,7 +69,7 @@ function mostrarLibros(){
                 <h1>${libro.titulo}</h1>
                 <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
                 <p>${libro.fechaPublicacion}</p>
-                <button>ver mas</button>
+                <button onclick="verDetalle(${libro.idLibro})">Ver más</button>
             `;
             divLibros.appendChild(libroDiv);
         });
@@ -85,9 +85,10 @@ function mostrarLibros(){
     },150)
 }
 
-
-
-
+function verDetalle(idLibro) {
+    // redirige a una página de detalle
+    window.location.href = `detalleLibro.jsp?id=${idLibro}`;
+}
 
 function checkBotones(){
     if(offset === 0){
