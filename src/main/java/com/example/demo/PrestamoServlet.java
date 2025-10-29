@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import dao.LibroAutorDAO;
 import dao.LibroDAO;
 import dao.PrestamoDAO;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import models.Autor;
 import models.Lector;
 import models.Libro;
 import models.Prestamo;
@@ -42,34 +44,23 @@ public class PrestamoServlet extends HttpServlet {
                     request.setAttribute("prestamos", prestamos);
                     request.getRequestDispatcher("misPrestamos.jsp").forward(request, response);
                     break;
+                case "detalle": // mostrar detalle de un libro
+                    int idLibro = Integer.parseInt(request.getParameter("id"));
+                    Libro libro = new LibroDAO().buscarPorId(idLibro);
+                    boolean tienePrestamos = prestamoDAO.prestamoActivoPorLector(idLector);
+                    boolean disponible = !prestamoDAO.prestamoActivoPorLector(idLector);
 
-                case "catalogo": // mostrar todos los libros con disponibilidad
-                    LibroDAO libroDAO = new LibroDAO();
-                    List<models.Libro> libros = libroDAO.listarLibros(); // todos los libros
-                    List<String> estados = new ArrayList<>();
+                    LibroAutorDAO libroAutorDAO = new LibroAutorDAO();
+                    List<Autor> autores = libroAutorDAO.listarAutoresDeUnLibro(idLibro);
 
-                    //  ver si el lector ya tiene un prestamo activo
-                    boolean tienePrestamo = prestamoDAO.prestamoActivoPorLector(idLector);
-
-                    // ver la disponibilidad de cada libro
-                    for (Libro libro : libros) {
-                        boolean activo = prestamoDAO.prestamoActivoPorLibro(libro.getIdLibro());
-                        if (activo) {
-                            estados.add("NO DISPONIBLE");
-                        } else {
-                            estados.add("DISPONIBLE");
-                        }
-                    }
-
-                    //  Pasamos la info al JSP
-                    request.setAttribute("libros", libros);
-                    request.setAttribute("estados", estados);
-                    request.setAttribute("tienePrestamo", tienePrestamo);
-                    request.getRequestDispatcher("libros.jsp").forward(request, response);
+                    request.setAttribute("libro", libro);
+                    request.setAttribute("estado", disponible ? "DISPONIBLE" : "NO DISPONIBLE");
+                    request.setAttribute("tienePrestamo", tienePrestamos);
+                    request.setAttribute("autores", autores);
+                    request.getRequestDispatcher("detalleLibro.jsp").forward(request, response);
                     break;
-
                 default:
-                    response.sendRedirect("libros.jsp");
+                    response.sendRedirect("dashboard.jsp");
             }
 
         } catch (Exception e) {
@@ -83,14 +74,20 @@ public class PrestamoServlet extends HttpServlet {
         try {
             String accion = request.getParameter("accion");
             HttpSession sesion = request.getSession();
-            Integer idLector = (Integer) sesion.getAttribute("idLector");
 
+            // recuperar el lector desde la sesión
+            Lector usuario = (Lector) sesion.getAttribute("authUser");
+            if (usuario == null) {
+                response.sendRedirect("login.jsp");
+                return;
+            }
+            int idLector = usuario.getID();
             boolean exito = false;
 
             if ("reservar".equals(accion)) {
                 int idLibro = Integer.parseInt(request.getParameter("idLibro"));
 
-                // 🔍 verificar si el lector ya tiene un prestamo activo
+                //  verificar si el lector ya tiene un prestamo activo
                 boolean tienePrestamoActivo = prestamoDAO.prestamoActivoPorLector(idLector);
 
                 if (tienePrestamoActivo) {
@@ -105,8 +102,8 @@ public class PrestamoServlet extends HttpServlet {
 
             } else if ("cancelar".equals(accion)) {
                 int idPrestamo = Integer.parseInt(request.getParameter("idPrestamo"));
-                // finalizar prestamo (cambia fecha de devolucion y estado en la tabla prestamo)
-                prestamoDAO.finalizarPrestamo(idPrestamo, LocalDateTime.now());
+                // cancelar prestamo (cambia fecha de devolucion y estado en la tabla prestamo)
+                prestamoDAO.cancelarPrestamo(idPrestamo, LocalDateTime.now());
                 exito = true;
             }
 
