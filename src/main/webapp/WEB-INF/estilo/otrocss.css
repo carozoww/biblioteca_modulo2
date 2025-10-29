@@ -48,6 +48,20 @@ nav a:hover {
     color: black;
 }
 
+#elementos_medio{
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+#elementos_medio a{
+    border: black solid 2px;
+    background-color: #FEACAC;
+    color: black;
+    padding: 12px 24px;
+}
+
+
 
 
 #botton-barra{
@@ -128,10 +142,19 @@ main>h1 {
     padding-bottom: 10px;
 }
 
+#seccion-filtros{
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #filtros {
     background-color: #f8f9fa;
     border-radius: 10px;
     padding: 20px;
+    width: 45%;
+    height: 70%;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #e9ecef;
@@ -193,6 +216,8 @@ main>h1 {
 #buscador-seccion {
     background-color: #f8f9fa;
     border-radius: 10px;
+    width: 45%;
+    height: 70%;
     padding: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -235,6 +260,15 @@ main>h1 {
 
 #buscador-seccion input[type="search"]:hover {
     border-color: #adb5bd;
+}
+
+#boton-alta button{
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #71B971;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .contenedor-libros {
@@ -307,9 +341,28 @@ main>h1 {
     width: 100%;
 }
 
+
+
 .libro button:hover {
-    background-color: #a94444;
     transform: translateY(-2px);
+}
+
+.div-botones{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.div-botones .ver-mas{
+    background-color: #71B971;
+}
+
+.div-botones .editar{
+    background-color: #FFDB58;
+}
+
+.div-botones .eliminar{
+    background-color: #BF5656;
 }
 
 
