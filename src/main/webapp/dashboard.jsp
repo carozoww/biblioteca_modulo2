@@ -23,7 +23,7 @@
     </div>
     <div id="elementos_derecha">
         <a href="perfil">Cuenta</a>
-        <a href="logout">Cerrar sesion</a>
+        <a href="logout">Cerrar sesión</a>
     </div>
 </nav>
 <aside id="sidebar">
