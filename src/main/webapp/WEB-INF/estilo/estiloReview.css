@@ -1,0 +1,248 @@
+#reviewsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.review-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.review-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.review-card p {
+    margin: 4px 0;
+    font-weight: 500;
+    color: #555;
+}
+
+.review-card .lector-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.review-card .libro-img {
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+
+.review-card .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+/* Modal general */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Layout top: libro y lector */
+.modal-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.libro-info {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+#modal-libro-img {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.lector-info {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    gap: 8px;
+}
+
+#modal-lector-img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.libro-titulo-stars h3 {
+    margin: 0 0 4px 0;
+}
+
+#modal-stars {
+    color: #f5b50a;
+}
+
+
+#modal-resenia {
+    margin-top: 12px;
+}
+
+
+#modal-like-section {
+    margin-top: 12px;
+}
+
+#inputComentario {
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ed2929;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#inputComentario:focus {
+    border-color: #4a90e2;
+}
+
+.stars {
+    color: #f5b50a;
+    margin: 8px 0;
+}
+
+button {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #b14141;
+}
+
+
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sugerencias {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #fff;
+    z-index: 1000;
+}
+
+
+.sugerencias .sugerencia-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.sugerencias .sugerencia-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+#comentariosList {
+    margin-top: 15px;
+}
+
+
+.comentario-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px; /* separa los comentarios entre sí */
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* separador */
+}
+
+
+.comentario-item .lector-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.comentario-item p {
+    margin: 5px 0 0;
+    color: #333;
+}
+
+
+.comentario-item strong {
+    color: #111;
+}
+
+
+.comentario-item span {
+    font-size: 0.8em;
+    color: #888;
+}
