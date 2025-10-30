@@ -61,7 +61,7 @@
 
     <div id="mainContent"></div>
 
-    <div id="contenidoLibros">
+    <div id="seccion-filtros">
         <div id="filtros">
             <h1>Filtrado</h1>
 
@@ -69,38 +69,35 @@
                 <select id="lista">
                     <option value="1">Todos los Libros</option>
                     <% for(String genero : generos){ %>
-
-                    <option value="<%= genero %>"><%= genero %></option>
-                    <% } %>
-
+                    <option value="<%= genero %>"> <%= genero %></option>
+                    <%} %>
                 </select>
                 <button onclick="enviarGenero()" id="botonGenero">click</button>
             </div>
         </div>
-
-
         <div id="buscador-seccion">
             <h1>Buscador</h1>
-            <label for="genero">Título</label>
+            <label for="genero">Titulo</label>
             <input type="search" id="inputBuscador">
             <div class="select-filtro">
-                <p>Selección de filtro para búsqueda</p>
+                <p>Seleccion de filtro para busqueda</p>
                 <select name="" id="selectTipo">
-                    <option value="Titulo">Título</option>
-                    <option value="Editorial" selected>Editorial</option>
+                    <option value="Titulo" selected>Titulo</option>
+                    <option value="Editorial">Editorial</option>
                     <option value="Autor">Autor</option>
                 </select>
             </div>
         </div>
+    </div>
 
 
-        <h1>Libros</h1>
-        <div class="contenedor-libros" id="containerLibro"></div>
+    <h1>Libros</h1>
+    <div class="contenedor-libros" id="containerLibro">
 
-        <div id="paginacion">
-            <button id="anterior">Anterior</button>
-            <button id="siguiente">Siguiente</button>
-        </div>
+    </div>
+    <div id="paginacion">
+        <button id="anterior">Anterior</button>
+        <button id="siguiente">Siguiente</button>
     </div>
 
 </main>
