@@ -26,7 +26,6 @@ public class DashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Verificar sesión
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("authUser") == null) {
             response.sendRedirect(request.getContextPath() + "/login-lector");
