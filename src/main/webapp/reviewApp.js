@@ -1,5 +1,4 @@
 let pagina = 1;
-const idLector = 1; // ID del lector actual
 let cargandoDetalle = false;
 
 // Generar estrellas
@@ -72,7 +71,7 @@ async function darLike(idReview) {
         const res = await fetch('reviews', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `accion=like&id_review=${idReview}&id_lector=${idLector}`
+            body: `accion=like&id_review=${idReview}`
         });
         const data = await res.json();
 

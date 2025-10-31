@@ -3,6 +3,7 @@ package com.example.demo;
 import com.google.gson.Gson;
 import dao.ReviewDAO;
 import dao.ReviewComentarioDAO;
+import models.Lector;
 import models.Review;
 import models.ReviewComentario;
 import jakarta.servlet.annotation.WebServlet;
@@ -85,7 +86,16 @@ public class ReviewServlet extends HttpServlet {
         try {
             if ("like".equals(accion)) {
                 int idReview = Integer.parseInt(request.getParameter("id_review"));
-                int idLector = Integer.parseInt(request.getParameter("id_lector"));
+
+                // Obtener el lector logueado desde la sesión
+                Lector usuario = (Lector) request.getSession().getAttribute("authUser");
+                if (usuario == null) {
+                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                    response.getWriter().println(gson.toJson(Map.of("error", "Usuario no logueado")));
+                    return;
+                }
+                int idLector = usuario.getID();
+
                 int nuevoConteo = reviewDAO.darLike(idReview, idLector);
                 response.getWriter().println(gson.toJson(Map.of("exito", true, "nuevoConteo", nuevoConteo)));
                 return;
@@ -93,8 +103,15 @@ public class ReviewServlet extends HttpServlet {
 
             if ("crearComentario".equals(accion) || "agregarComentario".equals(accion)) {
                 int idReview = Integer.parseInt(request.getParameter("id_review"));
-                int idLector = Integer.parseInt(request.getParameter("id_lector"));
                 String contenido = request.getParameter("contenido");
+
+                Lector usuario = (Lector) request.getSession().getAttribute("authUser");
+                if (usuario == null) {
+                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                    response.getWriter().println(gson.toJson(Map.of("error", "Usuario no logueado")));
+                    return;
+                }
+                int idLector = usuario.getID();
 
                 boolean exito = comentarioDAO.crearComentario(idReview, idLector, contenido);
                 response.getWriter().println(gson.toJson(Map.of("exito", exito)));
@@ -109,12 +126,20 @@ public class ReviewServlet extends HttpServlet {
             String resenia = request.getParameter("resenia");
 
             boolean exito = false;
+
+            Lector usuario = (Lector) request.getSession().getAttribute("authUser");
+            if (usuario == null) {
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.getWriter().println(gson.toJson(Map.of("error", "Usuario no logueado")));
+                return;
+            }
+            int idL = usuario.getID();
+
             if (idReviewStr != null && !idReviewStr.isEmpty()) {
                 int idR = Integer.parseInt(idReviewStr);
                 int valoracion = Integer.parseInt(valoracionStr);
                 exito = reviewDAO.actualizarReview(idR, valoracion, resenia);
             } else {
-                int idL = Integer.parseInt(idLectorStr);
                 int idLib = Integer.parseInt(idLibroStr);
                 int valoracion = Integer.parseInt(valoracionStr);
                 exito = reviewDAO.crearReview(idL, idLib, valoracion, resenia);
@@ -125,6 +150,7 @@ public class ReviewServlet extends HttpServlet {
             } else {
                 response.getWriter().println(gson.toJson(Map.of("error", "No se pudo guardar la review")));
             }
+
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().println(gson.toJson(Map.of("error", "Datos incorrectos")));

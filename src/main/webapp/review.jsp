@@ -85,6 +85,5 @@
     </div>
 </div>
 
-<script type="module" src="reviewApp.js"></script>
 </body>
 </html>

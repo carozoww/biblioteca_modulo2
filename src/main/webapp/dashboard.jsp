@@ -171,7 +171,7 @@
                 link.href = './WEB-INF/estilo/estiloReview.css';
                 document.head.appendChild(link);
             }
-
+            const idLector = <%= usuario.getID() %>;
             const script = document.createElement('script');
             script.src = 'reviewApp.js';
             script.type = 'module';
