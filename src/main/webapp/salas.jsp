@@ -9,26 +9,29 @@
 <html>
 <head>
     <title>Salas</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/estilosSala.css"%></style>
-
+    <style>
+        <%@include file="./WEB-INF/estilo/otrocss.css" %>
+    </style>
+    <style>
+        <%@include file="./WEB-INF/estilo/estilosSala.css" %>
+    </style>
 </head>
 <body>
 <%
-Lector usuario = (Lector) session.getAttribute("authUser");
-if (usuario == null) {
-response.sendRedirect(request.getContextPath() + "/login-lector");
-return;
-}
-List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
-Reserva reservaActiva = (Reserva) request.getAttribute("reservaActiva");
-String mensaje = (String) request.getAttribute("mensaje");
+    Lector usuario = (Lector) session.getAttribute("authUser");
+    if (usuario == null) {
+        response.sendRedirect(request.getContextPath() + "/login-lector");
+        return;
+    }
+    List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
+    Reserva reservaActiva = (Reserva) request.getAttribute("reservaActiva");
+    String mensaje = (String) request.getAttribute("mensaje");
 
-String fechaFormateada = "";
-if (reservaActiva != null) {
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-fechaFormateada = reservaActiva.getFecha_in().format(formatter);
-}
+    String fechaFormateada = "";
+    if (reservaActiva != null) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        fechaFormateada = reservaActiva.getFecha_in().format(formatter);
+    }
 %>
 <nav>
     <div id="logoynombre">
@@ -38,47 +41,40 @@ fechaFormateada = reservaActiva.getFecha_in().format(formatter);
     </div>
     <div id="elementos_derecha">
         <a href="perfil">Cuenta</a>
-        <a href="logout">Cerrar sesion</a>
+        <a href="logout">Cerrar sesión</a>
     </div>
 </nav>
-<aside id="sidebar">
-    <div id="columna_contenido">
-        <div>
-            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
-            <a href="">Usuarios</a>
-        </div>
-        <div>
-            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
-            <a href="">Reseñas</a>
-        </div>
-        <div>
-            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
-            <a href="prestamos?accion=catalogo">Prestamos</a>
-        </div>
-        <div>
-            <img src="imgs/room.png" alt="" width="50px" height="50px">
-            <a href="salas">Salas</a>
-        </div>
-    </div>
-</aside>
 <main>
-    <div id="mensaje" class="mensaje error"><%= mensaje %></div>
+<header>
+    <a href="dashboard" class="btn-volver ">Volver al inicio</a>
+</header>
+
+    <div id="mensaje" class="mensaje error"><%= mensaje %>
+    </div>
     <% if (reservaActiva != null) { %>
     <h1>Reserva sin terminar</h1>
-    <div>
-        <h2>Sala: <%= reservaActiva.getSala() %></h2>
-        <h2>Fecha: <%= fechaFormateada %></h2>
-        <h2>Horas reservadas: <%= reservaActiva.getHora_in() %> - <%= reservaActiva.getHora_fin() %> </h2>
-    </div>
+    <div class="reserva-container">
+        <h2>Sala: <span class="sala"><%= reservaActiva.getSala() %></span></h2>
+        <h2>Fecha: <span class="fecha"><%= fechaFormateada %></span></h2>
+        <div>
+            <span>Horas reservadas:</span>
+            <span class="hora"><%= reservaActiva.getHora_in() %> - <%= reservaActiva.getHora_fin() %></span>
+        </div>
 
-    <form id="realizarReserva" action="salas" method="post">
+
+    <form id="realizarReserva" action="salas" method="post" class="form-reserva">
         <input type="hidden" id="finalizar-accion" name="accion">
         <button id="finalizar-boton" class="cancelar-boton" type="submit">Cancelar</button>
     </form>
+    </div>
     <% } else { %>
     <div>
-        <h1>Seleccionar hora de Reserva:</h1>
+        <div>
+            <h1>Seleccionar sala:</h1>
+            <div class="contenedorSalas" id="containerSalas"></div>
+        </div>
 
+        <h1>Realizar Reserva:</h1>
         <p id="mensajeReserva" class="mensajeReserva">Selecciona una fecha y una sala para comenzar la reserva.</p>
         <form action="salas" method="post" id="formReserva">
             <div id="camposHoras">
@@ -93,37 +89,29 @@ fechaFormateada = reservaActiva.getFecha_in().format(formatter);
                 <select id="hora-fin" name="hora-fin" required></select>
                 <br>
                 <br>
-                <button type="submit">Reservar</button>
+                <button type="submit" >Reservar</button>
             </div>
         </form>
+
+        <% } %>
+        <div class="contenedorContenido">
+            <div>
+                <div>
+                <h1>Seleccionar fecha: </h1>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha"/>
+                </div>
+                <br>
+                <br>
+                <div id="tabla-container" class="tabla-scroll"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="contenedorContenido">
-        <% } %>
-        <div>
-            <h1>Horarios</h1>
-            <label for="fecha">Selecciona fecha:</label>
-            <input type="date" id="fecha"/>
-            <br>
-            <br>
-            <div id="tabla-container" class="tabla-scroll"></div>
-        </div>
-        <% if (reservaActiva == null) { %>
-        <div>
-            <h1>Seleccionar sala</h1>
-            <div class="contenedorSalas" id="containerSalas"></div>
-        </div>
-    </div>
-    <% } %>
+
+
 </main>
-<footer>
-    <div id ="pie-pagina">
-        <h2>¿No encuentra un libro en nuestro catálogo? Aceptamos sugerencias por medio del siguiente formulario</h2>
-        <form action="sugerencia">
-            <button type="submit"> Acceder Formulario</button>
-        </form>
-    </div>
-</footer>
 
 <script>
     const inputFecha = document.getElementById("fecha");
@@ -140,94 +128,108 @@ fechaFormateada = reservaActiva.getFecha_in().format(formatter);
     let reservasPorFecha = null;
 
 
-const salaItems = document.querySelectorAll('.sala-item');
-
-
-
-
-
-    // Cargar lista de salas
-    function cargarSalas() {
-      fetch("listadoSalas")
-        .then(res => res.text())
-        .then(html => contenedorSalas.innerHTML = html)
-        .catch(err => console.error("Error al cargar salas:", err));
-    }
-
-function initSalaItems() {
     const salaItems = document.querySelectorAll('.sala-item');
 
-    salaItems.forEach(function(item) {
-        const img = item.querySelector('.sala-img');
-        const info = item.querySelector('.info');
-        const btn = item.querySelector('.btn-info');
 
-        function toggleInfo() {
-            // Toggle usando clase
-            info.classList.toggle('visible');
-            item.classList.toggle('seleccionada');
-        }
+    // Cargar lista de salas/*
 
-        img.addEventListener('click', toggleInfo);
-        btn.addEventListener('click', toggleInfo);
-    });
-}
+    function initSalaItems() {
+        const salaItems = document.querySelectorAll('.sala-item');
 
-document.addEventListener('DOMContentLoaded', initSalaItems);
+        salaItems.forEach(function (item) {
+            const img = item.querySelector('.sala-img');
+            const info = item.querySelector('.info');
+            const btn = item.querySelector('.btn-info');
+
+            function toggleInfo() {
+                // Toggle usando clase
+                info.classList.toggle('visible');
+                item.classList.toggle('seleccionada');
+            }
+
+            img.addEventListener('click', toggleInfo);
+            btn.addEventListener('click', toggleInfo);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', initSalaItems);
 
 
     // Cargar tabla reservas
     function cargarTablaReservas() {
-      if (!reservasPorFecha) return;
+        if (!reservasPorFecha) return;
 
-    <% if (reservaActiva == null) { %>
-      fechaEnviar.value = inputFecha.value;
-    <% } %>
+        <% if (reservaActiva == null) { %>
+        fechaEnviar.value = inputFecha.value;
+        <% } %>
 
-      const { horas, salas } = reservasPorFecha;
-      const fechaActual = new Date();
-      let horariosValidos = horas.filter(hora => {
-        const fechaHora = new Date(inputFecha.value + `T` + hora + `:00`);
-        return fechaHora > fechaActual;
-      });
-      let html = "<table><thead><tr><th>Hora</th>";
+        const {horas, salas} = reservasPorFecha;
+        const fechaActual = new Date();
+        let horariosValidos = horas.filter(hora => {
+            const fechaHora = new Date(inputFecha.value + `T` + hora + `:00`);
+            return fechaHora > fechaActual;
+        });
+        let html = "<table><thead><tr><th>Hora</th>";
 
-      salas.forEach(s => {
-        html += `<th>Sala ` + s.numeroSala + `</th>`;
-      });
-
-      html += "</tr></thead><tbody>";
-
-      horas.forEach((hora, i) => {
-        html += `<tr><td>` + hora.toString() + `</td>`;
         salas.forEach(s => {
-        if (horariosValidos.includes(hora)) {
-          const disponible = s.disponibilidad[i];
-          html += disponible
-          ? "<td class='disponible'>&#10004;</td>"
-          : "<td class='no-disponible'>&#10008;</td>";
-                 } else {
-                    html += "<td class='no-disponible'>&#10008;</td>";
-                  }
+            html += `<th>Sala ` + s.numeroSala + `</th>`;
         });
 
-        html += "</tr>";
-      });
+        html += "</tr></thead><tbody>";
 
-      html += "</tbody></table>";
-      contenedorReservas.innerHTML = html;
+        horas.forEach((hora, i) => {
+            html += `<tr><td>` + hora.toString() + `</td>`;
+            salas.forEach(s => {
+                if (horariosValidos.includes(hora)) {
+                    const disponible = s.disponibilidad[i];
+                    html += disponible
+                        ? "<td class='disponible'>&#10004;</td>"
+                        : "<td class='no-disponible'>&#10008;</td>";
+                } else {
+                    html += "<td class='no-disponible'>&#10008;</td>";
+                }
+            });
+
+            html += "</tr>";
+        });
+
+        html += "</tbody></table>";
+        contenedorReservas.innerHTML = html;
+    }
+
+
+    function cargarSalas() {
+        fetch("salas?action=listar")
+            .then(res => res.json())
+            .then(data => {
+                let html = "";
+                data.forEach(s => {
+                    html += "<div class='sala-item' id='" + s.idSala + "' onclick='actualizarValor(" + s.idSala + ")'>";
+
+                    const img = s.imagen && s.imagen.trim() !== "" ? s.imagen : "imgs/room.png";
+
+                    html += " <p>Sala " + s.numeroSala + "</p>";
+                    html += " <img src=" + img + " alt='Sala' width='150' height='150'>";
+                    html += "<div class='info'>";
+                    html += "<p>Sala: " + s.numeroSala + "</p>";
+                    html += "<p>Max Personas: " + s.maxPersonas + "</p>";
+                    html += " <p>Ubicación:" + s.ubicacion + "</p></div></div>";
+                });
+                contenedorSalas.innerHTML = html;
+            })
+            .catch(err => console.error("Error al cargar salas:", err));
     }
 
     async function actualizarEstadoReserva() {
-    <% if (reservaActiva != null) { %>
-    return
-    <% } %>
-      const fecha = inputFecha.value.trim();
-      const sala = salaEnviar.value.trim();
+        <% if (reservaActiva != null) { %>
+        return
+        <% } %>
+        const fecha = inputFecha.value.trim();
+        const sala = salaEnviar.value.trim();
 
 
-      if (fecha !== "" && sala && sala !== "") {
-            const { horas, salas } = reservasPorFecha;
+        if (fecha !== "" && sala && sala !== "") {
+            const {horas, salas} = reservasPorFecha;
             const fechaActual = new Date();
 
             let horariosValidos = horas.filter(hora => {
@@ -235,164 +237,169 @@ document.addEventListener('DOMContentLoaded', initSalaItems);
                 return fechaHora > fechaActual;
             });
 
-        mensajeReserva.style.display = "none";
-        camposHoras.style.display = "block";
+            mensajeReserva.style.display = "none";
+            camposHoras.style.display = "block";
 
-        // Obtener las horariosValidos ocupadas de la sala actual
-        const salaSeleccionada = salas.find(s => s.idSala == sala ) || [];
+            // Obtener las horariosValidos ocupadas de la sala actual
+            const salaSeleccionada = salas.find(s => s.idSala == sala) || [];
 
-        horaInicio.value = "";
-        horaFin .value = "";
+            horaInicio.value = "";
+            horaFin.value = "";
 
-        const opcionInicial = document.createElement("option");
-        opcionInicial.value = "";
-        opcionInicial.textContent = "Selecciona hora";
-        opcionInicial.selected = true;
+            const opcionInicial = document.createElement("option");
+            opcionInicial.value = "";
+            opcionInicial.textContent = "Selecciona hora";
+            opcionInicial.selected = true;
 
-        horaInicio.innerHTML = "";
-        horaInicio.appendChild(opcionInicial);
+            horaInicio.innerHTML = "";
+            horaInicio.appendChild(opcionInicial);
 
-        // Recorrer las horariosValidos y agregar solo las disponibles
-        for (const hora of horariosValidos) {
-          const index = horariosValidos.indexOf(hora);
-          if (salaSeleccionada.disponibilidad[index]) {
-            const option = document.createElement("option");
-            option.value = hora;
-            option.textContent = hora;
-            horaInicio.appendChild(option);
-          }
+            // Recorrer las horariosValidos y agregar solo las disponibles
+            for (const hora of horariosValidos) {
+                const index = horariosValidos.indexOf(hora);
+                if (salaSeleccionada.disponibilidad[index]) {
+                    const option = document.createElement("option");
+                    option.value = hora;
+                    option.textContent = hora;
+                    horaInicio.appendChild(option);
+                }
+            }
+
+            // Generar horas +1
+            const horasMasUno = horariosValidos.map(hora => {
+                const partes = hora.trim().split(":");
+                const h = parseInt(partes[0], 10);
+                const nuevaHora = (h + 1).toString().padStart(2, "0");
+                return nuevaHora + ":00";
+            });
+
+            const opcionFinal = document.createElement("option");
+            opcionFinal.value = "";
+            opcionFinal.textContent = "Selecciona hora";
+            opcionFinal.selected = true;
+
+            horaFin.innerHTML = "";
+            horaFin.appendChild(opcionFinal);
+
+            // Recorrer las horas y agregar solo las disponibles
+            for (const hora of horasMasUno) {
+                const index = horasMasUno.indexOf(hora);
+                if (salaSeleccionada.disponibilidad[index]) {
+                    const option = document.createElement("option");
+                    option.value = hora;
+                    option.textContent = hora;
+                    horaFin.appendChild(option);
+                }
+            }
+        } else {
+            mensajeReserva.style.display = "block";
+            camposHoras.style.display = "none";
         }
-
-        // Generar horas +1
-        const horasMasUno = horariosValidos.map(hora => {
-          const partes = hora.trim().split(":");
-          const h = parseInt(partes[0], 10);
-          const nuevaHora = (h + 1).toString().padStart(2, "0");
-          return nuevaHora + ":00";
-        });
-
-        const opcionFinal = document.createElement("option");
-        opcionFinal.value = "";
-        opcionFinal.textContent = "Selecciona hora";
-        opcionFinal.selected = true;
-
-        horaFin.innerHTML = "";
-        horaFin.appendChild(opcionFinal);
-
-        // Recorrer las horas y agregar solo las disponibles
-        for (const hora of horasMasUno) {
-          const index = horasMasUno.indexOf(hora);
-          if (salaSeleccionada.disponibilidad[index]) {
-            const option = document.createElement("option");
-            option.value = hora;
-            option.textContent = hora;
-            horaFin.appendChild(option);
-          }
-        }
-      } else {
-        mensajeReserva.style.display = "block";
-        camposHoras.style.display = "none";
-      }
     }
 
     async function actualizarValoresReservas() {
-      if (inputFecha.value === "")
-        return;
-      const url = "reservas?fecha=" + encodeURIComponent(inputFecha.value);
-      await fetch(url)
-        .then(res => res.json())
-        .then(data => {reservasPorFecha = data; cargarTablaReservas(data); actualizarEstadoReserva(data);})
-        .catch(err => console.error("Error al cargar reservas:", err));
+        if (inputFecha.value === "")
+            return;
+        const url = "reservas?fecha=" + encodeURIComponent(inputFecha.value);
+        await fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                reservasPorFecha = data;
+                cargarTablaReservas(data);
+                actualizarEstadoReserva(data);
+            })
+            .catch(err => console.error("Error al cargar reservas:", err));
     }
 
     inputFecha.addEventListener("change", () => {
 
-      actualizarValoresReservas();
+        actualizarValoresReservas();
     });
 
     // Al seleccionar una sala
     function actualizarValor(idSala) {
-      salaEnviar.value = idSala;
+        salaEnviar.value = idSala;
 
-      // Quitar clase 'seleccionada' de todas las salas
-      document.querySelectorAll(".sala-item").forEach(sala => {
-        sala.classList.remove("seleccionada");
-      });
+        // Quitar clase 'seleccionada' de todas las salas
+        document.querySelectorAll(".sala-item").forEach(sala => {
+            sala.classList.remove("seleccionada");
+        });
 
-      // Añadir clase 'seleccionada' a la sala clickeada
-      const salaSeleccionada = document.getElementById(idSala);
-      if (salaSeleccionada) {
-        salaSeleccionada.classList.add("seleccionada");
-      }
+        // Añadir clase 'seleccionada' a la sala clickeada
+        const salaSeleccionada = document.getElementById(idSala);
+        if (salaSeleccionada) {
+            salaSeleccionada.classList.add("seleccionada");
+        }
 
-      actualizarEstadoReserva();
+        actualizarEstadoReserva();
     }
 
     function actualizarHoraFin() {
-      const valorInicio = horaInicio.value;
+        const valorInicio = horaInicio.value;
 
-      Array.from(horaFin.options).forEach(opt => opt.hidden = false);
-      if (!valorInicio) return;
+        Array.from(horaFin.options).forEach(opt => opt.hidden = false);
+        if (!valorInicio) return;
 
-      const hInicio = parseInt(valorInicio.split(":")[0]);
-      let horaReferencia = hInicio;
-      let consecutivo = true;
+        const hInicio = parseInt(valorInicio.split(":")[0]);
+        let horaReferencia = hInicio;
+        let consecutivo = true;
 
-      Array.from(horaFin.options).forEach(opt => {
-        if (!opt.value) return;
-        const h = parseInt(opt.value.split(":")[0]);
+        Array.from(horaFin.options).forEach(opt => {
+            if (!opt.value) return;
+            const h = parseInt(opt.value.split(":")[0]);
 
-        if (h <= hInicio) {
-          opt.hidden = true;
-          return;
-        }
+            if (h <= hInicio) {
+                opt.hidden = true;
+                return;
+            }
 
-        if (!consecutivo) {
-          opt.hidden = true;
-          return;
-        }
+            if (!consecutivo) {
+                opt.hidden = true;
+                return;
+            }
 
-        if (h - horaReferencia === 1) {
-          horaReferencia = h;
-        } else if (h - horaReferencia > 1) {
-          consecutivo = false;
-          opt.hidden = true;
-        }
-      });
+            if (h - horaReferencia === 1) {
+                horaReferencia = h;
+            } else if (h - horaReferencia > 1) {
+                consecutivo = false;
+                opt.hidden = true;
+            }
+        });
     }
 
     function actualizarHoraInicio() {
-      const valorFin = horaFin.value;
+        const valorFin = horaFin.value;
 
-      Array.from(horaInicio.options).forEach(opt => opt.hidden = false);
-      if (!valorFin) return;
+        Array.from(horaInicio.options).forEach(opt => opt.hidden = false);
+        if (!valorFin) return;
 
-      const hFin = parseInt(valorFin.split(":")[0]);
-      let horaReferencia = hFin;
-      let consecutivo = true;
+        const hFin = parseInt(valorFin.split(":")[0]);
+        let horaReferencia = hFin;
+        let consecutivo = true;
 
-      Array.from(horaInicio.options).reverse().forEach(opt => {
-        if (!opt.value) return;
-        const h = parseInt(opt.value.split(":")[0]);
+        Array.from(horaInicio.options).reverse().forEach(opt => {
+            if (!opt.value) return;
+            const h = parseInt(opt.value.split(":")[0]);
 
-        if (h >= hFin) {
-          opt.hidden = true;
-          return;
-        }
+            if (h >= hFin) {
+                opt.hidden = true;
+                return;
+            }
 
-        if (!consecutivo) {
-          opt.hidden = true;
-          return;
-        }
+            if (!consecutivo) {
+                opt.hidden = true;
+                return;
+            }
 
-        if (horaReferencia - h === 1) {
-          horaReferencia = h;
-        } else if (horaReferencia - h > 1) {
-          consecutivo = false;
-          opt.hidden = true;
-        }
-      });
+            if (horaReferencia - h === 1) {
+                horaReferencia = h;
+            } else if (horaReferencia - h > 1) {
+                consecutivo = false;
+                opt.hidden = true;
+            }
+        });
     }
+
     <% if (reservaActiva == null) { %>
 
     horaInicio.addEventListener("change", actualizarHoraFin);
@@ -411,36 +418,36 @@ document.addEventListener('DOMContentLoaded', initSalaItems);
 
     // Al cargar la página
     window.addEventListener("DOMContentLoaded", () => {
-      const ahora = new Date();
-      const year = ahora.getFullYear();
-      const month = String(ahora.getMonth() + 1).padStart(2, "0"); // meses 0-11
-      const day = String(ahora.getDate()).padStart(2, "0");
-      const hoy = year + `-` + month + `-` + day;
+        const ahora = new Date();
+        const year = ahora.getFullYear();
+        const month = String(ahora.getMonth() + 1).padStart(2, "0"); // meses 0-11
+        const day = String(ahora.getDate()).padStart(2, "0");
+        const hoy = year + `-` + month + `-` + day;
 
-      inputFecha.value = hoy;
-      inputFecha.min = hoy;
+        inputFecha.value = hoy;
+        inputFecha.min = hoy;
 
-    <% if (mensaje != null) { %>
-      mostrarMensaje();
-    <% } %>
+        <% if (mensaje != null) { %>
+        mostrarMensaje();
+        <% } %>
 
-    <% if (reservaActiva != null) { %>
-      const horaActiva = "<%= reservaActiva.getHora_in() %>";
-      const horaActual = ahora.toTimeString().split(':').slice(0,2).join(':');
-      const fechaReserva = "<%= reservaActiva.getFecha_in() %>".split("T")[0];
+        <% if (reservaActiva != null) { %>
+        const horaActiva = "<%= reservaActiva.getHora_in() %>";
+        const horaActual = ahora.toTimeString().split(':').slice(0, 2).join(':');
+        const fechaReserva = "<%= reservaActiva.getFecha_in() %>".split("T")[0];
 
-      if (fechaReserva == hoy && horaActual < horaActiva) {
-        finalizarAccion.value = "cancelar"
-        finalizarBoton.textContent = "Cancelar";
-      } else {
-        finalizarAccion.value = "terminar"
-        finalizarBoton.textContent = "Terminar";
-      }
-    <% } else { %>
+        if (fechaReserva == hoy && horaActual < horaActiva) {
+            finalizarAccion.value = "cancelar"
+            finalizarBoton.textContent = "Cancelar";
+        } else {
+            finalizarAccion.value = "terminar"
+            finalizarBoton.textContent = "Terminar";
+        }
+        <% } else { %>
         cargarSalas();
         initSalaItems();
-    <% } %>
-      actualizarValoresReservas();
+        <% } %>
+        actualizarValoresReservas();
     });
 </script>
 </body>
