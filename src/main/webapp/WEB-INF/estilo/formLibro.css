@@ -115,7 +115,9 @@ container-img input:not(:placeholder-shown){
     width: 100%;
 }
 
-#listado-editoriales{
+#listado-editoriales,
+#listado-autores,
+#listado-generos{
     background-color: rgb(233, 222, 222);
     width: 100%;
     left: 0;
@@ -125,12 +127,39 @@ container-img input:not(:placeholder-shown){
     top: 100%;
 }
 
-.editorial{
+.editorial,
+.autor,
+.genero{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 12px;
     border-bottom: 1px solid #ccc;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background-color: #BF5656;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+ul li button{
+    padding: 3px 3px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

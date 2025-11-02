@@ -1,17 +1,33 @@
-<%--
+<%@ page import="models.Libro" %>
+<%@ page import="models.Autor" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="models.Genero" %><%--
   Created by IntelliJ IDEA.
   User: cardo
-  Date: 27/10/2025
-  Time: 15:44
+  Date: 30/10/2025
+  Time: 23:27
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
+<%
+    Libro libro = null;
+    List<Autor> autores = new ArrayList<>();
+    List<Genero> generos = new ArrayList<>();
+    if(request.getAttribute("libro") != null){
+        libro = (Libro) request.getAttribute("libro");
+    }
+    if(request.getAttribute("autores") != null){
+        autores = (List<Autor>) request.getAttribute("autores");
+    }
+    if(request.getAttribute("generos") != null){
+        generos = (List<Genero>) request.getAttribute("generos");
+    }
+
+%>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
     <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
 </head>
 <body>
@@ -27,25 +43,26 @@
 </header>
 <div id="seccion-form">
     <form  method="POST" id="formulario" enctype="multipart/form-data">
-        <h1>Registrar Libro</h1>
+        <h1>Modificar Libro</h1>
         <div class="container-campo">
-            <label for="titulo">Titulo:</label>
-            <input type="text" name="titulo" maxlength="29" required>
+            <label for="titulo">Titulo Actual:</label>
+            <input type="text" name="titulo" maxlength="29" value="<%=libro.getTitulo()%>" required>
+            <input type="hidden" value="<%=libro.getIdLibro()%>" name="id_libro">
         </div>
         <div class="container-campo">
-            <label for="isbn">ISBN:</label>
-            <input type="text" name="isbn" maxlength="16" required>
+            <label for="isbn">ISBN Actual:</label>
+            <input type="text" name="isbn"  maxlength="16" value="<%=libro.getIsbn()%>" required>
         </div>
         <div class="container-campo">
-            <label for="fecha">Fecha de Publicación:</label>
-            <input type="date" name="fecha" required>
+            <label for="fecha">Fecha de Publicación Actual:</label>
+            <input type="date" name="fecha" value="<%=libro.getFechaPublicacion()%>" required >
         </div>
         <div class="container-campo">
-            <label for="editorial">Editorial:</label>
+            <label for="editorial">Editorial Actual:</label>
             <div id="buscar-editorial">
                 <div id="seccion-buscador-ed">
-                    <input type="search" name="idEditorial" id="edSearch" required>
-                    <input type="hidden" name="editorialid" id="idEditorial">
+                    <input type="search" name="idEditorial" id="edSearch" value="<%=libro.getEditorial()%>" required>
+                    <input type="hidden" name="editorialid" id="idEditorial" value="<%=libro.getIdEditorial()%>">
                 </div>
                 <div id="listado-editoriales">
 
@@ -68,12 +85,13 @@
             <label> Autores Asignados: </label>
             <div >
                 <ul id="autores-seleccion">
-
+                    <% for(Autor autor : autores){%>
+                    <li><%=autor.getNombre()%> <%=autor.getApellido()%><button value="<%=autor.getId_autor()%>" type="button" class="del">Eliminar</button></li>
+                    <%} %>
                 </ul>
             </div>
 
         </div>
-
 
         <div class="container-campo">
             <label for="">Genero:</label>
@@ -91,31 +109,43 @@
             <label> Generos Asignados: </label>
             <div >
                 <ul id="generos-seleccion">
-
+                    <% for(Genero genero : generos){%>
+                    <li><%=genero.getNombre()%><button value="<%=genero.getId_genero()%>" type="button" class="del">Eliminar</button></li>
+                    <%} %>
                 </ul>
             </div>
 
         </div>
-
         <div class="container-campo">
-            <label for="sinopsis">Sinopsis:</label>
-            <textarea name="sinopsis" id="" maxlength="254"></textarea>
+            <label for="sinopsis">Sinopsis Actual:</label>
+            <textarea name="sinopsis" id="" maxlength="254"><%=libro.getSinopsis()%></textarea>
         </div>
         <div class="container-campo">
-            <label for="numpaginas">Número de páginas:</label>
-            <input type="number" name="numpaginas" required>
+            <label for="numpaginas">Número de páginas actual:</label>
+            <input type="number" name="numpaginas" value="<%=libro.getNumpaginas()%>" required>
         </div>
         <div class="container-img">
-            <label for="">Imagen del libro:</label>
+            <label for="">Imagen del libro actual:</label>
+            <br>
+            <img src="<%=libro.getImagen_url()%>"  width="150" height="250">
             <input type="file" id="imagenInput" name="image" accept="image/*" required>
         </div>
         <div id="botones">
-            <button type="button">Cancelar</button>
+            <button type="button"> Cancelar</button>
             <button id="submitBtn" type="submit">Registrar Libro</button>
         </div>
     </form>
     <script src="altaLibro.js"></script>
     <script>
+        <%for(Autor autor : autores){ %>
+        autoresSeleccionados.push("<%=autor.getId_autor()%>")
+        <%}%>
+        <%for(Genero genero : generos){ %>
+        generosSeleccionados.push("<%=genero.getId_genero()%>")
+        <%}%>
+        console.log(autoresSeleccionados);
+
+
         document.getElementById('formulario').addEventListener('submit', async function(e) {
             e.preventDefault();
 
@@ -127,7 +157,7 @@
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Subiendo...';
 
-                const response = await fetch('alta-libro-servlet', {
+                const response = await fetch('modificar-libro-servlet', {
                     method: 'POST',
                     body: formData
                 });

@@ -23,7 +23,7 @@
 
     <header>
         <div id="logoynombre">
-            <img src="logo.jpg" width="100px" height="100px">
+            <img src="imgs/logo.jpg" width="100px" height="100px">
             <h1>Biblio-Tech-a</h1>
         </div>
         <div id="elementos_derecha">
@@ -37,17 +37,16 @@
             <div id="contenido">
                 <h1>Sugerencia</h1>
                 <p>¡Cuentanos sobre el libro o libros, que estas deseando poder ver en la biblioteca!</p>
-                <textarea name="areatexto" id="areatexto" maxlength="250"></textarea>
+                <textarea name="areatexto" id="areatexto" maxlength="250" required></textarea>
             </div>
             <div class="contador">
                 <span id="contador">250</span> caracteres restantes
             </div>
             <div id="botones">
 
-                    <button type="submit">Enviar Sugerencia</button>
+                <button type="button"  onclick="window.location.href='dashboard'">Volver</button>
+                <button type="submit">Enviar Sugerencia</button>
 
-
-                <button>Volver</button>
             </div>
             </form>
         </div>

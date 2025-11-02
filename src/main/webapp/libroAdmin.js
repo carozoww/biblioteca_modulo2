@@ -72,8 +72,8 @@ function mostrarLibros(){
                 <p>${libro.fechaPublicacion}</p>
                 <div class="div-botones">
                     <button class="ver-mas">Ver mas</button>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
+                    <button class="editar" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
+                    <button class="eliminar" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'">Eliminar</button>
                 </div>
             `;
             }else{
@@ -83,8 +83,8 @@ function mostrarLibros(){
                 <p>${libro.fechaPublicacion}</p>
                 <div class="div-botones">
                     <button class="ver-mas">Ver mas</button>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
+                    <button class="editar" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
+                    <button class="eliminar" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'" >Eliminar</button>
                 </div>
             `;
             }

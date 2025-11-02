@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
+    <title><%=usuario.getID()%></title>
 </head>
 
 <body>
@@ -105,9 +106,8 @@
 <footer>
     <div id="pie-pagina">
         <h2>¿No encuentra un libro en nuestro catálogo? Aceptamos sugerencias por medio del siguiente formulario</h2>
-        <form action="sugerencia">
-            <button type="submit">Acceder Formulario</button>
-        </form>
+        <button type="submit" onclick="window.location.href='sugerencia?id=<%=usuario.getID()%>'" >Acceder Formulario</button>
+
     </div>
 </footer>
 
