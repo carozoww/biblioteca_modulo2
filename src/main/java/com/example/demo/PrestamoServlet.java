@@ -102,8 +102,9 @@ public class PrestamoServlet extends HttpServlet {
 
             } else if ("cancelar".equals(accion)) {
                 int idPrestamo = Integer.parseInt(request.getParameter("idPrestamo"));
-                // cancelar prestamo (cambia fecha de devolucion y estado en la tabla prestamo)
-                prestamoDAO.cancelarPrestamo(idPrestamo, LocalDateTime.now());
+                // cancelar prestamo (elimina el prestamo)
+                prestamoDAO.eliminarPrestamo(idPrestamo);
+
                 exito = true;
             }
 
