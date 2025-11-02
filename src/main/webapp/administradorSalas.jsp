@@ -63,12 +63,13 @@
         <h2 id="textoAccion">Gestionar salas</h2>
         <div style="display: flex; align-items: flex-start; gap: 20px;">
             <img id="imagenSeleccionada" src='imgs/room.png' alt='Sala' width='150' height='150'>
-            <form style="flex: 1;" id="editarSala" action="administradorSalas" method="post">
+            <form style="flex: 1;" id="editarSala" action="administradorSalas" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="accion" name="accion" value="agregar">
                 <input type="hidden" id="id-sala" name="id-sala" required>
-                <div class="form-group">
-                    <label for="imagen-url">URL:</label>
-                    <input id="imagen-url" name="imagen-url" required>
+                <input type="hidden" id="imagen-anterior" name="imagen-anterior" required>
+                <div class="container-img">
+                    <label for="imagen-url">Imagen:</label>
+                    <input type="file" id="imagen-url" name="image" accept="image/*" required>
                 </div>
                 <div class="form-group">
                     <label for="numero-sala">Numero Sala:</label>
@@ -128,6 +129,7 @@
     const numSala = document.getElementById("numero-sala");
     const ubicacion = document.getElementById("ubicacion");
     const maxPersona = document.getElementById("max-personas");
+    const imagenAnterior = document.getElementById("imagen-anterior");
 
     const eliminarSalaForm = document.getElementById("eliminarSala");
     const eliminarSala = document.getElementById("eliminar-sala");
@@ -140,7 +142,8 @@
     function editarSalaCampos(salaId) {
         const datos = datosSalas.filter(sala => sala.idSala === salaId);
         idSala.value = datos[0].idSala || "";
-        urlImg.value = datos[0].imagen || "";
+        //urlImg.value = datos[0].imagen || "";
+        console.log("imagen " + datos[0].imagen);
         numSala.value = datos[0].numeroSala || "";
         ubicacion.value = datos[0].ubicacion || "";
         maxPersona.value = datos[0].maxPersonas || "";
@@ -150,9 +153,10 @@
         } else {
             imagenSeleccionada.src = datos[0].imagen ;
         }
-
+        imagenAnterior.value = datos[0].imagen;
         cancelar.classList.remove("hidden");
         boton.className = "btn-modificar";
+        urlImg.required = false;
         boton.innerText = "Actualizar";
         accion.value = "editar";
 
@@ -173,9 +177,11 @@
     cancelar.addEventListener('click', (e) => {
         cancelar.classList.add("hidden");
         boton.className = "btn-agregar";
+        urlImg.required = true;
         boton.innerText = "Agregar";
         accion.value = "agregar";
 
+        imagenAnterior.value = "";
         idSala.value = "";
         urlImg.value = "";
         numSala.value = "";
