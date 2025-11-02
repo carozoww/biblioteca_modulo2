@@ -65,12 +65,22 @@ function mostrarLibros(){
         librosPagina.forEach(libro =>{
             const libroDiv = document.createElement('div');
             libroDiv.className = 'libro';
-            libroDiv.innerHTML = `
+            if(libro.imagen_url == null){
+                libroDiv.innerHTML = `
                 <h1>${libro.titulo}</h1>
                 <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
                 <p>${libro.fechaPublicacion}</p>
                 <button onclick="verDetalle(${libro.idLibro})">Ver más</button>
             `;
+            }else{
+                libroDiv.innerHTML = `
+                <h1>${libro.titulo}</h1>
+                <img src="${libro.imagen_url}" alt="" width="150px" height="150px">
+                <p>${libro.fechaPublicacion}</p>
+                <button onclick="verDetalle(${libro.idLibro})">Ver más</button>
+                `;
+            }
+            
             divLibros.appendChild(libroDiv);
         });
 

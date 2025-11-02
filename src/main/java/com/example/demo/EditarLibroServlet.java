@@ -7,30 +7,34 @@ import com.google.gson.JsonObject;
 import dao.LibroAutorDAO;
 import dao.LibroDAO;
 import dao.LibroGeneroDAO;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
+import models.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-@WebServlet(name = "AltaLibroServlet", value = "/alta-libro-servlet")
+@WebServlet(name = "ModificarLibroServlet", value = "/modificar-libro-servlet")
 @MultipartConfig(
         maxFileSize = 10 * 1024 * 1024,      // 10MB máximo
         maxRequestSize = 10 * 1024 * 1024,   // 10MB máximo
         fileSizeThreshold = 1024 * 1024      // 1MB en memoria
 )
-public class AltaLibroServlet extends HttpServlet {
+public class EditarLibroServlet extends HttpServlet {
     private String message;
-    private LibroAutorDAO libroautordao = new LibroAutorDAO();
+    private LibroDAO libdao = new LibroDAO();
     private LibroGeneroDAO librogenerodao = new LibroGeneroDAO();
-    private LibroDAO librodao = new LibroDAO();
+    private LibroAutorDAO libroautordao = new LibroAutorDAO();
     private static Properties reader = new Properties();
     private static String CLOUD_NAME = "";
     private static String API_KEY = "";
@@ -44,8 +48,18 @@ public class AltaLibroServlet extends HttpServlet {
         response.setContentType("text/html");
 
         try{
+            String id = request.getParameter("id");
+            int id_libro = Integer.parseInt(id);
+            Libro libro = libdao.buscarLibroPorID(id_libro);
+            List<Autor> autores = libroautordao.listarAutoresDeUnLibro(id_libro);
+            List<Genero> generos = librogenerodao.listarGenerosDeLibro(id_libro);
 
-            request.getRequestDispatcher("altaLibro.jsp").forward(request, response);
+            request.setAttribute("autores",autores);
+            request.setAttribute("generos",generos);
+
+            request.setAttribute("libro", libro);
+
+            request.getRequestDispatcher("modificarLibro.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -66,6 +80,10 @@ public class AltaLibroServlet extends HttpServlet {
         String sinopsis = request.getParameter("sinopsis");
         int numpaginas = Integer.parseInt(request.getParameter("numpaginas"));
         Date fechaPublicacion = Date.valueOf(fecha);
+        String id = request.getParameter("id_libro");
+        int id_libro = Integer.parseInt(id);
+
+
         String autores = request.getParameter("autorid");
         String generos = request.getParameter("generoid");
 
@@ -87,11 +105,6 @@ public class AltaLibroServlet extends HttpServlet {
                 return;
             }
 
-            String[] autoresIds = autores.split(",");
-
-            System.out.println(librodao.obtenerId());
-
-            String[] generoIds = generos.split(",");
 
             String imageUrl = uploadToCloudinary(filePart);
 
@@ -99,15 +112,25 @@ public class AltaLibroServlet extends HttpServlet {
             jsonResponse.addProperty("message", "Libro e imagen guardados exitosamente");
             jsonResponse.addProperty("imageUrl", imageUrl);
 
+            libroautordao.eliminarAutoresDeLibro(id_libro);
+            librogenerodao.eliminarGenerosDeLibro(id_libro);
+
+            if(!autores.isEmpty() ){
+                String[] autoresIds = autores.split(",");
+                for(String id1 : autoresIds){
+                    libroautordao.asignarAutorALibro(Integer.parseInt(id1),id_libro);
+                }
+            }
+
+            if(!generos.isEmpty() ){
+                String[] generoIds = generos.split(",");
+                for(String id1 : generoIds){
+                    librogenerodao.asignarGeneroLibro(id_libro,Integer.parseInt(id1));
+                }
+            }
+
             LibroDAO librodao = new LibroDAO();
-            librodao.crearLibroConImagen(titulo,isbn,fechaPublicacion,editorial,sinopsis,numpaginas,imageUrl);
-            System.out.println(librodao.obtenerId());
-            for(String id : autoresIds){
-                libroautordao.asignarAutorALibro(Integer.parseInt(id),librodao.obtenerId());
-            }
-            for(String id : generoIds){
-                librogenerodao.asignarGeneroLibro(librodao.obtenerId(),Integer.parseInt(id));
-            }
+            librodao.EditarLibroActualizado(titulo,isbn,fechaPublicacion,editorial,sinopsis,numpaginas,imageUrl,id_libro);
             out.print(jsonResponse.toString());
         }catch(Exception e){
             throw new RuntimeException(e);
