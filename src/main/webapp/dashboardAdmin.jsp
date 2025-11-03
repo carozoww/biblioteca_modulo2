@@ -29,7 +29,7 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_medio">
-        <a href="">Generos</a>
+        <a href="generosAdmin">Generos</a>
         <a href="">Autores</a>
         <a href="">Editoriales</a>
         <a href="">Salas</a>

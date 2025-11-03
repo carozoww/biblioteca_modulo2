@@ -1,0 +1,81 @@
+table {
+    width: 70%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+th {
+    background-color: #a4f4f4;
+}
+button {
+    padding: 6px 10px;
+    margin: 2px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.agregar {
+    background-color: #4CAF50;
+    color: white;
+}
+.editar {
+    background-color: #FFC107;
+    color: black;
+}
+.eliminar {
+    background-color: #F44336;
+    color: white;
+}
+/* Título */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+label{
+    display: block;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding-right: 40px; /* espacio para el botón */
+}
+
+
+.mensaje {
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+}
+.exito { background-color: #c8e6c9; color: #256029; }
+.error { background-color: #ffcdd2; color: #b71c1c; }
+
+a{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #BF5656;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #BF5656;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
