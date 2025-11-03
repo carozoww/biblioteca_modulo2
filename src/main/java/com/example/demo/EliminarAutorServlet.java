@@ -1,0 +1,30 @@
+package com.example.demo;
+
+import dao.autorDAO;
+import dao.generoDAO;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+
+@WebServlet(name = "eliminarAutor", value = "/eliminarAutor")
+
+public class EliminarAutorServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        try {
+
+            autorDAO.eliminarAutor(id);
+            response.sendRedirect("autoresAdmin?mensaje=Autor eliminado correctamente");
+
+        }catch (Exception e) {
+            throw  new ServletException(e);
+
+        }
+
+    }
+
+}

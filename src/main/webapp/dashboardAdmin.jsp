@@ -30,7 +30,7 @@
     </div>
     <div id="elementos_medio">
         <a href="generosAdmin">Generos</a>
-        <a href="">Autores</a>
+        <a href="autoresAdmin">Autores</a>
         <a href="">Editoriales</a>
         <a href="">Salas</a>
     </div>
