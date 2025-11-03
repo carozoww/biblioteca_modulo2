@@ -9,6 +9,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import models.Lector;
 import models.Reserva;
 import models.Sala;
 
@@ -16,12 +18,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 
 @WebServlet(name = "ReservaServlet", value = "/reservas")
 public class ReservaServlet extends HttpServlet {
     ReservaDAO reservaDAO = new ReservaDAO();
     SalaDAO salaDAO = new SalaDAO();
+    LectorDAO lectorDAO = new LectorDAO();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {

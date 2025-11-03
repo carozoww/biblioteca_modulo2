@@ -63,11 +63,11 @@
             <input type="hidden" id="accion" name="accion" value="agregar">
             <input type="hidden" id="id-reserva" name="id-reserva">
             <div class="form-group">
-                <label for="id-sala">Id Sala:</label>
+                <label for="id-sala">Sala:</label>
                 <select id="id-sala" name="id-sala" required></select>
             </div>
             <div class="form-group">
-                <label for="id-lector">Id Lector:</label>
+                <label for="id-lector">Lector:</label>
                 <select id="id-lector" name="id-lector" required></select>
             </div>
             <div class="form-group">

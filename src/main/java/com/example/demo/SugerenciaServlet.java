@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import models.Lector;
 
 import java.io.IOException;
 
@@ -22,7 +23,8 @@ public class SugerenciaServlet extends HttpServlet {
         response.setContentType("text/html");
 
         try{
-
+            String idlector = request.getParameter("id");
+            System.out.println(idlector);
 
             HttpSession sesion = request.getSession();
 
@@ -36,10 +38,16 @@ public class SugerenciaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
 
         try{
+
             System.out.println("Entramos en el POST");
             String contenido = request.getParameter("areatexto");
             HttpSession sesion = request.getSession();
-            Integer idLector = (Integer) sesion.getAttribute("idLector");
+            Lector lector = (Lector) sesion.getAttribute("authUser");
+            if(lector == null){
+                System.out.println("El lector es null xdddd");
+            }
+            int idLector = lector.getID();
+            System.out.println(idLector);
             SugerenciaDAO sugerenciadao = new SugerenciaDAO();
             sugerenciadao.crearSugerencia(contenido,idLector);
             response.sendRedirect(request.getContextPath() + "/dashboard");
@@ -47,7 +55,7 @@ public class SugerenciaServlet extends HttpServlet {
 
 
         }catch(Exception e){
-            new RuntimeException(e);
+            throw new RuntimeException(e);
         }
     }
 

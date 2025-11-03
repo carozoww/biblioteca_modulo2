@@ -22,14 +22,14 @@
     // filtrar préstamos activos, reservados
     List<Prestamo> prestamosActivos = new ArrayList<>();
     // y disponibles (prestamos anteriores)
-    List<Prestamo> prestamosDisponibles = new ArrayList<>();
+    List<Prestamo> prestamosFinalizados = new ArrayList<>();
 
     if (prestamos != null) {
         for (Prestamo p : prestamos) {
             if ("PENDIENTE".equals(p.getEstado()) || "RESERVADO".equals(p.getEstado())) {
                 prestamosActivos.add(p);
-            } else if ("DISPONIBLE".equals(p.getEstado())) {
-                prestamosDisponibles.add(p);
+            } else if ("FINALIZADO".equals(p.getEstado())) {
+                prestamosFinalizados.add(p);
             }
         }
     }
@@ -127,8 +127,8 @@
             </tr>
             </thead>
             <tbody>
-            <% if (!prestamosDisponibles.isEmpty()) {
-                for (Prestamo p : prestamosDisponibles) {
+            <% if (!prestamosFinalizados.isEmpty()) {
+                for (Prestamo p : prestamosFinalizados) {
                     Libro libro = libroDAO.buscarPorId(p.getIdLibro());
             %>
             <tr>

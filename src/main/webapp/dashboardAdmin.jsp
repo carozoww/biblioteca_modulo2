@@ -29,8 +29,8 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_medio">
-        <a href="">Generos</a>
-        <a href="">Autores</a>
+        <a href="generosAdmin">Generos</a>
+        <a href="autoresAdmin">Autores</a>
         <a href="">Editoriales</a>
         <a href="">Salas</a>
     </div>
@@ -90,6 +90,7 @@
     </div>
     <div id="boton-alta">
         <button onclick="window.location.href='alta-libro-servlet'">Crear Libro</button>
+        <button>Asignar Autor a Libro</button>
     </div>
 
     <h1>Libros</h1>

@@ -4,6 +4,25 @@ h1, h2 {
     margin: 15px;
 }
 
+nav {
+    z-index: 10;
+}
+
+/* boton volver */
+.btn-volver {
+    background-color: #BF5656;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    background-color: #FEACAC;
+    color: #BF5656;
+}
+
+
 /* input de fecha */
 input[type="date"] {
     font-size: 14px;
@@ -48,10 +67,13 @@ input[type="date"]:focus {
 /* Para reservar */
 .mensajeReserva {
     font-style: italic;
-    background-color: #fff5f5;
-    border-left: 4px solid #BF5656;
-    padding: 10px;
-    border-radius: 5px;
+    border-left: 6px solid #BF5656;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(191, 86, 86, 0.2);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 #camposHoras label {
@@ -200,12 +222,39 @@ th {
     box-sizing: border-box;
 }
 
+/* Contenedor de reserva activa */
+.reserva-container {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 25px;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
 
+/* Títulos dentro de la reserva */
+.reserva-container h2 {
+    color: #BF5656;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Detalles de horas, sala y fecha */
+.reserva-container div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.form-reserva {
+    margin-top: 20px;
+}
 
 
-
-
+.cancelar-boton {
+    width: 100%;
+}
 
 
 
