@@ -52,7 +52,10 @@
                 <label>Contraseña:</label>
                 <div class="password-container">
                     <input id="contrasenia" type="password" name="contrasenia" value="" autocomplete="off">
-                    <button type="button" class="toggle-password" onclick="togglePassword()" title="Mostrar contraseña">👁️</button>
+                    <button type="button" class="toggle-password" onclick="togglePassword()" title="Mostrar contraseña">
+                        <img id="icono-ojo"  src="imgs/eye-fill-6.png" alt="Mostrar" width="22">️
+                    </button>
+
                 </div>
                 <small>Dejala vacía si no querés cambiarla.</small>
             </div>
@@ -66,20 +69,16 @@
 </main>
 <script>
     function togglePassword() {
+
         const input = document.getElementById('contrasenia');
-        if (!input) return; // protección por si algo falla
-
-        const isPassword = input.getAttribute('type') === 'password';
-        input.setAttribute('type', isPassword ? 'text' : 'password');
-
-
-
-        // alternar icono del botón
+        const icono = document.getElementById('icono-ojo');
         const btn = document.querySelector('.toggle-password');
-        if (btn) {
-            btn.title = isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña';
-            btn.textContent = isPassword ? '🙈' : '👁️';
-        }
+        const isPassword = input.getAttribute('type') === 'password';
+
+        input.setAttribute('type', isPassword ? 'text' : 'password');
+        icono.src = isPassword ? 'imgs/eye-close-fill-4.png' : 'imgs/eye-fill-6.png';
+        btn.title = isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña';
+
     }
 </script>
 </body>
