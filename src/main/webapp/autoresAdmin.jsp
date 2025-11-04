@@ -6,7 +6,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     List<Autor> autores = (List<Autor>) request.getAttribute("listaAutores");
-    String mensaje = (String) request.getAttribute("mensaje");
+    String mensaje = (String) request.getParameter("mensaje");
+    String error = request.getParameter("error");
 %>
 <html>
 <head>
@@ -35,7 +36,7 @@
     <h2 style="text-align:center;">Gestión de Autores</h2>
 
     <% if (mensaje != null) { %>
-    <div class="mensaje <%= mensaje.contains("correctamente") ? "exito" : "error" %>">
+    <div class="mensaje <%= mensaje.contains("No se puede") || mensaje.contains("") || mensaje.contains("") ? "error" : "exito" %>">
         <%= mensaje %>
     </div>
     <% } %>
