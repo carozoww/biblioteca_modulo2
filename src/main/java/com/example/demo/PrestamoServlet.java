@@ -15,7 +15,6 @@ import models.Prestamo;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "PrestamoServlet", value = "/prestamos")
