@@ -73,8 +73,8 @@ body {
 }
 
 .btn-volver:hover {
-    background-color: #FEACAC;
-    color: #BF5656;
+    background-color: #973131;
+    color: white;
 }
 
 .tabla {
@@ -95,7 +95,20 @@ body {
 }
 
 .btn-cancelar {
-    background-color: #FEACAC;
+    background-color: #973131;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-cancelar:hover {
+    background-color: #973131;
+    color: white;
+}
+.btn-aceptar {
+    background-color: #95bf56;
     border: none;
     padding: 6px 12px;
     border-radius: 6px;
@@ -104,8 +117,18 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-cancelar:hover {
-    background-color: #f48b8b;
+.btn-aceptar:hover {
+    background-color: #729c34;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: not-allowed;
 }
 
 .tabla td {
@@ -114,6 +137,44 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tablink {
+    background-color: #eee;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+.tablink.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 
 .msg {
     padding: 10px 15px;

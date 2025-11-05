@@ -75,10 +75,23 @@
             <form action="prestamos" method="post" class="form-reservar">
                 <input type="hidden" name="accion" value="reservar">
                 <input type="hidden" name="idLibro" value="<%= libro.getIdLibro() %>">
+
+                <%
+                    boolean puedeReservar = usuario.isAutenticacion() && !tienePrestamo;
+                    String textoBoton;
+                    if (!usuario.isAutenticacion()) {
+                        textoBoton = "No estás autenticado";
+                    } else if (tienePrestamo) {
+                        textoBoton = "Ya tenés un préstamo";
+                    } else {
+                        textoBoton = "Reservar";
+                    }
+                %>
+
                 <button type="submit"
-                        class="<%= tienePrestamo ? "btn-disabled" : "btn-reservar" %>"
-                        <%= tienePrestamo ? "disabled" : "" %>>
-                    <%= tienePrestamo ? "No disponible" : "Reservar" %>
+                        class="<%= puedeReservar ? "btn-reservar" : "btn-disabled" %>"
+                        <%= puedeReservar ? "" : "disabled" %>>
+                    <%= textoBoton %>
                 </button>
             </form>
 
