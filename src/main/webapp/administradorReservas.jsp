@@ -5,18 +5,26 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%  List<String> generos = (List<String>) request.getAttribute("listaGeneros");
+<% List<String> generos = (List<String>) request.getAttribute("listaGeneros");
     Administrador admin = (Administrador) session.getAttribute("authAdmin");
     if (admin == null) {
         response.sendRedirect(request.getContextPath() + "/login-admin");
         return;
     }%>
-
+<%
+    String mensaje = (String) session.getAttribute("mensaje");
+    if (mensaje != null)
+        session.removeAttribute("mensaje");
+%>
 <html>
 <head>
     <title>Reservas</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/estilosAdministradorReserva.css"%></style>
+    <style>
+        <%@include file="./WEB-INF/estilo/otrocss.css" %>
+    </style>
+    <style>
+        <%@include file="./WEB-INF/estilo/estilosAdministradorReserva.css" %>
+    </style>
 </head>
 <body>
 <nav>
@@ -57,6 +65,11 @@
     </div>
 </aside>
 <main>
+    <% if (mensaje != null) { %>
+    <div class="mensaje <%= mensaje.contains("No se puede") || mensaje.contains("Error") ? "error" : "exito" %>">
+        <%= mensaje %>
+    </div>
+    <% } %>
     <div class="form-container">
         <h2 id="textoAccion">Gestionar reservas</h2>
         <form id="editarReserva" action="administradorReservas" method="post">
@@ -102,6 +115,25 @@
     <div>
         <br>
         <h1>Seleccionar reserva</h1>
+        <h2>Filtros:</h2>
+        <br>
+        <div id="filtros-reserva-sala">
+            <div>
+                <label for="estado-filtro">Estado:</label>
+                <select id="estado-filtro">
+                    <option value="">TODOS</option>
+                    <option value="FINALIZADA">FINALIZADA</option>
+                    <option value="RESERVADA">RESERVADA</option>
+                    <option value="CANCELADA">CANCELADA</option>
+                </select>
+            </div>
+            <div>
+                <label for="fecha-filtro">Fecha:</label>
+                <input type="date" id="fecha-filtro">
+            </div>
+        </div>
+
+
         <div id="contenedor-tabla" class="contenedor-tabla">
             <table>
                 <thead>
@@ -125,11 +157,6 @@
 <footer>
 
 </footer>
-<%
-String mensaje = (String) session.getAttribute("mensaje");
-if (mensaje != null)
-session.removeAttribute("mensaje");
-%>
 
 <script>
     const boton = document.getElementById("boton");
@@ -145,9 +172,15 @@ session.removeAttribute("mensaje");
     const horaInicial = document.getElementById("hora-inicio");
     const horaFinal = document.getElementById("hora-fin");
 
+    const estadoFiltro = document.getElementById("estado-filtro");
+    const fechaFiltro = document.getElementById("fecha-filtro");
+
     var datosReservas = null;
     var datosSalas = null;
     var datosLectores = null;
+
+    estadoFiltro.addEventListener("change", filtrarTablaCombinado);
+    fechaFiltro.addEventListener("change", filtrarTablaCombinado);
 
     function modificarReservaCampos(reservaId) {
         const datos = datosReservas.filter(reserva => reserva.id_Reserva === reservaId);
@@ -157,10 +190,10 @@ session.removeAttribute("mensaje");
         estado.value = datos[0].estado || "";
 
         const [fechaInicio, horaInicioCompleta] = datos[0].fecha_in.split("T");
-        const horaInicio = horaInicioCompleta.substring(0,5);
+        const horaInicio = horaInicioCompleta.substring(0, 5);
 
         const [fechaFin, horaFinCompleta] = datos[0].fecha_fin.split("T");
-        const horaFin = horaFinCompleta.substring(0,5);
+        const horaFin = horaFinCompleta.substring(0, 5);
 
         fecha.value = fechaInicio || "";
         horaInicial.value = horaInicio || "";
@@ -172,8 +205,8 @@ session.removeAttribute("mensaje");
         accion.value = "editar";
 
         window.scrollTo({
-          top: 0,
-          behavior: "smooth"
+            top: 0,
+            behavior: "smooth"
         });
     }
 
@@ -193,29 +226,31 @@ session.removeAttribute("mensaje");
     });
 
     fetch("administradorReservas?cargarReservas=true")
-    .then(res => res.json())
-    .then(data => {
-          console.log(data);
-        datosReservas = data.reservas;
-        datosSalas = data.salas;
-        datosLectores = data.lectores;
-        cargarTabla();
-        salaSelect();
-        lectorSelect();
+        .then(res => res.json())
+        .then(data => {
+            datosReservas = data.reservas;
+            datosSalas = data.salas;
+            datosLectores = data.lectores;
+            cargarTabla();
+            salaSelect();
+            lectorSelect();
         })
-    .catch(err => console.error("Error cargando tabla:", err));
+        .catch(err => console.error("Error cargando tabla:", err));
 
     function cargarTabla() {
         const tbody = document.querySelector("#contenedor-tabla table tbody");
-        tbody.innerHTML = ""; // limpiar por si acaso
-        datosReservas.forEach(r => {
-            const [fechaInicio, horaInicioCompleta] = r.fecha_in.split("T");
-            const horaInicio = horaInicioCompleta.substring(0,5);
+        tbody.innerHTML = "";
+        if (datosReservas.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="6">No hay reservas</td></tr>`;
+        } else {
+            datosReservas.forEach(r => {
+                const [fechaInicio, horaInicioCompleta] = r.fecha_in.split("T");
+                const horaInicio = horaInicioCompleta.substring(0, 5);
 
-            const [fechaFin, horaFinCompleta] = r.fecha_fin.split("T");
-            const horaFin = horaFinCompleta.substring(0,5);
+                const [fechaFin, horaFinCompleta] = r.fecha_fin.split("T");
+                const horaFin = horaFinCompleta.substring(0, 5);
 
-            var row = `<tr><td data-label="Sala">` + r.sala + `</td>
+                var row = `<tr><td data-label="Sala">` + r.sala + `</td>
                     <td data-label="Lector">` + r.lector + `</td>
                     <td data-label="Fin">` + fechaInicio + ` ` + horaInicio + `</td>
                     <td data-label="Inicio">` + fechaFin + ` ` + horaFin + `</td>
@@ -224,32 +259,45 @@ session.removeAttribute("mensaje");
                 </tr>`;
                 tbody.innerHTML += row;
             });
+        }
     }
 
-    function showMensaje(message, duration = 3000) {
-      const container = document.getElementById('msg-container');
 
-      const msg = document.createElement('div');
-      msg.className = 'msg';
-      msg.innerText = message;
+    function filtrarTablaCombinado() {
+        const filtro = estadoFiltro.value;
+        const fechaSeleccionada = fechaFiltro.value;
+        const tbody = document.querySelector("#contenedor-tabla table tbody");
+        tbody.innerHTML = "";
 
-      container.appendChild(msg);
+        const filtrados = datosReservas.filter(r => {
+            const [fechaInicio] = r.fecha_in.split("T");
 
-      setTimeout(() => msg.classList.add('show'), 100);
+            const estadoCoincide = filtro === "" || r.estado === filtro;
+            const fechaCoincide = fechaSeleccionada === "" || fechaInicio === fechaSeleccionada;
 
-      setTimeout(() => {
-        msg.classList.remove('show');
-        setTimeout(() => container.removeChild(msg), 500);
-      }, duration);
+            return estadoCoincide && fechaCoincide;
+        });
+        if (filtrados.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="6">No hay reservas</td></tr>`;
+        } else {
+            filtrados.forEach(r => {
+                const [fechaInicio, horaInicioCompleta] = r.fecha_in.split("T");
+                const horaInicio = horaInicioCompleta.substring(0, 5);
+
+                const [fechaFin, horaFinCompleta] = r.fecha_fin.split("T");
+                const horaFin = horaFinCompleta.substring(0, 5);
+
+                var row = `<tr><td data-label="Sala">` + r.sala + `</td>
+                    <td data-label="Lector">` + r.lector + `</td>
+                    <td data-label="Fin">` + fechaInicio + ` ` + horaInicio + `</td>
+                    <td data-label="Inicio">` + fechaFin + ` ` + horaFin + `</td>
+                    <td data-label="Estado">` + r.estado + `</td>
+                    <td><button class= "btn-modificar"; onclick="modificarReservaCampos(` + r.id_Reserva + `)">Modificar </button></td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
     }
-
-      window.addEventListener('DOMContentLoaded', () => {
-      const mensaje = "<%= mensaje %>";
-
-      if (mensaje && mensaje !== "null" && mensaje.trim() !== "") {
-          showMensaje(mensaje);
-      }
-      });
 
     function salaSelect() {
         idSala.innerHTML = "";
@@ -260,12 +308,12 @@ session.removeAttribute("mensaje");
         idSala.appendChild(option);
 
         datosSalas.sort((a, b) => Number(a.numeroSala) - Number(b.numeroSala))
-        .forEach(s => {
-            const option = document.createElement("option");
-            option.value = s.idSala;
-            option.textContent = s.numeroSala;
-            idSala.appendChild(option);
-        });
+            .forEach(s => {
+                const option = document.createElement("option");
+                option.value = s.idSala;
+                option.textContent = s.numeroSala;
+                idSala.appendChild(option);
+            });
     }
 
     function lectorSelect() {
@@ -277,12 +325,12 @@ session.removeAttribute("mensaje");
         idLector.appendChild(option);
 
         datosLectores.sort((a, b) => a.nombre.localeCompare(b.nombre))
-        .forEach(l => {
-            const option = document.createElement("option");
-            option.value = l.ID;
-            option.textContent = l.nombre;
-            idLector.appendChild(option);
-        });
+            .forEach(l => {
+                const option = document.createElement("option");
+                option.value = l.ID;
+                option.textContent = l.nombre;
+                idLector.appendChild(option);
+            });
     }
 </script>
 </body>

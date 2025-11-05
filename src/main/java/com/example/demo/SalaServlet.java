@@ -43,7 +43,7 @@ public class SalaServlet extends HttpServlet {
             } else {
                 String action = request.getParameter("action");
                 if (action != null && action.equals("listar")) {
-                    List<Sala> salas = salaDAO.listarSalas();
+                    List<Sala> salas = salaDAO.listarSalasHabilitadas();
                     response.setContentType("application/json;charset=UTF-8");
                     PrintWriter out = response.getWriter();
                     out.print(new Gson().toJson(salas));

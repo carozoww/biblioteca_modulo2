@@ -47,22 +47,15 @@ input[type="date"]:focus {
     font-weight: bold;
 }
 
-/* mensajes */
-.mensaje, p[style*="color:"] {
-    display: none;
+.mensaje {
     text-align: center;
-    font-weight: bold;
     margin: 10px auto;
-    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
 }
-
-.mensaje.success {
-    color: #2ecc71;
-}
-
-.mensaje.error {
-    color: #e74c3c;
-}
+.exito { background-color: #c8e6c9; color: #256029; }
+.error { background-color: #ffcdd2; color: #b71c1c; }
 
 /* Para reservar */
 .mensajeReserva {

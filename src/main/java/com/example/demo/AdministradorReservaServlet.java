@@ -125,7 +125,7 @@ public class AdministradorReservaServlet extends HttpServlet {
                     request.getSession().setAttribute("mensaje", "horario de la reserva no permitido");
                 }
             }
-            response.sendRedirect("administradorReservas.jsp");
+            response.sendRedirect("administradorReservas");
         }catch(Exception e){
             throw new RuntimeException(e);
         }

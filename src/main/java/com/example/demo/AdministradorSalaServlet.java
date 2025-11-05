@@ -5,6 +5,7 @@ import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import dao.ReservaDAO;
 import dao.SalaDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -30,6 +31,7 @@ import java.util.Properties;
 )
 public class AdministradorSalaServlet extends HttpServlet {
     SalaDAO salaDAO = new SalaDAO();
+    ReservaDAO reservaDAO = new ReservaDAO();
     private static Properties reader = new Properties();
     private static String CLOUD_NAME = "";
     private static String API_KEY = "";
@@ -48,7 +50,6 @@ public class AdministradorSalaServlet extends HttpServlet {
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(json);
-
                 return;
             }
             request.getRequestDispatcher("administradorSalas.jsp").forward(request, response);
@@ -64,10 +65,20 @@ public class AdministradorSalaServlet extends HttpServlet {
                 JsonObject jsonResponse = new JsonObject();
                 PrintWriter out = response.getWriter();
 
-                //String imagen = request.getParameter("imagen-url");
                 int numero = Integer.parseInt(request.getParameter("numero-sala"));
                 String ubicacion = request.getParameter("ubicacion");
+                boolean habilitada = Boolean.parseBoolean(request.getParameter("habilitada"));
+
                 int personas = Integer.parseInt(request.getParameter("max-personas"));
+                List<Sala> salas = salaDAO.listarSalas();
+
+                for (Sala s : salas) {
+                    if (s.getNumeroSala() == numero) {
+                        request.getSession().setAttribute("mensaje", "Error: El numero de sala ya existe.");
+                        response.sendRedirect("administradorSalas");
+                        return;
+                    }
+                }
 
                 InputStream input = conexion.class.getResourceAsStream("/api.properties");
                 reader.load(input);
@@ -78,21 +89,31 @@ public class AdministradorSalaServlet extends HttpServlet {
                 Part filePart = request.getPart("image");
 
                 if (filePart == null || filePart.getSize() == 0) {
-                    request.getSession().setAttribute("mensaje", "No se seleccionó ninguna imagen");
+                    request.getSession().setAttribute("mensaje", "Error: No se seleccionó ninguna imagen");
                     return;
                 }
 
                 String imageUrl = uploadToCloudinary(filePart);
-                salaDAO.crearSala(numero, ubicacion, personas, imageUrl);
+                salaDAO.crearSala(numero, ubicacion, personas, imageUrl, habilitada);
 
                 request.getSession().setAttribute("mensaje", "sala agregada");
             } else if ("editar".equals(accion)) {
+
                 int id = Integer.parseInt(request.getParameter("id-sala"));
                 String imagen = request.getParameter("imagen-anterior");
                 int numero = Integer.parseInt(request.getParameter("numero-sala"));
                 String ubicacion = request.getParameter("ubicacion");
                 int personas = Integer.parseInt(request.getParameter("max-personas"));
+                boolean habilitada = Boolean.parseBoolean(request.getParameter("habilitada"));
 
+                List<Sala> salas = salaDAO.listarSalas();
+                for (Sala s : salas) {
+                    if (s.getNumeroSala() == numero && s.getIdSala() != id) {
+                        request.getSession().setAttribute("mensaje", "Error: El numero de sala ya existe.");
+                        response.sendRedirect("administradorSalas");
+                        return;
+                    }
+                }
                 InputStream input = conexion.class.getResourceAsStream("/api.properties");
                 reader.load(input);
                 CLOUD_NAME = reader.getProperty("CLOUD_NAME");
@@ -103,21 +124,24 @@ public class AdministradorSalaServlet extends HttpServlet {
                 String imageUrl = "";
                 if (filePart == null || filePart.getSize() == 0) {
                     imageUrl = imagen;
-                    System.out.println("imagen blanco" + imagen);
                 } else {
                     imageUrl = uploadToCloudinary(filePart);
-                    System.out.println("IMagen archivo" + imageUrl);
                 }
 
-                salaDAO.editarSala(id, numero, ubicacion, personas, imageUrl);
-                request.getSession().setAttribute("mensaje", "sala editada");
+                salaDAO.editarSala(id, numero, ubicacion, personas, imageUrl, habilitada);
+                request.getSession().setAttribute("mensaje", "Sala editada");
             } else if ("eliminar".equals(accion)) {
-                int id = Integer.parseInt(request.getParameter("eliminar-sala"));
 
-                salaDAO.borrarSala(id);
-                request.getSession().setAttribute("mensaje", "sala borrada");
+                int id = Integer.parseInt(request.getParameter("eliminar-sala"));
+                if (reservaDAO.existeReservaParaSala(id)) {
+                    request.getSession().setAttribute("mensaje", "Existen reservas realizadas para la sala. No se puede elimiar.");
+                }else{
+                    salaDAO.borrarSala(id);
+                    request.getSession().setAttribute("mensaje", "Sala borrada");
+                }
+
             }
-            response.sendRedirect("administradorSalas.jsp");
+            response.sendRedirect("administradorSalas");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
