@@ -25,13 +25,17 @@
     }
     List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
     Reserva reservaActiva = (Reserva) request.getAttribute("reservaActiva");
-    String mensaje = (String) request.getAttribute("mensaje");
 
     String fechaFormateada = "";
     if (reservaActiva != null) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         fechaFormateada = reservaActiva.getFecha_in().format(formatter);
     }
+%>
+<%
+    String mensaje = (String) session.getAttribute("mensaje");
+    if (mensaje != null)
+        session.removeAttribute("mensaje");
 %>
 <nav>
     <div id="logoynombre">
@@ -45,11 +49,15 @@
     </div>
 </nav>
 <main>
+    <% if (mensaje != null && !mensaje.equals("null")) { %>
+    <div class="mensaje <%= mensaje.contains("No se puede") || mensaje.contains("Error") ? "error" : "exito" %>">
+        <%= mensaje %>
+    </div>
+    <% } %>
 <header>
     <a href="dashboard" class="btn-volver ">Volver al inicio</a>
 </header>
 
-    <div id="mensaje" class="mensaje error"><%= mensaje %>
     </div>
     <% if (reservaActiva != null) { %>
     <h1>Reserva sin terminar</h1>
@@ -406,15 +414,6 @@
     horaFin.addEventListener("change", actualizarHoraInicio);
     <% } %>
 
-    function mostrarMensaje() {
-        const mensaje = document.getElementById("mensaje");
-        mensaje.style.display = "block";
-
-        // Ocultar después de 10 segundos
-        setTimeout(() => {
-            mensaje.style.display = "none";
-        }, 10000);
-    }
 
     // Al cargar la página
     window.addEventListener("DOMContentLoaded", () => {
@@ -426,10 +425,6 @@
 
         inputFecha.value = hoy;
         inputFecha.min = hoy;
-
-        <% if (mensaje != null) { %>
-        mostrarMensaje();
-        <% } %>
 
         <% if (reservaActiva != null) { %>
         const horaActiva = "<%= reservaActiva.getHora_in() %>";
