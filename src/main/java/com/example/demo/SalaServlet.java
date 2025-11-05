@@ -87,7 +87,7 @@ public class SalaServlet extends HttpServlet {
                 LocalTime horaFinal = LocalTime.parse(horaFin);
 
                 if (horaInicial.isAfter(horaFinal) || fechaDate.equals(fechaActual) && horaActual.isAfter(horaInicial)) {
-                    request.setAttribute("mensaje", "Horas seleccionadas no validas");
+                    request.getSession().setAttribute("mensaje", "Error: Horas seleccionadas no validas");
                     request.getRequestDispatcher("salas.jsp").forward(request, response);
                     return;
                 }
@@ -96,10 +96,13 @@ public class SalaServlet extends HttpServlet {
                 LocalDateTime fechaHoraFin = fechaDate.atTime(horaFinal);
 
                 reservaDAO.agregarReserva(salaId, lectorCompleto.getID(), fechaHoraInicio, fechaHoraFin);
+                request.getSession().setAttribute("mensaje", "reserva agregada");
             } else if (accion.equals("cancelar")) {
                 reservaDAO.cancelarReservaPorLector(lectorCompleto.getID());
+                request.getSession().setAttribute("mensaje", "reserva cancelada");
             } else if (accion.equals("terminar")) {
                 reservaDAO.finalizarReservaPorLector(lectorCompleto.getID());
+                request.getSession().setAttribute("mensaje", "reserva terminada");
             }
 
             Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
