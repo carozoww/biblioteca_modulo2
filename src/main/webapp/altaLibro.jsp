@@ -21,8 +21,7 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
-        <a href="">Cerrar sesion</a>
+
     </div>
 </header>
 <div id="seccion-form">
@@ -110,7 +109,7 @@
             <input type="file" id="imagenInput" name="image" accept="image/*" required>
         </div>
         <div id="botones">
-            <button type="button">Cancelar</button>
+            <button type="button" onclick="window.location.href='dashboardAdmin'">Cancelar</button>
             <button id="submitBtn" type="submit">Registrar Libro</button>
         </div>
     </form>

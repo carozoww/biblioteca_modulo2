@@ -90,7 +90,7 @@
     </div>
     <div id="boton-alta">
         <button onclick="window.location.href='alta-libro-servlet'">Crear Libro</button>
-        <button>Asignar Autor a Libro</button>
+        <button onclick="window.location.href='alta-lector-servlet'">Registrar Lector</button>
     </div>
 
     <h1>Libros</h1>

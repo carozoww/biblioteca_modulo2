@@ -37,8 +37,6 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
-        <a href="">Cerrar sesion</a>
     </div>
 </header>
 <div id="seccion-form">
@@ -128,10 +126,12 @@
             <label for="">Imagen del libro actual:</label>
             <br>
             <img src="<%=libro.getImagen_url()%>"  width="150" height="250">
-            <input type="file" id="imagenInput" name="image" accept="image/*" required>
+
+            <input type="file" id="imagenInput" name="image" accept="image/*" >
+            <input type="hidden" value="<%=libro.getImagen_url()%>" name="imagenVieja">
         </div>
         <div id="botones">
-            <button type="button"> Cancelar</button>
+            <button type="button" onclick="window.location.href='dashboardAdmin'"> Cancelar</button>
             <button id="submitBtn" type="submit">Registrar Libro</button>
         </div>
     </form>
