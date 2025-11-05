@@ -83,6 +83,8 @@ public class EditarLibroServlet extends HttpServlet {
         String id = request.getParameter("id_libro");
         int id_libro = Integer.parseInt(id);
 
+        String imagen = request.getParameter("imagenVieja");
+
 
         String autores = request.getParameter("autorid");
         String generos = request.getParameter("generoid");
@@ -98,19 +100,17 @@ public class EditarLibroServlet extends HttpServlet {
 
             Part filePart = request.getPart("image");
 
-            if (filePart == null || filePart.getSize() == 0) {
-                jsonResponse.addProperty("success", false);
-                jsonResponse.addProperty("message", "No se seleccionó ninguna imagen");
-                out.print(jsonResponse.toString());
-                return;
+            if (filePart != null && filePart.getSize() > 0) {
+                imagen = uploadToCloudinary(filePart);
+
             }
 
 
-            String imageUrl = uploadToCloudinary(filePart);
-
             jsonResponse.addProperty("success", true);
             jsonResponse.addProperty("message", "Libro e imagen guardados exitosamente");
-            jsonResponse.addProperty("imageUrl", imageUrl);
+            jsonResponse.addProperty("imageUrl", imagen);
+
+
 
             libroautordao.eliminarAutoresDeLibro(id_libro);
             librogenerodao.eliminarGenerosDeLibro(id_libro);
@@ -130,7 +130,8 @@ public class EditarLibroServlet extends HttpServlet {
             }
 
             LibroDAO librodao = new LibroDAO();
-            librodao.EditarLibroActualizado(titulo,isbn,fechaPublicacion,editorial,sinopsis,numpaginas,imageUrl,id_libro);
+            librodao.EditarLibroActualizado(titulo,isbn,fechaPublicacion,editorial,sinopsis,numpaginas,imagen,id_libro);
+
             out.print(jsonResponse.toString());
         }catch(Exception e){
             throw new RuntimeException(e);

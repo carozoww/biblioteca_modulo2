@@ -1,8 +1,6 @@
 package com.example.demo;
 
-import dao.ReviewDAO;
 import dao.generoDAO;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,10 +14,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "dashboardServlet", value = "/dashboard")
-public class DashboardServlet extends HttpServlet {
+@WebServlet(name = "dashboardUsuarioServlet", value = "/dashboardUsuario")
+public class DashboardUsuarioServlet extends HttpServlet {
     private String message;
-    private ReviewDAO reviewdao = new ReviewDAO();
 
     public void init() {
         message = "Hello World!";
@@ -28,11 +25,6 @@ public class DashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session = request.getSession(false);
-        if (session == null || session.getAttribute("authUser") == null) {
-            response.sendRedirect(request.getContextPath() + "/login-lector");
-            return;
-        }
 
         List<Genero> generos = generoDAO.mostrarGeneros();
         List<String> generos2 = new ArrayList<>();
@@ -42,12 +34,8 @@ public class DashboardServlet extends HttpServlet {
         });
 
         request.setAttribute("listaGeneros", generos2);
-        Lector usuario = (Lector) session.getAttribute("authUser");
-        int num_resenias = reviewdao.obtenerNumReseniasPositivas(usuario.getID());
-        request.setAttribute("num_resenias", num_resenias);
 
-        request.setAttribute("usuario", usuario);
-        request.getRequestDispatcher("/dashboard.jsp").forward(request, response);
+        request.getRequestDispatcher("/dashboardUsuario.jsp").forward(request, response);
     }
 
     public void destroy() {

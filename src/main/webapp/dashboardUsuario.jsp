@@ -8,16 +8,8 @@
 
 <%
     List<String> generos = (List<String>) request.getAttribute("listaGeneros");
-    int num_resenias = 0;
-    if(request.getAttribute("num_resenias") != null){
-        num_resenias = (int) request.getAttribute("num_resenias");
-    }
 
-    Lector usuario = (Lector) session.getAttribute("authUser");
-    if (usuario == null) {
-        response.sendRedirect(request.getContextPath() + "/login-lector");
-        return;
-    }
+
 %>
 <html>
 <head>
@@ -25,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
-    <title><%=usuario.getID()%></title>
+    <title>Pagina Principal</title>
 </head>
 
 <body>
@@ -36,28 +28,25 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_derecha">
-        <a href="perfil">Cuenta</a>
-        <a href="logout">Cerrar sesión</a>
+        <a href="login-lector">Iniciar sesión</a>
     </div>
 </nav>
 
 <aside id="sidebar">
     <div id="columna_contenido">
         <div>
-            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
-            <a href="">Usuarios</a>
-        </div>
-        <div>
             <img src="imgs/resenia.png" alt="" width="50px" height="50px">
-            <a href="#" id="linkResenas">Reseñas</a>
+            <a href="" id="resenia">Reseñas</a>
         </div>
         <div>
             <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
-            <a href="prestamos?accion=listar">Préstamos</a>
+            <a href="" id="prestamo">Prestamos</a>
         </div>
-        <div>
-            <img src="imgs/room.png" alt="" width="50px" height="50px">
-            <a href="salas">Salas</a>
+        <div id="mensaje-error">
+
+        </div>
+        <div id="link">
+
         </div>
     </div>
 </aside>
@@ -95,9 +84,7 @@
         </div>
     </div>
 
-    <div id="recomendado-seccion">
-        <button type="submit" onclick="enviarId_lector()" >Mostrar Libros Recomendados</button>
-    </div>
+
     <h1>Libros</h1>
     <div class="contenedor-libros" id="containerLibro">
 
@@ -110,16 +97,52 @@
 </main>
 
 <footer>
-    <div id="pie-pagina">
-        <h2>¿No encuentra un libro en nuestro catálogo? Aceptamos sugerencias por medio del siguiente formulario</h2>
-        <button type="submit" onclick="window.location.href='sugerencia?id=<%=usuario.getID()%>'" >Acceder Formulario</button>
 
-    </div>
 </footer>
 
 <script src="libroapp.js"></script>
 <script>
-    const idLector = <%= usuario.getID() %>;
+    const reseniA = document.getElementById('resenia');
+    const seccionLink = document.getElementById('link');
+    const PrestamoA = document.getElementById('prestamo');
+
+
+    reseniA.addEventListener('click', (e) =>{
+        e.preventDefault();
+        const error = document.getElementById('mensaje-error');
+        const mensaje = document.createElement('p');
+        error.innerHTML = "";
+        seccionLink.innerHTML = "";
+        mensaje.innerText="Necesitas iniciar sesión para ver las reseñas de la comunidad!!!";
+        mensaje.style.fontSize = "24px";
+        const linkIS = document.createElement('a');
+        linkIS.innerText="Iniciar Sesión";
+        linkIS.href="login-lector";
+
+        error.appendChild(mensaje);
+        seccionLink.appendChild(linkIS);
+
+    })
+
+    PrestamoA.addEventListener('click',(e) =>{
+        e.preventDefault();
+        const error = document.getElementById('mensaje-error');
+        const mensaje = document.createElement('p');
+        error.innerHTML = "";
+        seccionLink.innerHTML = "";
+        mensaje.innerText="Necesitas iniciar sesión para realizar un prestamo de libro!!!";
+        mensaje.style.fontSize = "24px";
+        const linkIS = document.createElement('a');
+        linkIS.innerText="Iniciar Sesión";
+        linkIS.href="login-lector";
+
+        error.appendChild(mensaje);
+        seccionLink.appendChild(linkIS);
+
+
+    })
+
+
     const sidebar = document.getElementById("sidebar");
     function abrirBarra() {
         sidebar.classList.toggle('show')
@@ -145,73 +168,10 @@
                 mostrarLibros();
             })
     }
-
-    async function enviarId_lector() {
-        const id = <%=usuario.getID()%>;
-        const numresenias = <%=num_resenias%>;
-
-        if(numresenias < 3){
-            return;
-        }
-
-
-        fetch('librosRecomendados', {
-            method: 'POST',
-            headers:{ 'Content-Type':'application/x-www-form-urlencoded' },
-            body: 'id_lector=' + encodeURIComponent(id)
-        })
-            .then(async response => {
-                if (!response.ok) throw new Error('Error en la respuesta del servidor');
-                librosFiltrados = await response.json();
-                offset = 0;
-                mostrarLibros();
-            })
-    }
 </script>
 
 <!-- Carga dinámica de reseñas -->
-<script>
-    const mainContent = document.getElementById('mainContent');
-    const linkResenas = document.getElementById('linkResenas');
 
-    linkResenas.addEventListener('click', async (e) => {
-        e.preventDefault();
-
-
-        const contenidoLibros = document.getElementById('contenidoLibros');
-        if (contenidoLibros) contenidoLibros.style.display = 'none';
-
-
-        mainContent.innerHTML = '';
-
-        try {
-            const res = await fetch('review.jsp');
-            let html = await res.text();
-
-            const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-            if (!bodyMatch) throw new Error("No se pudo extraer el body de review.jsp");
-            mainContent.innerHTML = bodyMatch[1];
-
-
-            if (!document.getElementById('estiloReview')) {
-                const link = document.createElement('link');
-                link.id = 'estiloReview';
-                link.rel = 'stylesheet';
-                link.href = './WEB-INF/estilo/estiloReview.css';
-                document.head.appendChild(link);
-            }
-
-            const script = document.createElement('script');
-            script.src = 'reviewApp.js';
-            script.type = 'module';
-            document.body.appendChild(script);
-
-        } catch (err) {
-            console.error('Error cargando reseñas:', err);
-            mainContent.innerHTML = '<p>Error al cargar las reseñas.</p>';
-        }
-    });
-</script>
 
 </body>
 </html>

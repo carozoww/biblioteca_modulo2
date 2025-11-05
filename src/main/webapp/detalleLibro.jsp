@@ -26,6 +26,8 @@
     List<Editorial> editoriales = Collections.singletonList(editorial.buscarEditorialPorId(idE));
 
     boolean tienePrestamo = prestamoDAO.prestamoActivoPorLector(idLector);
+
+    boolean autenticado = usuario.isAutenticacion();
 %>
 
 <!DOCTYPE html>

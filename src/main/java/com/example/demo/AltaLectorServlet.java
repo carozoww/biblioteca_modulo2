@@ -12,24 +12,27 @@ import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@WebServlet(name = "RegisterServlet", value = "/register")
-public class RegisterServlet extends HttpServlet {
-
+@WebServlet(name = "AltaLectorServlet", value = "/alta-lector-servlet")
+public class AltaLectorServlet extends HttpServlet {
     private LectorDAO lectorDAO = new LectorDAO();
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         try{
+
 
             List<Lector> lectores = lectorDAO.listarLectores();
             if(lectores.isEmpty()){
                 System.out.println("No se obtienen lectores");
             }
             request.setAttribute("lectores", lectores);
-            request.getRequestDispatcher("registro.jsp").forward(request, response);
+            request.getRequestDispatcher("altaLector.jsp").forward(request, response);
+
+
+
         }catch(Exception e){
             throw new ServletException(e);
         }
@@ -52,21 +55,15 @@ public class RegisterServlet extends HttpServlet {
         try{
             String hashed = BCrypt.hashpw(password, BCrypt.gensalt(12)); // 12 = factor de costo
             System.out.println("Hash generado: " + hashed);
-            LectorDAO lectorDAO = new LectorDAO();
+
             Boolean existe = false;
             if(!lectorDAO.existeLector(cedula).isEmpty()){
                 existe = true;
                 request.setAttribute("existeLector",existe);
-                request.getRequestDispatcher("registro.jsp").forward(request, response);
+                request.getRequestDispatcher("altaLector.jsp").forward(request, response);
             }else{
-                Lector lector = new Lector(lectorDAO.obtenerUltimaId()+1,nombre,cedula,telefono,direccion,false,nuevaFecha ,false,correo,hashed);
-                HttpSession newSession = request.getSession(true);
-                newSession.setAttribute("authUser", lector);
-                newSession.setMaxInactiveInterval(30 * 60);
-                String csrfToken = UUID.randomUUID().toString();
-                newSession.setAttribute("csrfToken", csrfToken);
-                response.sendRedirect(request.getContextPath() + "/dashboard");
-                lectorDAO.crearLector(nombre,cedula,telefono,direccion,false,nuevaFecha ,false,correo,hashed);
+                response.sendRedirect(request.getContextPath() + "/dashboardAdmin");
+                lectorDAO.crearLector(nombre,cedula,telefono,direccion,true,nuevaFecha ,false,correo,hashed);
                 return;
             }
             request.setAttribute("existeLector",existe);
