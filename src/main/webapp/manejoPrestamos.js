@@ -1,14 +1,13 @@
-function showTab(tabId) {
+function showTab(tabId, btn) {
     document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
-    document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
+    document.querySelectorAll('.tablink').forEach(b => b.classList.remove('active'));
 
-    // guarda la pestaña seleccionada
+    document.getElementById(tabId).classList.add('active');
+    btn.classList.add('active');
+
     localStorage.setItem("tabActivaPrestamos", tabId);
 }
 
-// al cargar la página, revisa que pestaña estaba activa
 window.addEventListener('load', function () {
     const tabGuardada = localStorage.getItem("tabActivaPrestamos");
     if (tabGuardada && document.getElementById(tabGuardada)) {
@@ -16,11 +15,7 @@ window.addEventListener('load', function () {
         document.getElementById(tabGuardada).classList.add('active');
 
         document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-        document.querySelector(`.tablink[onclick="showTab('${tabGuardada}')"]`).classList.add('active');
-    } else {
-        // si no hay pestaña guardada, mostrara la primera
-        document.querySelector('.tab-content').classList.add('active');
-        document.querySelector('.tablink').classList.add('active');
+        document.querySelector(`.tablink[onclick="showTab('${tabGuardada}', this)"]`).classList.add('active');
     }
 });
 // mensaje que desaparece automáticamente
