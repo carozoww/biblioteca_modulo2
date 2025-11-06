@@ -14,7 +14,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Sugerencia</title>
     <style><%@include file="./WEB-INF/estilo/form.css"%></style>
 
 </head>

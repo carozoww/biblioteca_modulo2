@@ -27,7 +27,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Edición de Libro</title>
     <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
 </head>
 <body>

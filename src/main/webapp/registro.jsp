@@ -23,7 +23,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Registro Lector</title>
     <style><%@include file="./WEB-INF/estilo/login.css"%></style>
 
 </head>

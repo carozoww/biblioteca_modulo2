@@ -23,7 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
@@ -44,7 +44,6 @@
         <a href="administradorSalas">Salas</a>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
         <a href="logout">Cerrar sesion</a>
     </div>
 </nav>

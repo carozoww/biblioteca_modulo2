@@ -20,7 +20,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Registrar Lector</title>
     <style><%@include file="./WEB-INF/estilo/login.css"%></style>
 </head>
 <body>

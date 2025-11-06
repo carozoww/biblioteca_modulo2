@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
-    <title><%=usuario.getID()%></title>
+    <title>Dashboard</title>
 </head>
 
 <body>

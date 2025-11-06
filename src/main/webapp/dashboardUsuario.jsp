@@ -33,6 +33,7 @@
     </div>
     <div id="elementos_derecha">
         <a href="login-lector">Iniciar sesión</a>
+        <a href="login-admin">Iniciar sesión Admin</a>
     </div>
 </nav>
 
