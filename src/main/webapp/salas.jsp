@@ -4,6 +4,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.time.LocalDateTime" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -37,6 +38,7 @@
     if (mensaje != null)
         session.removeAttribute("mensaje");
 %>
+
 <nav>
     <div id="logoynombre">
         <button onclick="abrirBarra()" id="botton-barra"> click</button>
@@ -69,7 +71,13 @@
             <span>Horas reservadas:</span>
             <span class="hora"><%= reservaActiva.getHora_in() %> - <%= reservaActiva.getHora_fin() %></span>
         </div>
-
+        <% if (reservaActiva.getEstado().equals("PENDIENTE")) { %>
+        <form id="realizarReserva" action="salas" method="post" class="form-reserva">
+            <input type="hidden" id="finalizar-accion" name="accion" value="cancelar">
+            <input type="hidden" id="finalizar-accion" name="accion" value="cancelar">
+            <button id="finalizar-boton" class="cancelar-boton" type="submit">Cancelar</button>
+        </form>
+            <% } %>
     </div>
     <% } else { %>
     <div>
@@ -80,7 +88,10 @@
         </div>
         <% if (reservaActiva == null) { %>
         <h1>Realizar Reserva:</h1>
-        <p id="mensajeReserva" class="mensajeReserva">Selecciona una fecha y una sala para comenzar la reserva.</p>
+        <p id="mensajeReserva" class="mensajeReserva">
+            <%= !usuario.isAutenticacion() ? "No estas autenticadao. No se puede Reservar" : "Selecciona una fecha y una sala para comenzar la reserva." %>
+        </p>
+
         <form action="salas" method="post" id="formReserva">
             <div id="camposHoras">
                 <input type="hidden" name="accion" value="reservar">
@@ -94,10 +105,11 @@
                 <select id="hora-fin" name="hora-fin" required></select>
                 <br>
                 <br>
-                <button type="submit" >Reservar</button>
+                <button type="submit" <%= !usuario.isAutenticacion() ? "disabled" : "" %>>
+                    <%= !usuario.isAutenticacion() ? "No estas autenticadao" : "Reservar" %>
+                </button>
             </div>
         </form>
-
         <% } %>
         <div class="contenedorContenido">
             <div>
