@@ -33,6 +33,11 @@ async function cargarReviews() {
 
         const div = document.createElement('div');
         div.className = 'review-card';
+        let botonesExtra = '';
+        if (verSoloMias && r.idLector === idLector) {
+            botonesExtra = `<button class="eliminar-btn" data-id="${r.idReview}" style="margin-top:8px;">Eliminar</button>`;
+        }
+
         div.innerHTML = `
             <div class="card-header">
                 <img src="${libroImg}" class="libro-img" alt="Libro">
@@ -57,10 +62,30 @@ async function cargarReviews() {
                 </div>
             </div>
             <button class="detalle-btn" data-id="${r.idReview}" style="margin-top:8px;">Ver detalle</button>
+            ${botonesExtra}
         `;
         container.appendChild(div);
     });
 
+    container.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('eliminar-btn')) {
+            const idReview = e.target.dataset.id;
+            if (confirm("¿Eliminar esta review?")) {
+                const res = await fetch('reviews', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `accion=eliminar&id_review=${idReview}`
+                });
+                const data = await res.json();
+                if (data.exito) {
+                    alert("Review eliminada");
+                    cargarReviews(); // recarga la lista
+                } else {
+                    alert(data.error || "No se pudo eliminar la review");
+                }
+            }
+        }
+    });
     document.getElementById('paginaActual').innerText = pagina;
 }
 

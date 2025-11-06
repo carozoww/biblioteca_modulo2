@@ -101,49 +101,7 @@ public class ReviewServlet extends HttpServlet {
         String accion = request.getParameter("accion");
 
         try {
-            if ("like".equals(accion)) {
-                int idReview = Integer.parseInt(request.getParameter("id_review"));
-
-                // Obtener el lector logueado desde la sesión
-                Lector usuario = (Lector) request.getSession().getAttribute("authUser");
-                if (usuario == null) {
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    response.getWriter().println(gson.toJson(Map.of("error", "Usuario no logueado")));
-                    return;
-                }
-                int idLector = usuario.getID();
-
-                int nuevoConteo = reviewDAO.darLike(idReview, idLector);
-                response.getWriter().println(gson.toJson(Map.of("exito", true, "nuevoConteo", nuevoConteo)));
-                return;
-            }
-
-            if ("crearComentario".equals(accion) || "agregarComentario".equals(accion)) {
-                int idReview = Integer.parseInt(request.getParameter("id_review"));
-                String contenido = request.getParameter("contenido");
-
-                Lector usuario = (Lector) request.getSession().getAttribute("authUser");
-                if (usuario == null) {
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    response.getWriter().println(gson.toJson(Map.of("error", "Usuario no logueado")));
-                    return;
-                }
-                int idLector = usuario.getID();
-
-                boolean exito = comentarioDAO.crearComentario(idReview, idLector, contenido);
-                response.getWriter().println(gson.toJson(Map.of("exito", exito)));
-                return;
-            }
-
-            // Crear o actualizar review
-            String idReviewStr = request.getParameter("id_review");
-            String idLectorStr = request.getParameter("id_lector");
-            String idLibroStr = request.getParameter("id_libro");
-            String valoracionStr = request.getParameter("valoracion");
-            String resenia = request.getParameter("resenia");
-
-            boolean exito = false;
-
+            // Declarar usuario
             Lector usuario = (Lector) request.getSession().getAttribute("authUser");
             if (usuario == null) {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -151,6 +109,44 @@ public class ReviewServlet extends HttpServlet {
                 return;
             }
             int idL = usuario.getID();
+
+            if ("like".equals(accion)) {
+                int idReview = Integer.parseInt(request.getParameter("id_review"));
+                int nuevoConteo = reviewDAO.darLike(idReview, idL);
+                response.getWriter().println(gson.toJson(Map.of("exito", true, "nuevoConteo", nuevoConteo)));
+                return;
+            }
+
+            if ("crearComentario".equals(accion) || "agregarComentario".equals(accion)) {
+                int idReview = Integer.parseInt(request.getParameter("id_review"));
+                String contenido = request.getParameter("contenido");
+                boolean exito = comentarioDAO.crearComentario(idReview, idL, contenido);
+                response.getWriter().println(gson.toJson(Map.of("exito", exito)));
+                return;
+            }
+
+            if ("eliminar".equals(accion)) {
+                int idReview = Integer.parseInt(request.getParameter("id_review"));
+                Review review = reviewDAO.obtenerReview(idReview);
+
+                if (review == null || review.getIdLector() != idL) {
+                    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+                    response.getWriter().println(gson.toJson(Map.of("error", "No puedes eliminar esta review")));
+                    return;
+                }
+
+                boolean exito = reviewDAO.eliminarReview(idReview);
+                response.getWriter().println(gson.toJson(Map.of("exito", exito)));
+                return;
+            }
+
+            // Crear o actualizar review
+            String idReviewStr = request.getParameter("id_review");
+            String idLibroStr = request.getParameter("id_libro");
+            String valoracionStr = request.getParameter("valoracion");
+            String resenia = request.getParameter("resenia");
+
+            boolean exito = false;
 
             if (idReviewStr != null && !idReviewStr.isEmpty()) {
                 int idR = Integer.parseInt(idReviewStr);
@@ -173,4 +169,5 @@ public class ReviewServlet extends HttpServlet {
             response.getWriter().println(gson.toJson(Map.of("error", "Datos incorrectos")));
         }
     }
+
 }

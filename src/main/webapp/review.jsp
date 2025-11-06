@@ -3,6 +3,11 @@
 <%@ page import="models.Review" %>
 <%@ page import="models.Libro" %>
 <%@ page import="dao.LibroDAO" %>
+<%@ page import="models.Lector" %>
+
+<%
+    Lector authUser = (Lector) session.getAttribute("authUser");
+%>
 
 <html>
 <head>
@@ -86,6 +91,9 @@
         <div id="comentariosList" class="comentarios-list"></div>
     </div>
 </div>
-
+<div id="userData" data-id="<%= authUser != null ? authUser.getID() : 0 %>"></div>
+<script>
+    const idLector = document.getElementById('userData').dataset.id;
+</script>
 </body>
 </html>
