@@ -97,11 +97,10 @@ public class SalaServlet extends HttpServlet {
                 reservaDAO.agregarReserva(salaId, lector.getID(), fechaHoraInicio, fechaHoraFin);
                 request.getSession().setAttribute("mensaje", "reserva agregada");
             } else if (accion.equals("cancelar")) {
+                System.out.println("cancelando salas");
+                System.out.println("LECTOR" + lector.getID());
                 reservaDAO.cancelarReservaPorLector(lector.getID());
                 request.getSession().setAttribute("mensaje", "reserva cancelada");
-            } else if (accion.equals("terminar")) {
-                reservaDAO.finalizarReservaPorLector(lector.getID());
-                request.getSession().setAttribute("mensaje", "reserva terminada");
             }
 
             Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
