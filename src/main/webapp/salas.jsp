@@ -26,6 +26,7 @@
     }
     List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
     Reserva reservaActiva = (Reserva) request.getAttribute("reservaActiva");
+    boolean penalizacion = (boolean) request.getAttribute("penalizacion");
 
     String fechaFormateada = "";
     if (reservaActiva != null) {
@@ -58,6 +59,7 @@
     <% } %>
 <header>
     <a href="dashboard" class="btn-volver ">Volver al inicio</a>
+    <a href="mis-reservas" class="btn-volver ">Rservas terminadas</a>
 </header>
 <input type="hidden" id="mostrarReservaActiva" value="<%= reservaActiva != null ? "conReservaActiva" : "sinReservaActiva" %>" >
 
@@ -89,7 +91,7 @@
         <% if (reservaActiva == null) { %>
         <h1>Realizar Reserva:</h1>
         <p id="mensajeReserva" class="mensajeReserva">
-            <%= !usuario.isAutenticacion() ? "No estas autenticadao. No se puede Reservar" : "Selecciona una fecha y una sala para comenzar la reserva." %>
+            <%= !usuario.isAutenticacion() ? "No estas autorizado. No se puede Reservar" : "Selecciona una fecha y una sala para comenzar la reserva." %>
         </p>
 
         <form action="salas" method="post" id="formReserva">
@@ -106,7 +108,7 @@
                 <br>
                 <br>
                 <button type="submit" <%= !usuario.isAutenticacion() ? "disabled" : "" %>>
-                    <%= !usuario.isAutenticacion() ? "No estas autenticadao" : "Reservar" %>
+                    <%= !usuario.isAutenticacion() ? "No estas autorizado" : "Reservar" %>
                 </button>
             </div>
         </form>

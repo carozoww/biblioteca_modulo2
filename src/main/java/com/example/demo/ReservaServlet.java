@@ -32,7 +32,7 @@ public class ReservaServlet extends HttpServlet {
         try {
             LocalDate fechaSeleccionada = LocalDate.parse(request.getParameter("fecha"));
 
-            List<Sala> salas = salaDAO.listarSalas();
+            List<Sala> salas = salaDAO.listarSalasHabilitadas();
             List<Reserva> reservasFiltradas = reservaDAO.listarReservasSinFinalizarPorFecha(fechaSeleccionada);
 
             List<Integer> horas = Arrays.asList(9,10,11,12,13,14,15,16,17);

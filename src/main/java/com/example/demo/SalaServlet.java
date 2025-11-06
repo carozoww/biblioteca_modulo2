@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.google.gson.Gson;
 import dao.LectorDAO;
+import dao.PenalizacionDAO;
 import dao.ReservaDAO;
 import dao.SalaDAO;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import models.Lector;
+import models.Penalizacion;
 import models.Reserva;
 import models.Sala;
 
@@ -25,6 +27,7 @@ public class SalaServlet extends HttpServlet {
     ReservaDAO reservaDAO = new ReservaDAO();
     LectorDAO lectorDAO = new LectorDAO();
     SalaDAO salaDAO = new SalaDAO();
+    PenalizacionDAO penalizacionDAO = new PenalizacionDAO();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
@@ -36,7 +39,7 @@ public class SalaServlet extends HttpServlet {
                 return;
             }
             Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
-
+            boolean penalizacionActiva = penalizacionDAO.tienePenalizacionActiva(lector.getID());
 
             String action = request.getParameter("action");
             if (action != null && action.equals("listar")) {
@@ -47,7 +50,7 @@ public class SalaServlet extends HttpServlet {
                 out.flush();
                 return;
             }
-
+            request.setAttribute("penalizacion", penalizacionActiva);
             request.setAttribute("reservaActiva", reservaActiva);
             request.getRequestDispatcher("salas.jsp").forward(request, response);
         } catch (Exception e) {
