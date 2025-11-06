@@ -4,11 +4,11 @@ body {
     color: #333;
 }
 
+/* ======= NAVBAR ======= */
 #navbar {
     display: flex;
     top: 0;
     position: sticky;
-    grid-area: navbar;
     background-color: #BF5656;
     color: white;
     padding: 1em;
@@ -36,13 +36,11 @@ body {
 }
 
 #elementos_derecha a {
-    float: left;
     color: white;
     text-align: center;
     padding: 12px;
     text-decoration: none;
     font-size: 25px;
-    line-height: 25px;
     border-radius: 4px;
 }
 
@@ -51,7 +49,7 @@ body {
     color: black;
 }
 
-
+/* ======= CONTENIDO PRINCIPAL ======= */
 .main-content {
     padding: 30px;
     max-width: 1000px;
@@ -77,16 +75,76 @@ body {
     color: white;
 }
 
+/* ======= TABS ======= */
+.tabs {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin: 25px 0 0 0;
+}
+
+.tablink {
+    background-color: #BF5656;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.tablink:hover {
+    background-color: #973131;
+}
+
+.tablink.active {
+    background-color: #973131;
+}
+
+/* ======= CONTENIDO DE CADA TAB ======= */
+.tab-content {
+    display: none;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 25px 30px; /*  padding interno */
+    margin-bottom: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ======= TABLAS ======= */
+.tabla-prestamos {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px; /*  separación de la tabla con el borde del contenedor */
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.tabla-prestamos h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: left;
+}
+
 .tabla {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 25px;
+    text-align: left;
+    background-color: #fff;
 }
 
 .tabla th, .tabla td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 12px;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .tabla th {
@@ -94,6 +152,11 @@ body {
     color: white;
 }
 
+.tabla tbody tr:hover {
+    background-color: #f3f8ff;
+}
+
+/* ======= BOTONES ======= */
 .btn-cancelar {
     background-color: #cc5656;
     border: none;
@@ -103,10 +166,12 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .btn-cancelar:hover {
     background-color: #973131;
     color: white;
 }
+
 .btn-aceptar {
     background-color: #95bf56;
     border: none;
@@ -131,51 +196,7 @@ body {
     cursor: not-allowed;
 }
 
-.tabla td {
-    max-width: none;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.tabs {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.tablink {
-    background-color: #eee;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 8px 8px 0 0;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.tablink:hover {
-    background-color: #ddd;
-}
-
-.tablink.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.tab-content {
-    display: none;
-    border: 1px solid #ccc;
-    border-radius: 0 0 10px 10px;
-    padding: 20px 0;
-    background-color: #fff;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-
+/* ======= MENSAJES ======= */
 .msg {
     padding: 10px 15px;
     border-radius: 6px;
@@ -219,58 +240,17 @@ body {
     visibility: hidden;
 }
 
-#search-container {
+/* ======= BUSCADORES ======= */
+.search-container {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 15px;
 }
 
-#buscarPendientes {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 220px;
-    transition: 0.2s;
-}
-
-#buscarConfirmados {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 220px;
-    transition: 0.2s;
-}
-#buscarReservados {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 220px;
-    transition: 0.2s;
-}
-#buscarFinalizados {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 220px;
-    transition: 0.2s;
-}
-#buscarPendientes:focus {
-    border-color: #973131;
-    outline: none;
-}
-#buscarConfirmados:focus {
-    border-color: #973131;
-    outline: none;
-}
-#buscarReservados:focus {
-    border-color: #973131;
-    outline: none;
-}
-#buscarFinalizados:focus {
-    border-color: #973131;
-    outline: none;
-}
-
+#buscarPendientes,
+#buscarConfirmados,
+#buscarReservados,
+#buscarFinalizados,
 #buscarPrestamo {
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -278,8 +258,12 @@ body {
     width: 220px;
     transition: 0.2s;
 }
+
+#buscarPendientes:focus,
+#buscarConfirmados:focus,
+#buscarReservados:focus,
+#buscarFinalizados:focus,
 #buscarPrestamo:focus {
     border-color: #973131;
     outline: none;
 }
-
