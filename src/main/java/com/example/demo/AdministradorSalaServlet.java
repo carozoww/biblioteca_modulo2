@@ -74,8 +74,8 @@ public class AdministradorSalaServlet extends HttpServlet {
 
                 for (Sala s : salas) {
                     if (s.getNumeroSala() == numero) {
-                        request.getSession().setAttribute("mensaje", "Error: El numero de sala ya existe.");
-                        response.sendRedirect("administradorSalas");
+                        request.setAttribute("mensaje", "Error: El numero de sala ya existe.");
+                        request.getRequestDispatcher("administradorSalas.jsp").forward(request, response);
                         return;
                     }
                 }
@@ -89,14 +89,15 @@ public class AdministradorSalaServlet extends HttpServlet {
                 Part filePart = request.getPart("image");
 
                 if (filePart == null || filePart.getSize() == 0) {
-                    request.getSession().setAttribute("mensaje", "Error: No se seleccionó ninguna imagen");
+                    request.setAttribute("mensaje", "Error: No se seleccionó ninguna imagen");
+                    request.getRequestDispatcher("administradorSalas.jsp").forward(request, response);
                     return;
                 }
 
                 String imageUrl = uploadToCloudinary(filePart);
                 salaDAO.crearSala(numero, ubicacion, personas, imageUrl, habilitada);
 
-                request.getSession().setAttribute("mensaje", "sala agregada");
+                request.setAttribute("mensaje", "sala agregada");
             } else if ("editar".equals(accion)) {
 
                 int id = Integer.parseInt(request.getParameter("id-sala"));
@@ -109,8 +110,8 @@ public class AdministradorSalaServlet extends HttpServlet {
                 List<Sala> salas = salaDAO.listarSalas();
                 for (Sala s : salas) {
                     if (s.getNumeroSala() == numero && s.getIdSala() != id) {
-                        request.getSession().setAttribute("mensaje", "Error: El numero de sala ya existe.");
-                        response.sendRedirect("administradorSalas");
+                        request.setAttribute("mensaje", "Error: El numero de sala ya existe.");
+                        request.getRequestDispatcher("administradorSalas.jsp").forward(request, response);
                         return;
                     }
                 }
@@ -129,19 +130,19 @@ public class AdministradorSalaServlet extends HttpServlet {
                 }
 
                 salaDAO.editarSala(id, numero, ubicacion, personas, imageUrl, habilitada);
-                request.getSession().setAttribute("mensaje", "Sala editada");
+                request.setAttribute("mensaje", "Sala editada");
             } else if ("eliminar".equals(accion)) {
 
                 int id = Integer.parseInt(request.getParameter("eliminar-sala"));
                 if (reservaDAO.existeReservaParaSala(id)) {
-                    request.getSession().setAttribute("mensaje", "Existen reservas realizadas para la sala. No se puede elimiar.");
+                    request.setAttribute("mensaje", "Existen reservas realizadas para la sala. No se puede elimiar.");
                 }else{
                     salaDAO.borrarSala(id);
-                    request.getSession().setAttribute("mensaje", "Sala borrada");
+                    request.setAttribute("mensaje", "Sala borrada");
                 }
 
             }
-            response.sendRedirect("administradorSalas");
+            request.getRequestDispatcher("administradorSalas.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

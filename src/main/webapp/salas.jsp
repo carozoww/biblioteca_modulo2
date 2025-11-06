@@ -34,9 +34,9 @@
     }
 %>
 <%
-    String mensaje = (String) session.getAttribute("mensaje");
+    String mensaje = (String) request.getAttribute("mensaje");
     if (mensaje != null)
-        session.removeAttribute("mensaje");
+        request.removeAttribute("mensaje");
 %>
 
 <nav>

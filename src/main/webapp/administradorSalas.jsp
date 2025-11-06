@@ -1,22 +1,16 @@
-<%@ page import="models.Sala" %>
-<%@ page import="models.Lector" %>
-<%@ page import="models.Reserva" %>
 <%@ page import="models.Administrador" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.time.LocalDateTime" %>
-<%@ page import="java.time.format.DateTimeFormatter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<% List<String> generos = (List<String>) request.getAttribute("listaGeneros");
+<%
     Administrador admin = (Administrador) session.getAttribute("authAdmin");
     if (admin == null) {
         response.sendRedirect(request.getContextPath() + "/login-admin");
         return;
     }%>
 <%
-    String mensaje = (String) session.getAttribute("mensaje");
+    String mensaje = (String) request.getAttribute("mensaje");
     if (mensaje != null)
-        session.removeAttribute("mensaje");
+        request.removeAttribute("mensaje");
 %>
 <html>
 <head>
@@ -29,11 +23,10 @@
     </style>
     <style>
         main {
-            width: min(90%, 1000px); /* ocupa 90% de la pantalla o máximo 1200px */
-            margin: 10px auto; /* centra horizontal y vertical dentro del área de main */
+            width: min(90%, 1000px);
+            margin: 10px auto;
             box-sizing: border-box;
         }
-
     </style>
 </head>
 <body>

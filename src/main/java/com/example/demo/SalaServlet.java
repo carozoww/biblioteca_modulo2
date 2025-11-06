@@ -35,13 +35,11 @@ public class SalaServlet extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/login-lector");
                 return;
             }
-            Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
-            Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lectorCompleto.getID());
+            Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
 
 
             String action = request.getParameter("action");
             if (action != null && action.equals("listar")) {
-                System.out.println("listando salas");
                 List<Sala> salas = salaDAO.listarSalasHabilitadas();
                 response.setContentType("application/json;charset=UTF-8");
                 PrintWriter out = response.getWriter();
@@ -73,7 +71,8 @@ public class SalaServlet extends HttpServlet {
 
             if (accion.equals("reservar") && horaFin != null && !horaFin.isEmpty() && horaInicio != null && !horaInicio.isEmpty() && fecha != null && !fecha.isEmpty() && sala != null) {
                 int salaId = Integer.parseInt(sala);
-                if (reservaPresente) {
+                if (reservaPresente || !lector.isAutenticacion()) {
+                    request.setAttribute("mensaje", "Error: No tienes permitido realizar reservas");
                     request.getRequestDispatcher("salas.jsp").forward(request, response);
                     return;
                 }
@@ -86,7 +85,7 @@ public class SalaServlet extends HttpServlet {
                 LocalTime horaFinal = LocalTime.parse(horaFin);
 
                 if (horaInicial.isAfter(horaFinal) || fechaDate.equals(fechaActual) && horaActual.isAfter(horaInicial)) {
-                    request.getSession().setAttribute("mensaje", "Error: Horas seleccionadas no validas");
+                    request.setAttribute("mensaje", "Error: Horas seleccionadas no validas");
                     request.getRequestDispatcher("salas.jsp").forward(request, response);
                     return;
                 }
@@ -95,22 +94,18 @@ public class SalaServlet extends HttpServlet {
                 LocalDateTime fechaHoraFin = fechaDate.atTime(horaFinal);
 
                 reservaDAO.agregarReserva(salaId, lector.getID(), fechaHoraInicio, fechaHoraFin);
-                request.getSession().setAttribute("mensaje", "reserva agregada");
-            } else if (accion.equals("cancelar")) {
-                System.out.println("cancelando salas");
-                System.out.println("LECTOR" + lector.getID());
-                reservaDAO.cancelarReservaPorLector(lector.getID());
-                request.getSession().setAttribute("mensaje", "reserva cancelada");
-            }
+                request.setAttribute("mensaje", "reserva agregada");
 
-            Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
-            request.setAttribute("reservaActiva", null);
-            if (reservaActiva != null) {
+                Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
                 request.setAttribute("reservaActiva", reservaActiva);
+
+            } else if (accion.equals("cancelar")) {
+                reservaDAO.cancelarReservaPorLector(lector.getID());
+                request.setAttribute("mensaje", "reserva cancelada");
             }
 
-            response.sendRedirect("salas");
-
+           // response.sendRedirect("salas");
+            request.getRequestDispatcher("salas.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
