@@ -50,6 +50,7 @@ public class SalaServlet extends HttpServlet {
                 out.flush();
                 return;
             }
+            System.out.println("estado de la penalizacion: " + penalizacionActiva);
             request.setAttribute("penalizacion", penalizacionActiva);
             request.setAttribute("reservaActiva", reservaActiva);
             request.getRequestDispatcher("salas.jsp").forward(request, response);

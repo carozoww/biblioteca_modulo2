@@ -27,7 +27,7 @@
     List<Sala> salasInfo = (List<Sala>) request.getAttribute("listaSalas");
     Reserva reservaActiva = (Reserva) request.getAttribute("reservaActiva");
     boolean penalizacion = (boolean) request.getAttribute("penalizacion");
-
+    System.out.println("la penlizacion es:" + penalizacion);
     String fechaFormateada = "";
     if (reservaActiva != null) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -91,7 +91,7 @@
         <% if (reservaActiva == null) { %>
         <h1>Realizar Reserva:</h1>
         <p id="mensajeReserva" class="mensajeReserva">
-            <%= !usuario.isAutenticacion() ? "No estas autorizado. No se puede Reservar" : "Selecciona una fecha y una sala para comenzar la reserva." %>
+            <%= (!usuario.isAutenticacion() || penalizacion ) ? "No estas autorizado. No se puede Reservar" : "Selecciona una fecha y una sala para comenzar la reserva." %>
         </p>
 
         <form action="salas" method="post" id="formReserva">
@@ -107,8 +107,8 @@
                 <select id="hora-fin" name="hora-fin" required></select>
                 <br>
                 <br>
-                <button type="submit" <%= !usuario.isAutenticacion() ? "disabled" : "" %>>
-                    <%= !usuario.isAutenticacion() ? "No estas autorizado" : "Reservar" %>
+                <button type="submit" <%= (!usuario.isAutenticacion() || penalizacion ) ? "disabled" : "" %>>
+                    <%= (!usuario.isAutenticacion() || penalizacion ) ? "No estas autorizado" : "Reservar" %>
                 </button>
             </div>
         </form>
