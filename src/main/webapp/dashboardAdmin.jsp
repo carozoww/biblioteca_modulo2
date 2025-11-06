@@ -52,7 +52,7 @@
     <div id="columna_contenido">
         <div>
             <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
-            <a href="">Lectores</a>
+            <a href="autenticarLector">Lectores</a>
         </div>
         <div>
             <img src="imgs/resenia.png" alt="" width="50px" height="50px">
@@ -148,8 +148,6 @@
                 librosFiltrados = await response.json();
                 offset = 0;
                 mostrarLibros();
-
-
             })
     }
 </script>
