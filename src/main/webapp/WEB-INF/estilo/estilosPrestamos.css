@@ -95,7 +95,7 @@ body {
 }
 
 .btn-cancelar {
-    background-color: #973131;
+    background-color: #cc5656;
     border: none;
     padding: 6px 12px;
     border-radius: 6px;
@@ -190,5 +190,96 @@ body {
 .msg-error {
     background-color: #f8d7da;
     color: #721c24;
+}
+
+/* ======= PAGINACIÓN ======= */
+#paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#paginacion button {
+    background-color: #973131;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#paginacion button:hover {
+    background-color: #650909;
+}
+
+#paginacion button[style*="hidden"] {
+    visibility: hidden;
+}
+
+#search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#buscarPendientes {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 220px;
+    transition: 0.2s;
+}
+
+#buscarConfirmados {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 220px;
+    transition: 0.2s;
+}
+#buscarReservados {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 220px;
+    transition: 0.2s;
+}
+#buscarFinalizados {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 220px;
+    transition: 0.2s;
+}
+#buscarPendientes:focus {
+    border-color: #973131;
+    outline: none;
+}
+#buscarConfirmados:focus {
+    border-color: #973131;
+    outline: none;
+}
+#buscarReservados:focus {
+    border-color: #973131;
+    outline: none;
+}
+#buscarFinalizados:focus {
+    border-color: #973131;
+    outline: none;
+}
+
+#buscarPrestamo {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 220px;
+    transition: 0.2s;
+}
+#buscarPrestamo:focus {
+    border-color: #973131;
+    outline: none;
 }
 

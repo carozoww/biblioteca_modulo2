@@ -44,6 +44,7 @@
             }
         }
     }
+    prestamosFinalizados.sort((a, b) -> b.getFechaDevolucion().compareTo(a.getFechaDevolucion()));
 
 %>
 
@@ -91,6 +92,10 @@
     </div>
 
     <div id="pendientes" class="tab-content active">
+        <div class="search-container">
+            <input type="text" id="buscarPendientes" placeholder="Buscar préstamo...">
+        </div>
+
         <section class="tabla-prestamos">
             <h3>Préstamos pendientes de aprobación</h3>
             <table class="tabla">
@@ -140,9 +145,17 @@
                 </tbody>
             </table>
         </section>
+        <div id="paginacion">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
     </div>
 
     <div id="confirmados" class="tab-content">
+        <div class="search-container">
+            <input type="text" id="buscarConfirmados" placeholder="Buscar préstamo...">
+        </div>
+
         <section class="tabla-prestamos">
             <h3>Préstamos confirmados</h3>
             <table class="tabla">
@@ -184,9 +197,17 @@
                 </tbody>
             </table>
         </section>
+        <div id="paginacion">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
     </div>
 
     <div id="reservados" class="tab-content">
+        <div class="search-container">
+            <input type="text" id="buscarReservados" placeholder="Buscar préstamo...">
+        </div>
+
         <section class="tabla-prestamos">
             <h3>Préstamos reservados</h3>
             <table class="tabla">
@@ -234,9 +255,17 @@
                 </tbody>
             </table>
         </section>
+        <div id="paginacion">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
     </div>
 
     <div id="finalizados" class="tab-content">
+        <div class="search-container">
+            <input type="text" id="buscarFinalizados" placeholder="Buscar préstamo...">
+        </div>
+
         <section class="tabla-prestamos">
             <h3>Préstamos finalizados</h3>
             <table class="tabla">
@@ -276,46 +305,13 @@
                 </tbody>
             </table>
         </section>
+        <div id="paginacion">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
     </div>
 
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
-            document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            event.target.classList.add('active');
-
-            // guarda la pestaña seleccionada
-            localStorage.setItem("tabActivaPrestamos", tabId);
-        }
-
-        // al cargar la página, revisa que pestaña estaba activa
-        window.addEventListener('load', function () {
-            const tabGuardada = localStorage.getItem("tabActivaPrestamos");
-            if (tabGuardada && document.getElementById(tabGuardada)) {
-                document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
-                document.getElementById(tabGuardada).classList.add('active');
-
-                document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-                document.querySelector(`.tablink[onclick="showTab('${tabGuardada}')"]`).classList.add('active');
-            } else {
-                // si no hay pestaña guardada, mostrara la primera
-                document.querySelector('.tab-content').classList.add('active');
-                document.querySelector('.tablink').classList.add('active');
-            }
-        });
-        // mensaje que desaparece automáticamente
-        window.addEventListener('load', function() {
-            const msg = document.querySelector('.msg');
-            if (msg) {
-                setTimeout(() => {
-                    msg.style.transition = 'opacity 0.8s ease';
-                    msg.style.opacity = '0';
-                    setTimeout(() => msg.remove(), 800);
-                }, 3000);
-            }
-        });
-    </script>
+    <script src="manejoPrestamos.js"></script>
 </main>
 </body>
 </html>
