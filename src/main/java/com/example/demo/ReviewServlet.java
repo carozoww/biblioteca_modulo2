@@ -68,6 +68,23 @@ public class ReviewServlet extends HttpServlet {
                 return;
             }
 
+            if ("filtrarMisReviews".equals(accion)) {
+                Lector usuario = (Lector) request.getSession().getAttribute("authUser");
+
+                if (usuario == null) {
+                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                    response.getWriter().println(gson.toJson(List.of()));
+                    return;
+                }
+
+                int idLector = usuario.getID();
+                List<Review> misReviews = reviewDAO.listarReviewsPorLector(idLector);
+
+                response.getWriter().println(gson.toJson(misReviews));
+                return;
+            }
+
+
             response.getWriter().println("{\"error\":\"Acción no válida\"}");
         } catch (Exception e) {
             e.printStackTrace();

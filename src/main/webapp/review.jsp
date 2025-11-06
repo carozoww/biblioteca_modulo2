@@ -16,8 +16,10 @@
 <body>
 
 <h1>Reseñas</h1>
-
-<button id="nuevaReviewBtn">Nueva Reseña</button>
+<div id="botonesHeader">
+    <button id="nuevaReviewBtn">Nueva Reseña</button>
+    <button id="btnToggleReviews">Ver solo mis reviews</button>
+</div>
 <div id="reviewsList"></div>
 
 <div id="paginacion">

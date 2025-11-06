@@ -16,6 +16,11 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
+#botonesHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .review-card:hover {
     transform: translateY(-4px);

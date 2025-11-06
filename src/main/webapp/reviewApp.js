@@ -1,5 +1,6 @@
 let pagina = 1;
 let cargandoDetalle = false;
+let verSoloMias = false;
 
 // Generar estrellas
 function generarEstrellas(valor) {
@@ -17,9 +18,13 @@ async function cargarReviews() {
     const container = document.getElementById('reviewsList');
     container.innerHTML = '';
 
-    const res = await fetch(`reviews?accion=listar&pagina=${pagina}`);
-    const data = await res.json();
+    const res = await fetch(
+        verSoloMias
+            ? `reviews?accion=filtrarMisReviews`
+            : `reviews?accion=listar&pagina=${pagina}`
+    );
 
+    const data = await res.json();
     data.forEach(r => {
         const libroImg = r.imagenLibro || 'imgs/libro.jpg';
         const lectorImg = r.imagenLector || 'imgs/iconouser.png';
@@ -219,14 +224,19 @@ async function enviarComentario(idReview) {
     }
 }
 
-// Botón para agregar comentario
+// Boton para agregar comentario
 document.getElementById('btnAgregarComentario').addEventListener('click', () => {
     const idReview = document.getElementById('btnAgregarComentario').dataset.idreview;
     if (!idReview) { console.error("idReview vacío!"); return; }
     enviarComentario(idReview);
 });
 
-
+//Boton del filtro
+document.getElementById("btnToggleReviews").addEventListener("click", async () => {
+    verSoloMias = !verSoloMias;
+    document.getElementById("btnToggleReviews").innerText = verSoloMias ? "Ver Todas las Reseñas" : "Ver Mis Reseñas";
+    await cargarReviews();
+});
 
 // MODALES
 
