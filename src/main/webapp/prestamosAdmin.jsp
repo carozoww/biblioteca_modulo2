@@ -61,9 +61,7 @@
 
 <nav id="navbar">
     <div id="logoynombre">
-        <a href="dashboardAdmin">
             <img src="imgs/logo.jpg" width="100" height="100" alt="Logo Biblio-Tech-a">
-        </a>
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_derecha">
