@@ -38,7 +38,7 @@ public class LoginLectorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         String ced = request.getParameter("cedula");
-        String contrasenia = request.getParameter("passw");
+        String contrasenia = request.getParameter("pass");
 
         Boolean existeCedula = false;
         try{

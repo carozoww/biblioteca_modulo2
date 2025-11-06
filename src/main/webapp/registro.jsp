@@ -69,7 +69,7 @@
             <div class="ingreso">
                 <label for="password">Contraseña:</label>
                 <div class="ingreso-pass">
-                    <input type="password" id="password" class="password-input" name="passw">
+                    <input type="password" id="password" class="password-input" name="pass">
                     <img src="imgs/eye-fill-6.png" alt="" class="ojologo">
                 </div>
             </div>

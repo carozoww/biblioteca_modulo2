@@ -105,7 +105,7 @@
             <button onclick="window.location.href='alta-lector-servlet'">Registrar Lector</button>
         </div>
 
-        <h1>Libros</h1>
+        <h1 id="tituloLibro">Libros</h1>
         <div class="contenedor-libros" id="containerLibro">
 
         </div>

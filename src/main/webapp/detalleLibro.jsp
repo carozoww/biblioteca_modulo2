@@ -10,6 +10,7 @@
     LibroAutorDAO libroAutorDAO = new LibroAutorDAO();
     LibroGeneroDAO librogenerodao = new LibroGeneroDAO();
     EditorialDAO editorial = new EditorialDAO();
+    PenalizacionDAO penadao = new PenalizacionDAO();
     List<Genero> generos = librogenerodao.listarGenerosDeLibro(idLibro);
 
     // Obtener sesión e idLector
@@ -27,8 +28,8 @@
     List<Editorial> editoriales = Collections.singletonList(editorial.buscarEditorialPorId(idE));
 
     boolean tienePrestamo = prestamoDAO.prestamoActivoPorLector(idLector);
+    boolean estaPenalizado = penadao.tienePenalizacionActiva(idLector);
 
-    boolean autenticado = usuario.isAutenticacion();
 %>
 
 <!DOCTYPE html>
@@ -112,13 +113,15 @@
                 <input type="hidden" name="idLibro" value="<%= libro.getIdLibro() %>">
 
                 <%
-                    boolean puedeReservar = usuario.isAutenticacion() && !tienePrestamo;
+                    boolean puedeReservar = usuario.isAutenticacion() && !tienePrestamo && !estaPenalizado;
                     String textoBoton;
                     if (!usuario.isAutenticacion()) {
                         textoBoton = "No estás autenticado";
                     } else if (tienePrestamo) {
                         textoBoton = "Ya tenés un préstamo";
-                    } else {
+                    } else if(estaPenalizado){
+                        textoBoton = "Estas penalizado";
+                    } else{
                         textoBoton = "Reservar";
                     }
                 %>

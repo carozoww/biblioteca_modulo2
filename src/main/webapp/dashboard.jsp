@@ -44,8 +44,8 @@
 <aside id="sidebar">
     <div id="columna_contenido">
         <div>
-            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
-            <a href="">Usuarios</a>
+            <img src="imgs/libros.svg" alt="" width="50px" height="50px">
+            <a href="">Libros</a>
         </div>
         <div>
             <img src="imgs/resenia.png" alt="" width="50px" height="50px">
@@ -97,6 +97,7 @@
 
     <div id="recomendado-seccion">
         <button type="submit" onclick="enviarId_lector()" >Mostrar Libros Recomendados</button>
+        <p id="mensajeError"></p>
     </div>
     <h1 id="tituloLibro">Libros</h1>
     <div class="contenedor-libros" id="containerLibro">
@@ -149,10 +150,14 @@
     async function enviarId_lector() {
         const id = <%=usuario.getID()%>;
         const numresenias = <%=num_resenias%>;
+        const mensaje = document.getElementById('mensajeError');
 
         if(numresenias < 3){
+            mensaje.innerText = "Haz 3 reseñas positivas a libros para listar tus libros recomendados!!!";
             return;
         }
+
+        mensaje.innerText ="";
 
 
         fetch('librosRecomendados', {
