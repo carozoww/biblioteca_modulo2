@@ -262,6 +262,12 @@ main>h1 {
     border-color: #adb5bd;
 }
 
+#boton-alta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
 #boton-alta button{
     margin: 10px;
     padding: 12px 24px;
@@ -269,6 +275,21 @@ main>h1 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#boton-alta p{
+    font-size:24px;
+    color:red;
+    margin:10px;
+}
+
+#tituloLibro{
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
 }
 
 .contenedor-libros {

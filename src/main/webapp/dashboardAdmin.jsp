@@ -9,6 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%  List<String> generos = (List<String>) request.getAttribute("listaGeneros");
     Administrador admin = (Administrador) session.getAttribute("authAdmin");
+    String error = (String) session.getAttribute("error");
+    if(error != null){
+        session.removeAttribute("error");
+    }
+
+
     if (admin == null) {
         response.sendRedirect(request.getContextPath() + "/login-admin");
         return;
@@ -90,10 +96,15 @@
     </div>
     <div id="boton-alta">
         <button onclick="window.location.href='alta-libro-servlet'">Crear Libro</button>
+        <%if(error != null){ %>
+        <p><%=error%></p>
+        <%}%>
         <button onclick="window.location.href='alta-lector-servlet'">Registrar Lector</button>
+
     </div>
 
     <h1>Libros</h1>
+
     <div class="contenedor-libros" id="containerLibro">
 
     </div>
