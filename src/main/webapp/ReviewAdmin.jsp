@@ -6,7 +6,6 @@
     <style>
         <%@ include file="./WEB-INF/estilo/estiloReview.css" %>
         body { font-family: Arial, sans-serif; }
-        button.eliminar-btn { cursor:pointer; border:none; padding:5px 10px; border-radius:4px; }
     </style>
 </head>
 <body>
