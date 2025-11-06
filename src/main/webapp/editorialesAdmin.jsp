@@ -11,9 +11,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Editoriales</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
+    <style>
+        <%@include file="./WEB-INF/estilo/otrocss.css" %>
+    </style>
     <!-- Estilos simples para los botones y tabla -->
-    <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
+    <style>
+        <%@include file="./WEB-INF/estilo/estiloscrud.css" %>
+    </style>
+    <style>
+        body {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "navbar"
+                "main";
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        main {
+            width: min(90%, 1000px); /* ocupa 90% de la pantalla o máximo 1200px */
+            margin: 10px auto; /* centra horizontal y vertical dentro del área de main */
+            box-sizing: border-box;
+        }
+    </style>
+
 </head>
 <body>
 <nav>
@@ -63,15 +86,18 @@
                 for (Editorial editorial : editoriales) {
         %>
         <tr>
-            <td><%= index++ %></td>
-            <td><%= editorial.getNombre() %></td>
+            <td><%= index++ %>
+            </td>
+            <td><%= editorial.getNombre() %>
+            </td>
             <td>
                 <!-- Botones de acción CRUD -->
                 <form action="editarEditorial" method="get" style="display:inline;">
                     <input type="hidden" name="id" value="<%= editorial.getIdEditorial() %>">
                     <button type="submit" class="editar">Editar</button>
                 </form>
-                <form action="eliminarEditorial" method="post" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este Editorial?');">
+                <form action="eliminarEditorial" method="post" style="display:inline;"
+                      onsubmit="return confirm('¿Seguro que deseas eliminar este Editorial?');">
                     <input type="hidden" name=id value="<%= editorial.getIdEditorial() %>">
                     <button type="submit" class="eliminar">Eliminar</button>
                 </form>

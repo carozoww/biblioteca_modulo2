@@ -1,4 +1,11 @@
 /* general */
+body{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                "navbar"
+                "main";
+}
+
 
 main h1 {
     color: #BF5656;

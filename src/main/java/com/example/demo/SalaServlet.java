@@ -36,21 +36,21 @@ public class SalaServlet extends HttpServlet {
                 return;
             }
             Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
-            Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
+            Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lectorCompleto.getID());
 
-            if (reservaActiva != null) {
-                request.setAttribute("reservaActiva", reservaActiva);
-            } else {
-                String action = request.getParameter("action");
-                if (action != null && action.equals("listar")) {
-                    List<Sala> salas = salaDAO.listarSalasHabilitadas();
-                    response.setContentType("application/json;charset=UTF-8");
-                    PrintWriter out = response.getWriter();
-                    out.print(new Gson().toJson(salas));
-                    out.flush();
-                    return;
-                }
+
+            String action = request.getParameter("action");
+            if (action != null && action.equals("listar")) {
+                System.out.println("listando salas");
+                List<Sala> salas = salaDAO.listarSalasHabilitadas();
+                response.setContentType("application/json;charset=UTF-8");
+                PrintWriter out = response.getWriter();
+                out.print(new Gson().toJson(salas));
+                out.flush();
+                return;
             }
+
+            request.setAttribute("reservaActiva", reservaActiva);
             request.getRequestDispatcher("salas.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -69,8 +69,7 @@ public class SalaServlet extends HttpServlet {
 
             HttpSession sesion = request.getSession();
             Lector lector = (Lector) sesion.getAttribute("authUser");
-            Lector lectorCompleto = lectorDAO.buscarPorCedula(Integer.parseInt(lector.getCedula()));
-            boolean reservaPresente = reservaDAO.reservaActivaPorLector(lectorCompleto.getID());
+            boolean reservaPresente = reservaDAO.reservaActivaPorLector(lector.getID());
 
             if (accion.equals("reservar") && horaFin != null && !horaFin.isEmpty() && horaInicio != null && !horaInicio.isEmpty() && fecha != null && !fecha.isEmpty() && sala != null) {
                 int salaId = Integer.parseInt(sala);
@@ -95,17 +94,17 @@ public class SalaServlet extends HttpServlet {
                 LocalDateTime fechaHoraInicio = fechaDate.atTime(horaInicial);
                 LocalDateTime fechaHoraFin = fechaDate.atTime(horaFinal);
 
-                reservaDAO.agregarReserva(salaId, lectorCompleto.getID(), fechaHoraInicio, fechaHoraFin);
+                reservaDAO.agregarReserva(salaId, lector.getID(), fechaHoraInicio, fechaHoraFin);
                 request.getSession().setAttribute("mensaje", "reserva agregada");
             } else if (accion.equals("cancelar")) {
-                reservaDAO.cancelarReservaPorLector(lectorCompleto.getID());
+                reservaDAO.cancelarReservaPorLector(lector.getID());
                 request.getSession().setAttribute("mensaje", "reserva cancelada");
             } else if (accion.equals("terminar")) {
-                reservaDAO.finalizarReservaPorLector(lectorCompleto.getID());
+                reservaDAO.finalizarReservaPorLector(lector.getID());
                 request.getSession().setAttribute("mensaje", "reserva terminada");
             }
 
-            Reserva reservaActiva = reservaDAO.listarReservaActivaDelLector(lectorCompleto.getID());
+            Reserva reservaActiva = reservaDAO.listarReservasActivaDelLector(lector.getID());
             request.setAttribute("reservaActiva", null);
             if (reservaActiva != null) {
                 request.setAttribute("reservaActiva", reservaActiva);

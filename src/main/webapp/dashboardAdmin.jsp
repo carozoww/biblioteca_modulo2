@@ -44,6 +44,7 @@
         <a href="administradorSalas">Salas</a>
     </div>
     <div id="elementos_derecha">
+        <a href="">Cuenta</a>
         <a href="logout">Cerrar sesion</a>
     </div>
 </nav>
@@ -63,7 +64,7 @@
         </div>
         <div>
             <img src="imgs/reserva.png" alt="" width="50px" height="50px">
-            <a href="administradorReservas">Reservas</a>
+            <a href="reservasAdmin">Reservas</a>
         </div>
     </div>
 </aside>

@@ -1,4 +1,21 @@
 /* generales */
+body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "navbar"
+    "main";
+}
+
+nav {
+    grid-area: navbar;
+}
+
+main {
+    width: min(90%, 1000px); /* ocupa 90% de la pantalla o máximo 1200px */
+    margin: 10px auto;       /* centra horizontal y vertical dentro del área de main */
+}
+
+
 h1, h2 {
     text-align: left;
     margin: 15px;
@@ -229,6 +246,10 @@ th {
 .reserva-container h2 {
     color: #BF5656;
     font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.reserva-container h1 {
+    color: #BF5656;
     margin-bottom: 15px;
 }
 
