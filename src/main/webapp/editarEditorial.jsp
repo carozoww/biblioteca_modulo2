@@ -8,10 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Editorial</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
 </head>
 <body>
     <nav>
@@ -29,7 +27,7 @@
     <main>
 
         <h2>Editar Editorial</h2>
-        <form action="editarEditorial" method="post">
+        <form class="crud-form" action="editarEditorial" method="post">
             <input type="hidden" name="id" value="<%= editorial.getIdEditorial() %>">
             <label>Nombre:</label>
             <input type="text" name="nombre" maxlength="30" value="<%= editorial.getNombre() %>" required>

@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Editorial</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
 </head>
 <body>
     <nav>
@@ -23,7 +21,7 @@
 
     <main>
         <h2>Agregar Nueva Editorial</h2>
-        <form action="agregarEditorial" method="post">
+        <form class="crud-form" action="agregarEditorial" method="post">
             <label>Nombre:</label>
             <input type="text" name="nombre" maxlength="30" required>
             <br><br>

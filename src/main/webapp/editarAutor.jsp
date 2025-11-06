@@ -9,10 +9,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Género</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
+
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
+
 </head>
 <body>
 <nav>
@@ -30,7 +30,7 @@
 <main>
 
     <h2>Editar Autor</h2>
-    <form action="editarAutor" method="post">
+    <form class="crud-form" action="editarAutor" method="post">
         <input type="hidden" name="id" value="<%= autor.getId_autor()%>">
         <label>Nombre:</label>
         <input type="text" name="nombre" value="<%= autor.getNombre() %>" required>

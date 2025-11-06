@@ -40,11 +40,10 @@
     <div id="elementos_medio">
         <a href="generosAdmin">Generos</a>
         <a href="autoresAdmin">Autores</a>
-        <a href="">Editoriales</a>
-        <a href="">Salas</a>
+        <a href="editorialesAdmin">Editoriales</a>
+        <a href="administradorSalas">Salas</a>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
         <a href="logout">Cerrar sesion</a>
     </div>
 </nav>
@@ -64,7 +63,7 @@
         </div>
         <div>
             <img src="imgs/reserva.png" alt="" width="50px" height="50px">
-            <a href="">Reservas</a>
+            <a href="administradorReservas">Reservas</a>
         </div>
     </div>
 </aside>

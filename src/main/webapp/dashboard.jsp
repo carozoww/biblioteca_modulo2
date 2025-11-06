@@ -77,7 +77,7 @@
                     <option value="<%= genero %>"> <%= genero %></option>
                     <%} %>
                 </select>
-                <button onclick="enviarGenero()" id="botonGenero">click</button>
+                <button onclick="enviarGenero()" id="botonGenero">Buscar</button>
             </div>
         </div>
         <div id="buscador-seccion">

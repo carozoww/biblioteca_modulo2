@@ -12,7 +12,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Generos</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
 </head>

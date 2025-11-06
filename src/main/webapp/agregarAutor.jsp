@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Autor</title>
-    <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
+    <%--<style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>--%>
 </head>
 <body>
 <nav>
@@ -23,7 +22,7 @@
 
 <main>
     <h2>Agregar Nuevo Autor</h2>
-    <form action="agregarAutor" method="post">
+    <form class="crud-form" action="agregarAutor" method="post">
         <label>Nombre:</label>
         <input type="text" name="nombre" required>
         <label>Apellido:</label>

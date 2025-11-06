@@ -6,6 +6,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="models.Libro" %>
 <%@ page import="models.Lector" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     // Verificar sesión del administrador
     Administrador admin = (Administrador) session.getAttribute("authAdmin");

@@ -36,13 +36,12 @@
         <h1>Biblio-Tech-a</h1>
     </div>
     <div id="elementos_medio">
-        <a href="">Generos</a>
-        <a href="">Autores</a>
-        <a href="">Editoriales</a>
-        <a href="">Salas</a>
+        <a href="generosAdmin">Generos</a>
+        <a href="autoresAdmin">Autores</a>
+        <a href="editorialesAdmin">Editoriales</a>
+        <a href="administradorSalas">Salas</a>
     </div>
     <div id="elementos_derecha">
-        <a href="">Cuenta</a>
         <a href="logout">Cerrar sesion</a>
     </div>
 </nav>
@@ -50,19 +49,19 @@
     <div id="columna_contenido">
         <div>
             <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
-            <a href="">Lectores</a>
+            <a href="autenticarLector">Lectores</a>
         </div>
         <div>
             <img src="imgs/resenia.png" alt="" width="50px" height="50px">
-            <a href="">Reseñas</a>
+            <a href="#">Reseñas</a>
         </div>
         <div>
             <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
-            <a href="">Prestamos</a>
+            <a href="prestamosAdmin">Prestamos</a>
         </div>
         <div>
             <img src="imgs/reserva.png" alt="" width="50px" height="50px">
-            <a href="">Reservas</a>
+            <a href="administradorReservas">Reservas</a>
         </div>
     </div>
 </aside>
