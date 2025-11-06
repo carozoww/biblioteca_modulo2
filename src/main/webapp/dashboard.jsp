@@ -64,7 +64,7 @@
 
 <main>
 
-    <div id="mainContent"></div>
+    <div id="mainContent">
 
     <div id="seccion-filtros">
         <div id="filtros">
@@ -98,7 +98,7 @@
     <div id="recomendado-seccion">
         <button type="submit" onclick="enviarId_lector()" >Mostrar Libros Recomendados</button>
     </div>
-    <h1>Libros</h1>
+    <h1 id="tituloLibro">Libros</h1>
     <div class="contenedor-libros" id="containerLibro">
 
     </div>
@@ -106,7 +106,7 @@
         <button id="anterior">Anterior</button>
         <button id="siguiente">Siguiente</button>
     </div>
-
+    </div>
 </main>
 
 <footer>

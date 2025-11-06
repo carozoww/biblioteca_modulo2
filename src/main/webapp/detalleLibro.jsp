@@ -1,15 +1,16 @@
-<%@ page import="models.Libro, models.Autor, dao.LibroDAO, dao.LibroAutorDAO, dao.PrestamoDAO" %>
-<%@ page import="models.Lector" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
-<%@ page import="dao.EditorialDAO" %>
-<%@ page import="models.Editorial" %>
 <%@ page import="java.util.Collections" %>
+<%@ page import="models.*" %>
+<%@ page import="dao.*" %>
 <%
     int idLibro = Integer.parseInt(request.getParameter("id"));
     PrestamoDAO prestamoDAO = new PrestamoDAO();
     LibroDAO libroDAO = new LibroDAO();
     LibroAutorDAO libroAutorDAO = new LibroAutorDAO();
+    LibroGeneroDAO librogenerodao = new LibroGeneroDAO();
     EditorialDAO editorial = new EditorialDAO();
+    List<Genero> generos = librogenerodao.listarGenerosDeLibro(idLibro);
 
     // Obtener sesión e idLector
     Lector usuario = (Lector) session.getAttribute("authUser");
@@ -20,7 +21,7 @@
     int idLector = usuario.getID();
 
     // Obtener libro, autores y editorial
-    Libro libro = libroDAO.buscarPorId(idLibro);
+    Libro libro = libroDAO.buscarLibroPorID(idLibro);
     List<Autor> autores = libroAutorDAO.listarAutoresDeUnLibro(idLibro);
     int idE = libro.getIdEditorial();
     List<Editorial> editoriales = Collections.singletonList(editorial.buscarEditorialPorId(idE));
@@ -54,23 +55,55 @@
 
 <main id="detalle-libro">
     <div class="container">
-        <h2 class="titulo-libro"><%= libro.getTitulo() %></h2>
 
+
+        <h2 class="titulo-libro"><%= libro.getTitulo() %></h2>
+        <%if(libro.getImagen_url() != null){ %>
+        <img src="<%=libro.getImagen_url()%>" width="300" heigth="375px" class="imagen">
+        <%}else{%>
+        <img src="imgs/libro.jpg" width="300" heigth="375px" class="imagen">
+        <%}%>
         <div class="info-libro">
-            <p><span class="label">Autores:</span>
-                <% for(Autor a : autores){ %>
+            <p><span class="label"> <b>Número de páginas:</b></span> <%=libro.getNumpaginas()%></p>
+
+            <p><span class="label"><b>Autores:</b></span>
+
+                <% if(!autores.isEmpty()){
+                    for(Autor a : autores){ %>
                 <%= a.getNombre() %> <%= a.getApellido() %><% if(autores.indexOf(a) < autores.size() - 1){ %>, <% } %>
-                <% } %>
+                <%
+                    }
+                }else{%>
+                Sin autores asignados
+                <%}
+                %>
             </p>
 
-            <p><span class="label">Editorial:</span>
+            <p><span class="label"><b>Generos:</b></span>
+
+                <% if(!generos.isEmpty()){
+                    for(Genero g : generos){ %>
+                <%= g.getNombre() %> <% if(generos.indexOf(g) < generos.size() - 1){ %>, <% } %>
+                <%
+                    }
+                }else{%>
+                Sin generos asignados
+                <%}    %>
+            </p>
+
+            <p><span class="label"> <b>Editorial:</b></span>
                 <% for(Editorial e : editoriales){ %>
                 <%= e.getNombre() %>
                 <% } %>
             </p>
 
-            <p><span class="label">ISBN:</span> <%= libro.getIsbn() %></p>
-            <p><span class="label">Fecha de publicación:</span> <%= libro.getFechaPublicacion() %></p>
+            <p><span class="label"><b>ISBN:</b></span> <%= libro.getIsbn() %></p>
+            <p><span class="label"><b>Fecha de publicación:</b></span> <%= libro.getFechaPublicacion() %></p>
+            <div>
+                <label><b>Sinopsis:</b></label>
+                <p><%=libro.getSinopsis()%> </p>
+            </div>
+
         </div>
 
         <div class="acciones">

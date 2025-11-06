@@ -9,6 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%  List<String> generos = (List<String>) request.getAttribute("listaGeneros");
     Administrador admin = (Administrador) session.getAttribute("authAdmin");
+    String error = (String) session.getAttribute("error");
+    if(error != null){
+        session.removeAttribute("error");
+    }
+
+
     if (admin == null) {
         response.sendRedirect(request.getContextPath() + "/login-admin");
         return;

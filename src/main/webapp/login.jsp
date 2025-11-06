@@ -39,7 +39,7 @@
             </div>
 
             <div id="botones">
-                <button type="button" onclick="window.location.href='dashboardUsuario'">Regresar</button>
+                <button type="button" onclick="window.location.href='dashboardUsuario'">Ingresar sin cuenta</button>
                 <button type="submit">Iniciar Sesión</button>
             </div>
 

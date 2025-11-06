@@ -2,21 +2,25 @@
 <%@ page import="java.util.List" %>
 <%@ page import="models.Autor" %>
 <%@ page import="models.Editorial" %>
+<%@ page import="java.util.ArrayList" %>
 
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ page pageEncoding="UTF-8" %>
 
 <%
-    List<String> generos = (List<String>) request.getAttribute("listaGeneros");
+    List<String> generos = new ArrayList<>();
+
+    if(request.getAttribute("listaGeneros") != null){
+        generos = (List<String>) request.getAttribute("listaGeneros");
+    }
+
 
 
 %>
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
-    <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
     <title>Pagina Principal</title>
 </head>
 
@@ -170,7 +174,6 @@
     }
 </script>
 
-<!-- Carga dinámica de reseñas -->
 
 
 </body>
