@@ -58,6 +58,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre completo</th>
+                <th>Autenticado</th>
                 <th>Penalización</th>
                 <th>Acción</th>
             </tr>
@@ -73,6 +74,9 @@
                 </td>
                 <td><%= lector.getNombre() %>
                 </td>
+                <td class="status <%= lector.isAutenticacion() %>">
+                    <%= lector.isAutenticacion() ? "Sí" : "No" %>
+                </td>
                 <td><%= (pena != null) ? pena.getMotivo() : "-" %>
                 </td>
                 <td>
@@ -83,18 +87,20 @@
                         <input type="hidden" name="idPena" value="<%= pena.getId_pena() %>">
                         <button type="submit" class="btn-cancelar">Quitar</button>
                     </form>
-                    <% } else { %>
+                    <% } else  if (lector.isAutenticacion())  { %>
                     <!-- aplicar -->
                     <form action="${pageContext.request.contextPath}/aplicarPenalizaciones.jsp" method="get"
                           style="display:inline;">
                         <input type="hidden" name="idLector" value="<%= lector.getID() %>">
                         <button type="submit" class="btn-aceptar">Aplicar</button>
                     </form>
-                    <% } %>
+                    <% } else {%>
+                    <p>-</p>
                 </td>
             </tr>
             <%
             }
+                    }
                 } else { %>
             <tr>
                 <td colspan="6">No hay lectores registrados</td>
