@@ -33,6 +33,7 @@
             }
         }
     }
+    prestamosFinalizados.sort((a, b) -> b.getFechaDevolucion().compareTo(a.getFechaDevolucion()));
 %>
 
 <!DOCTYPE html>
@@ -133,6 +134,9 @@
     </div>
 
     <div id="finalizados" class="tab-content">
+        <div class="search-container">
+            <input type="text" id="buscarPrestamo" placeholder="Buscar préstamo...">
+        </div>
         <section class="tabla-prestamos">
             <h3>Préstamos anteriores</h3>
             <table class="tabla">
@@ -161,48 +165,112 @@
                 </tbody>
             </table>
         </section>
+        <div id="paginacion">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
     </div>
 </main>
+<script src="manejoPrestamos.js"></script>
+<%--<script>--%>
+<%--    function showTab(tabId) {--%>
+<%--        document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));--%>
+<%--        document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));--%>
+<%--        document.getElementById(tabId).classList.add('active');--%>
+<%--        event.target.classList.add('active');--%>
 
-<script>
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
-        document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-        event.target.classList.add('active');
+<%--        // guarda la pestaña seleccionada--%>
+<%--        localStorage.setItem("tabActivaPrestamos", tabId);--%>
+<%--    }--%>
 
-        // guarda la pestaña seleccionada
-        localStorage.setItem("tabActivaPrestamos", tabId);
-    }
+<%--    // al cargar la página, revisa que pestaña estaba activa--%>
+<%--    window.addEventListener('load', function () {--%>
+<%--        const tabGuardada = localStorage.getItem("tabActivaPrestamos");--%>
+<%--        if (tabGuardada && document.getElementById(tabGuardada)) {--%>
+<%--            document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));--%>
+<%--            document.getElementById(tabGuardada).classList.add('active');--%>
 
-    // al cargar la página, revisa que pestaña estaba activa
-    window.addEventListener('load', function () {
-        const tabGuardada = localStorage.getItem("tabActivaPrestamos");
-        if (tabGuardada && document.getElementById(tabGuardada)) {
-            document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
-            document.getElementById(tabGuardada).classList.add('active');
+<%--            document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));--%>
+<%--            document.querySelector(`.tablink[onclick="showTab('${tabGuardada}')"]`).classList.add('active');--%>
+<%--        } else {--%>
+<%--            // si no hay pestaña guardada, mostrara la primera--%>
+<%--            document.querySelector('.tab-content').classList.add('active');--%>
+<%--            document.querySelector('.tablink').classList.add('active');--%>
+<%--        }--%>
+<%--    });--%>
 
-            document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`.tablink[onclick="showTab('${tabGuardada}')"]`).classList.add('active');
-        } else {
-            // si no hay pestaña guardada, mostrara la primera
-            document.querySelector('.tab-content').classList.add('active');
-            document.querySelector('.tablink').classList.add('active');
-        }
-    });
+<%--    // mensaje que desaparece automáticamente--%>
+<%--    window.addEventListener('load', function() {--%>
+<%--        const msg = document.querySelector('.msg');--%>
+<%--        if (msg) {--%>
+<%--            setTimeout(() => {--%>
+<%--                msg.style.transition = 'opacity 0.8s ease';--%>
+<%--                msg.style.opacity = '0';--%>
+<%--                setTimeout(() => msg.remove(), 800);--%>
+<%--            }, 3000);--%>
+<%--        }--%>
+<%--    });--%>
+<%--    // === PAGINACIÓN Y BÚSQUEDA PARA PRÉSTAMOS ===--%>
+<%--    document.addEventListener('DOMContentLoaded', function() {--%>
+<%--        const limit = 10; // cantidad de filas por página--%>
 
-    // mensaje que desaparece automáticamente
-    window.addEventListener('load', function() {
-        const msg = document.querySelector('.msg');
-        if (msg) {
-            setTimeout(() => {
-                msg.style.transition = 'opacity 0.8s ease';
-                msg.style.opacity = '0';
-                setTimeout(() => msg.remove(), 800);
-            }, 3000);
-        }
-    });
-</script>
+<%--        // Aplica paginación a todas las tablas con clase "tabla"--%>
+<%--        document.querySelectorAll('.tabla').forEach(tabla => {--%>
+<%--            const tbody = tabla.querySelector('tbody');--%>
+<%--            const filas = Array.from(tbody.querySelectorAll('tr'));--%>
+<%--            const contenedor = tabla.closest('.tab-content');--%>
+<%--            const paginacion = contenedor.querySelector('#paginacion');--%>
+
+<%--            // si no hay paginación en esa pestaña, la creamos (solo para pendientes)--%>
+<%--            let anterior = paginacion ? paginacion.querySelector('#anterior') : null;--%>
+<%--            let siguiente = paginacion ? paginacion.querySelector('#siguiente') : null;--%>
+<%--            let offset = 0;--%>
+
+<%--            function mostrarPagina() {--%>
+<%--                filas.forEach(f => f.style.display = 'none');--%>
+<%--                const inicio = offset * limit;--%>
+<%--                const fin = inicio + limit;--%>
+<%--                filas.slice(inicio, fin).forEach(f => f.style.display = '');--%>
+<%--                actualizarBotones();--%>
+<%--            }--%>
+
+<%--            function actualizarBotones() {--%>
+<%--                if (anterior && siguiente) {--%>
+<%--                    anterior.style.visibility = offset === 0 ? 'hidden' : 'visible';--%>
+<%--                    siguiente.style.visibility = (offset + 1) * limit >= filas.length ? 'hidden' : 'visible';--%>
+<%--                }--%>
+<%--            }--%>
+
+<%--            if (anterior && siguiente) {--%>
+<%--                anterior.addEventListener('click', () => {--%>
+<%--                    if (offset > 0) offset--;--%>
+<%--                    mostrarPagina();--%>
+<%--                });--%>
+
+<%--                siguiente.addEventListener('click', () => {--%>
+<%--                    offset++;--%>
+<%--                    mostrarPagina();--%>
+<%--                });--%>
+<%--            }--%>
+
+<%--            // Si hay campo de búsqueda global (opcional)--%>
+<%--            const buscador = document.getElementById('buscarPrestamo');--%>
+<%--            if (buscador) {--%>
+<%--                buscador.addEventListener('input', () => {--%>
+<%--                    const termino = buscador.value.toLowerCase().trim();--%>
+<%--                    const filtradas = filas.filter(f =>--%>
+<%--                        f.textContent.toLowerCase().includes(termino)--%>
+<%--                    );--%>
+<%--                    filas.forEach(f => f.style.display = 'none');--%>
+<%--                    filtradas.forEach(f => f.style.display = '');--%>
+<%--                });--%>
+<%--            }--%>
+
+<%--            // Mostrar primera página al iniciar--%>
+<%--            mostrarPagina();--%>
+<%--        });--%>
+<%--    });--%>
+<%--</script>--%>
 
 </body>
 </html>
