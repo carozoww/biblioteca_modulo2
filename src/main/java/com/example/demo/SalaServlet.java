@@ -73,6 +73,9 @@ public class SalaServlet extends HttpServlet {
             Lector lector = (Lector) sesion.getAttribute("authUser");
             boolean reservaPresente = reservaDAO.reservaActivaPorLector(lector.getID());
 
+            boolean penalizacionActiva = penalizacionDAO.tienePenalizacionActiva(lector.getID());
+            request.setAttribute("penalizacion", penalizacionActiva);
+
             if (accion.equals("reservar") && horaFin != null && !horaFin.isEmpty() && horaInicio != null && !horaInicio.isEmpty() && fecha != null && !fecha.isEmpty() && sala != null) {
                 int salaId = Integer.parseInt(sala);
                 if (reservaPresente || !lector.isAutenticacion()) {
