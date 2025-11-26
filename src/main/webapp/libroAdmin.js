@@ -71,8 +71,8 @@ function mostrarLibros(){
                 <img src="imgs/libro.jpg" alt="" width="150px" height="150px">
                 <p>${libro.fechaPublicacion}</p>
                 <div class="div-botones">
-                    <button class="editar" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
-                    <button class="eliminar" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'">Eliminar</button>
+                    <button class="btn-warning" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
+                    <button class="btn-danger" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'">Eliminar</button>
                 </div>
             `;
             }else{
@@ -81,8 +81,8 @@ function mostrarLibros(){
                 <img src="${libro.imagen_url}" alt="" width="150px" height="150px">
                 <p>${libro.fechaPublicacion}</p>
                 <div class="div-botones">
-                    <button class="editar" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
-                    <button class="eliminar" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'" >Eliminar</button>
+                    <button class="btn-warning" onclick="window.location.href='modificar-libro-servlet?id=${libro.idLibro}'">Editar</button>
+                    <button class="btn-danger" onclick="window.location.href='baja-libro-servlet?id=${libro.idLibro}'">Eliminar</button>
                 </div>
             `;
             }

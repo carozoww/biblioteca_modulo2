@@ -40,7 +40,7 @@ async function cargarReviews() {
 
         div.innerHTML = `
             <div class="card-header">
-                <img src="${libroImg}" class="libro-img" alt="Libro">
+                <img src="${libroImg}" class="libro-img" alt="Libro" onerror="this.src='imgs/libro.jpg'; this.onerror=null;">
                 <div>
                     <h3>${r.nombreLibro}</h3>
                     <div style="display:flex; align-items:center; gap:5px; margin-top:4px;">
@@ -136,7 +136,7 @@ async function verDetalle(idReview) {
         const lectorImg = r.imagenLector || 'imgs/iconouser.png';
 
         const libroEl = document.getElementById('modal-libro-img');
-        libroEl.src = libroImg;
+        libroEl.src = r.imagenLibro ? r.imagenLibro : 'imgs/libro.jpg';
         libroEl.onerror = () => { libroEl.src = 'imgs/libro.jpg'; };
 
         const lectorEl = document.getElementById('modal-lector-img');

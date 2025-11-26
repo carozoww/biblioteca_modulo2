@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-color: #f7f9fc;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 /* ======= NAVBAR ======= */
@@ -9,8 +10,9 @@ body {
     display: flex;
     top: 0;
     position: sticky;
-    background-color: #BF5656;
-    color: white;
+    grid-area: navbar;
+    background-color: #2F3A45;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 1em;
     justify-content: space-between;
     align-items: center;
@@ -45,8 +47,8 @@ body {
 }
 
 #elementos_derecha a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
 }
 
 .main-content {
@@ -59,13 +61,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;              /* mismo ancho que el #container */
-    max-width: 900px;        /* mismo límite que la tabla */
-    margin: 0 auto 20px;     /* centra horizontalmente */
-    padding: 0 30px;         /* igual padding lateral que #container */
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 0 30px;
 }
 .page-title{
-    font-size: 2rem;   /* aumenta el tamaño */
+    font-size: 2rem;
 }
 
 /* ======= ENCABEZADO ======= */
@@ -103,8 +105,8 @@ h2 {
 }
 
 #buscar:focus {
-    border-color: #973131;
     outline: none;
+    border-color: #3A6B6B;
 }
 
 /* ======= TABLA ======= */
@@ -116,10 +118,11 @@ h2 {
 }
 
 #tabla th {
-    background-color: #973131;
+    background-color: #3A6B6B;
     color: white;
-    padding: 12px;
     font-weight: 600;
+    padding: 12px;
+    text-align: center;
 }
 
 #tabla td {
@@ -144,35 +147,39 @@ h2 {
 
 /* ======= BOTONES ======= */
 button {
-    background-color: #973131;
+    background-color: #3A6B6B;
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 7px 14px;
+    padding: 8px 16px;
     cursor: pointer;
-    transition: 0.2s;
+    font-weight: 600;
+    transition: all 0.2s;
 }
 
 button:hover:not(:disabled) {
-    background-color: #973131;
+    background-color: #5FA09A;
 }
 
 button:disabled {
     background-color: #ccc;
+    color: #666;
     cursor: not-allowed;
 }
 
 .btn-volver {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn-volver:hover {
-    background-color: #973131;
-    color: white;
+    background-color: #7AB2A7;
+    color: #1F2B30;
 }
 
 
@@ -180,39 +187,36 @@ button:disabled {
 #paginacion {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 #paginacion button {
-    background-color: #973131;
-    color: #fff;
-    border: none;
+    background-color: #3A6B6B;
+    color: white;
     padding: 8px 16px;
     border-radius: 6px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 #paginacion button:hover {
-    background-color: #650909;
+    background-color: #5FA09A;
 }
+
 
 #paginacion button[style*="hidden"] {
     visibility: hidden;
 }
 
 .mensajes {
-    box-sizing: border-box;
     margin-bottom: 15px;
-    align-content: center;
+    text-align: center;
 }
 
 .msg {
     padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 .msg-exito {

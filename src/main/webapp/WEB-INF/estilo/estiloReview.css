@@ -7,30 +7,25 @@
 }
 
 .review-card {
-    background: #fff;
-    border: 1px solid #ddd;
+    background-color: white;
     border-radius: 12px;
     padding: 16px;
-    width: 100%;
     max-width: 280px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-#botonesHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: auto;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-self: stretch;
 }
 
 .review-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
 }
 
 .review-card h3 {
     margin: 0 0 8px;
-    font-size: 1.1em;
-    color: #333;
+    font-size: 1.1rem;
+    color: var(--teal-dark);
 }
 
 .review-card p {
@@ -39,29 +34,29 @@
     color: #555;
 }
 
-.review-card .lector-img {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-.review-card .libro-img {
-    width: 70px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-right: 8px;
-}
-
-
 .review-card .card-header {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
 }
 
+.review-card .lector-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.review-card .libro-img {
+    width: 70px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
 
 /* Modal general */
 .modal {
@@ -75,23 +70,29 @@
 }
 
 .modal-content {
-    background: #fff;
+    background-color: #FAF8F5;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
     width: 90%;
     position: relative;
+    box-shadow: var(--shadow);
 }
 
 .modal-close {
     position: absolute;
     top: 10px;
     right: 15px;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 20px;
+    transition: color 0.2s ease;
 }
 
-/* Layout top: libro y lector */
+.modal-close:hover {
+    color: #a94444;
+}
+
 .modal-top {
     display: flex;
     flex-direction: column;
@@ -107,10 +108,9 @@
 #modal-libro-img {
     width: 120px;
     height: 140px;
-    object-fit: cover;
     border-radius: 8px;
+    object-fit: cover;
 }
-
 
 .lector-info {
     display: flex;
@@ -120,25 +120,25 @@
 }
 
 #modal-lector-img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .libro-titulo-stars h3 {
-    margin: 0 0 4px 0;
+    margin: 0 0 4px;
+    color: var(--teal-dark);
 }
 
 #modal-stars {
-    color: #f5b50a;
+    color: #10A3AA;
 }
-
 
 #modal-resenia {
     margin-top: 12px;
+    color: var(--text-dark);
 }
-
 
 #modal-like-section {
     margin-top: 12px;
@@ -150,43 +150,54 @@
     resize: vertical;
     padding: 8px 10px;
     border-radius: 6px;
-    border: 1px solid #ed2929;
+    border: 1px solid var(--teal-dark);
     font-family: inherit;
     font-size: 14px;
-    background-color: #f5f5f5;
+    background-color: var(--gray-soft);
     box-sizing: border-box;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 #inputComentario:focus {
-    border-color: #4a90e2;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(58, 107, 107, 0.15);
 }
 
 .stars {
-    color: #f5b50a;
+    color: #10A3AA;
     margin: 8px 0;
 }
 
 button {
-    background-color: #BF5656;
+    background-color: var(--teal);
     color: white;
     border: none;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #b14141;
+    background-color: var(--teal-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
-
+#botonesHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:none;
+}
 
 .input-container {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: 100%;
 }
 
 .sugerencias {
@@ -198,10 +209,9 @@ button:hover {
     border-radius: 4px;
     max-height: 150px;
     overflow-y: auto;
-    background: #fff;
+    background-color: #fff;
     z-index: 1000;
 }
-
 
 .sugerencias .sugerencia-item {
     padding: 8px;
@@ -209,24 +219,22 @@ button:hover {
 }
 
 .sugerencias .sugerencia-item:hover {
-    background-color: #f0f0f0;
+    background-color: var(--teal-light);
+    color: var(--text-dark);
 }
-
 
 #comentariosList {
     margin-top: 15px;
 }
 
-
 .comentario-item {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px; /* separa los comentarios entre sí */
+    margin-bottom: 15px;
     align-items: flex-start;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ddd; /* separador */
+    border-bottom: 1px solid #ddd;
 }
-
 
 .comentario-item .lector-img {
     width: 35px;
@@ -235,19 +243,141 @@ button:hover {
     object-fit: cover;
 }
 
-
 .comentario-item p {
     margin: 5px 0 0;
-    color: #333;
+    color: var(--text-dark);
 }
-
 
 .comentario-item strong {
-    color: #111;
+    color: var(--text-dark);
 }
-
 
 .comentario-item span {
     font-size: 0.8em;
     color: #888;
+}
+
+/* --------------------------------- */
+
+#valoracion {
+    width: 60px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 2px solid #3A6B6B;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#valoracion:focus {
+    border-color: #7AB2A7;
+    box-shadow: 0 0 8px rgba(122,178,167,0.25);
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Botón guardar */
+#guardarReview {
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3A6B6B;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#guardarReview:hover {
+    background-color: #7AB2A7;
+    color: #1F2B30;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Modal */
+#reviewModal {
+    display: none; /* se activa con JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#reviewModal .modal-content {
+    background-color: #FAF8F5;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: modalFadeIn 0.5s forwards;
+    position: relative;
+}
+
+@keyframes modalFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Título del modal */
+#reviewModal h2 {
+    color: #3A6B6B;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    border-bottom: 3px solid #3A6B6B;
+    padding-bottom: 10px;
+}
+
+/* Inputs */
+#reviewModal input,
+#reviewModal textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #3A6B6B;
+    font-size: 14px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+#reviewModal input:focus,
+#reviewModal textarea:focus {
+    border-color: #7AB2A7;
+    box-shadow: 0 0 8px rgba(122,178,167,0.25);
+    outline: none;
+}
+
+/* Autocompletado sugerencias */
+#sugerenciasLibros {
+    border: 1px solid #3A6B6B;
+    border-radius: 6px;
+    background-color: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: -10px;
+    position: absolute;
+    width: calc(100%);
+    z-index: 1010;
+}
+
+.sugerencia-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sugerencia-item:hover {
+    background-color: #7AB2A733;
 }

@@ -44,8 +44,9 @@
             <input type="text" id="inputLibro" placeholder="Escribe el título..." autocomplete="off">
             <div id="sugerenciasLibros" class="sugerencias"></div>
         </div>
-
-        <label>Valoración: <input type="number" id="valoracion" min="1" max="5"></label><br>
+        <div class="label-valoracion">
+            <label>Valoración: <input type="number" id="valoracion" min="1" max="5"></label><br>
+        </div>
         <label>Reseña:</label><br>
         <textarea id="resenia" rows="4" cols="40" placeholder="Escribe tu reseña..."></textarea><br>
         <button id="guardarReview">Guardar</button>

@@ -50,7 +50,7 @@ async function cargarReviews() {
                 </div>
             </div>
             <button class="detalle-btn" data-id="${r.idReview}" style="margin-top:8px;">Ver detalle</button>
-            <button class="eliminar-btn" data-id="${r.idReview}" style="margin-top:4px; background-color:red; color:white;">Eliminar</button>
+            <button class="eliminar-btn" data-id="${r.idReview}" style="margin-top:4px;">Eliminar</button>
         `;
         container.appendChild(div);
 

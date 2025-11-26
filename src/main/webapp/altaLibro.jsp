@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Libro</title>
     <style><%@include file="./WEB-INF/estilo/formLibro.css"%></style>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
 </head>
 <body>
 <header>

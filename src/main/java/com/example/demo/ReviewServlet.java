@@ -32,9 +32,9 @@ public class ReviewServlet extends HttpServlet {
             if ("listar".equals(accion)) {
                 int pagina = 1;
                 try { pagina = Integer.parseInt(request.getParameter("pagina")); } catch (Exception ignored) {}
-                int offset = (pagina - 1) * 20;
+                int offset = (pagina - 1) * 15;
 
-                List<Review> reviews = reviewDAO.listarReviews(offset, 20);
+                List<Review> reviews = reviewDAO.listarReviews(offset, 15);
                 response.getWriter().println(gson.toJson(reviews));
                 return;
             }

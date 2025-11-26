@@ -1,6 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F5F7F9;
 }
 
 nav{
@@ -8,12 +14,11 @@ nav{
     top: 0;
     position: sticky;
     grid-area: navbar;
-    background-color: #BF5656;
+    background-color: #2F3A45; /* Paleta Académico Moderno */
     color: white;
     padding: 1em;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav #logoynombre {
@@ -30,30 +35,23 @@ nav a {
     font-size: 25px;
     line-height: 25px;
     border-radius: 4px;
+    transition: 0.2s;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #7AB2A7; /* Hover modernizado */
+    color: #1F2B30;
+    transform: translateY(-2px);
 }
-
-
-
-/*#botton-barra{
-    visibility: hidden;
-}*/
-
-
-
 
 .perfil-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #dcd7d7;
+    background-color: #FAF8F5; /* Fondo sidebar-style */
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -65,52 +63,74 @@ nav a:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.perfil-container img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 /* Título */
 .perfil-container h1 {
     text-align: center;
-    color: #333;
+    color: #2F3A45; /* Texto principal */
     margin-bottom: 20px;
     font-size: 2rem;
 }
-.perfil-container label{
-    display: block;
 
+.perfil-container label {
+    display: block;
+    color: #2F3A45;
 }
+
 .perfil-container input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #000000;
+    border: 1px solid #2F3A45;
+    border-radius: 6px;
     outline: none;
+    transition: all 0.2s ease;
+}
 
+.perfil-container input:focus {
+    border-color: #3A6B6B;
+    box-shadow: 0 0 0 3px rgba(58,107,107,0.15);
 }
 
 /* Datos del perfil */
 .perfil-datos p {
-    background-color: #FEACAC;
-    color: #222;
+    background-color: #FAF8F5;
+    color: #2F3A45;
     text-align: left;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin: 10px 0;
     font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.perfil-datos p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
 /* Enlace de cierre de sesión */
-.boton {
+.boton, .botones-acciones a {
     margin-top: 20px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #BF5656;
+    background-color: #3A6B6B; /* Botón principal */
     color: white;
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.logout:hover {
-    background-color: #a24a4a;
+.boton:hover, .botones-acciones a:hover {
+    background-color: #7AB2A7;
+    color: #1F2B30;
 }
 
 main{
@@ -121,30 +141,17 @@ main{
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 30px;
-    border: solid black 1px;
     width: 600px;
     max-width: 90%;
 }
 
-/* CONTENEDOR FLEX PARA LOS BOTONES */
+/* Contenedor flex para botones */
 .botones-acciones {
-    display: flex; /* Los coloca en una fila */
-    gap: 15px; /* Espacio entre los botones */
+    display: flex;
+    gap: 15px;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: space-between; /* Uno a la izquierda, otro a la derecha */
 }
-
-.botones-acciones a{
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #BF5656;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
 
 /* Pequeño ajuste visual para el botón del ojo */
 .password-container {
@@ -152,7 +159,8 @@ main{
     display: flex;
     align-items: center;
 }
-.password-container img{
+
+.password-container img {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -161,10 +169,13 @@ main{
     top: 50%;
     transform: translateY(-50%);
 }
+
 .password-container input[type="password"],
 .password-container input[type="text"] {
     width: 100%;
-    padding-right: 40px; /* espacio para el botón */
+    padding-right: 40px;
+    border: 1px solid #2F3A45;
+    border-radius: 6px;
 }
 
 .toggle-password {
@@ -178,5 +189,5 @@ main{
 }
 
 .toggle-password:hover {
-    color: #BF5656;
+    color: #3A6B6B;
 }

@@ -22,6 +22,7 @@
 <head>
     <title>Registrar Lector</title>
     <style><%@include file="./WEB-INF/estilo/login.css"%></style>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
 </head>
 <body>
 <div id="container">

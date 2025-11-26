@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
     <meta charset="UTF-8">
     <title>Agregar Editorial</title>
     <!-- Estilos simples para los botones y tabla -->

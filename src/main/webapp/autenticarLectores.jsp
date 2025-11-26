@@ -22,6 +22,7 @@
     <style>
         <%@include file="./WEB-INF/estilo/estilosListaLectores.css" %>
     </style>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
 </head>
 <body>
 <nav id="navbar">

@@ -14,6 +14,7 @@
 %>
 <html>
 <head>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
     <title>Salas</title>
     <style>
         <%@include file="./WEB-INF/estilo/otrocss.css" %>

@@ -49,20 +49,20 @@
 </nav>
 <aside id="sidebar">
     <div id="columna_contenido">
-        <div>
-            <img src="imgs/iconouser.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-users"></i>
             <a href="autenticarLector">Lectores</a>
         </div>
-        <div>
-            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-star"></i>
             <a href="#" id="linkResenas">Reseñas</a>
         </div>
-        <div>
-            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-handshake fa-2x"></i>
             <a href="prestamosAdmin">Préstamos</a>
-        </div>
-        <div>
-            <img src="imgs/reserva.png" alt="" width="50px" height="50px">
+        </div >
+        <div class="sidebar-item">
+            <i class="fa-solid fa-calendar-check"></i>
             <a href="reservasAdmin">Reservas</a>
         </div>
     </div>

@@ -10,11 +10,13 @@ body {
     display: flex;
     top: 0;
     position: sticky;
-    background-color: #BF5656;
-    color: white;
+    grid-area: navbar;
+    background-color: #2F3A45;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 1em;
     justify-content: space-between;
     align-items: center;
+
 }
 
 #logoynombre {
@@ -93,33 +95,36 @@ input:focus {
 }
 
 button {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
     border: none;
-    padding: 12px;
     border-radius: 8px;
-    font-size: 1rem;
+    padding: 8px 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    transition: all 0.2s;
 }
 
-button:hover {
-    background-color: #973131;
+button:hover:not(:disabled) {
+    background-color: #5FA09A;
 }
 
 /* ======== ENLACE VOLVER ======== */
 .volver {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .volver:hover {
-    background-color: #973131;
-    color: white;
+    background-color: #7AB2A7;
+    color: #1F2B30;
 }
+
 .msg {
     padding: 10px 15px;
     border-radius: 6px;

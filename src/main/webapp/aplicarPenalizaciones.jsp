@@ -10,6 +10,7 @@
     <style>
         <%@include file="./WEB-INF/estilo/estilosAplicarPenas.css" %>
     </style>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
 </head>
 <body>
 <nav id="navbar">

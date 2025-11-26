@@ -1,56 +1,58 @@
 /* general */
 body{
+    background-color: #F5F7F9;
     grid-template-columns: 1fr;
     grid-template-areas:
                 "navbar"
                 "main";
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #2F3A45;
+    z-index: 10;
+}
 
 main h1 {
-    color: #BF5656;
+    color: #3A6B6B;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     text-align: center;
     margin-bottom: 25px;
-    border-bottom: 3px solid #BF5656;
+    border-bottom: 3px solid #3A6B6B;
     padding-bottom: 10px;
 }
 
-main button {
-    width: 100%;
-    background-color: #BF5656;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #a94444;
-}
-
-.hidden {
-    display: none !important;
-}
+.hidden { display: none !important; }
 
 /* form */
 .form-container {
     padding: 25px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     width: 80%;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    background-color: #FAF8F5;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.6s forwards;
 }
 
 .form-container h2 {
+    color: #3A6B6B;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     text-align: center;
-    color: #BF5656;
-    border-bottom: 2px solid #BF5656;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3A6B6B;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-group {
@@ -61,23 +63,34 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
-input {
+input, select, textarea {
     width: 100%;
-    padding: 8px 10px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border: 2px solid #3A6B6B;
+    border-radius: 8px;
+    font-size: 14px;
     box-sizing: border-box;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
 
-input:focus {
-    border-color: #BF5656;
+input:focus, select:focus, textarea:focus {
+    border-color: #7AB2A7;
+    box-shadow: 0 0 8px rgba(122,178,167,0.25);
     outline: none;
+    transform: scale(1.02);
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
 }
 
 .time-row {
     display: flex;
-    margin-bottom: 15px;
     gap: 10px;
 }
 
@@ -86,43 +99,87 @@ input:focus {
     margin-bottom: 0;
 }
 
-/* select */
 select {
-    width: 100%;
-    padding: 8px 10px;
-    border-radius: 6px;
     cursor: pointer;
     appearance: none;
-    background-image: linear-gradient(45deg, transparent 50%, #BF5656 50%),
-                      linear-gradient(135deg, #BF5656 50%, transparent 50%);
+    background-image: linear-gradient(45deg, transparent 50%, #3A6B6B 50%),
+    linear-gradient(135deg, #3A6B6B 50%, transparent 50%);
     background-position: calc(100% - 15px) calc(50% - 3px), calc(100% - 10px) calc(50% - 3px);
     background-size: 5px 5px, 5px 5px;
     background-repeat: no-repeat;
 }
 
 select:hover {
-    border-color: #BF5656;
+    border-color: #7AB2A7;
 }
 
 select:focus {
     outline: none;
-    border-color: #BF5656;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-.form-buttons {
+/* Botones de formulario */
+.form-buttons, #botones {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 15px;
     margin-top: 20px;
 }
 
-/* tabla */
+button, .btn-agregar, .btn-eliminar, .btn-modificar, .btn-cancelar {
+    flex: 1;
+    border: none;
+    padding: 10px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Botones primarios */
+.btn-agregar {
+    background-color: #3A6B6B;
+}
+.btn-agregar:hover {
+    background-color: #7AB2A7;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Botones de acciones críticas */
+.btn-eliminar {
+    background-color: #BF5656;
+}
+.btn-eliminar:hover {
+    background-color: #a94444;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-modificar {
+    background-color: #3A6B6B;
+}
+.btn-modificar:hover {
+    background-color: #7AB2A7;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-cancelar {
+    background-color: #6c757d;
+}
+.btn-cancelar:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Tabla */
 .contenedor-tabla {
     width: 100%;
     max-width: 100%;
-    overflow-x: auto; /* ✅ solo la tabla scrollea si es necesario */
+    overflow-x: auto;
     overflow-y: hidden;
     box-sizing: border-box;
 }
@@ -138,18 +195,19 @@ table {
 }
 
 th {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     padding: 12px 15px;
     font-size: clamp(13px, 1.4vw, 16px);
     letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
 td {
     border: 1px solid #dee2e6;
-    padding: 5px 10px;
+    padding: 8px 10px;
     text-align: center;
     font-size: clamp(12px, 1.3vw, 15px);
 }
@@ -159,8 +217,9 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #FEACAC33;
-    transition: background-color 0.2s ease;
+    background-color: #7AB2A733;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
 }
 
 /* Bordes redondeados */
@@ -177,12 +236,6 @@ table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-th, td, .btn-modificar, .btn-eliminar {
-  padding: 8px 6px;
-  text-align: center;
-  font-size: clamp(10px, 1.1vw, 14px);
-}
-
 td img {
     max-width: 100%;
     height: auto;
@@ -191,19 +244,42 @@ td img {
     margin: 0 auto;
 }
 
+/* Mensajes emergentes */
+#msg-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.msg {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.msg.show {
+    opacity: 1;
+    transform: translateY(0) scale(1.02);
+}
+
+.mensaje {
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+}
+.exito { background-color: #c8e6c9; color: #256029; }
+.error { background-color: #ffcdd2; color: #b71c1c; }
+
 /* Responsive */
 @media (max-width: 800px) {
-    main {
-        min-width:400px;
-        width: 91vw;
-        box-sizing: border-box;
-        padding: 15px;
-    }
-
-    nav {
-            z-index: 10;
-        }
-
     .contenedor-tabla {
         overflow-x: auto;
     }
@@ -236,82 +312,7 @@ td img {
         width: 45%;
         padding-left: 10px;
         font-weight: bold;
-        color: #BF5656;
+        color: #3A6B6B;
         text-align: left;
     }
 }
-
-/* botones */
-.btn-agregar {
-    background-color: #28a745;
-}
-.btn-agregar:hover {
-    background-color: #218838;
-}
-
-.btn-eliminar {
-    background-color: #dc3545;
-}
-.btn-eliminar:hover {
-    background-color: #b52a36;
-}
-
-.btn-modificar {
-    background-color: #BF5656;
-}
-.btn-modificar:hover {
-    background-color: #a94444;
-}
-
-.btn-cancelar {
-    background-color: #6c757d;
-}
-.btn-cancelar:hover {
-    background-color: #5a6268;
-}
-
-/* mensaje */
-#msg-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.msg {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 5px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s, transform 0.5s;
-}
-.msg.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mensaje {
-    text-align: center;
-    margin: 10px auto;
-    width: 60%;
-    padding: 10px;
-    border-radius: 8px;
-}
-.exito { background-color: #c8e6c9; color: #256029; }
-.error { background-color: #ffcdd2; color: #b71c1c; }
-
-
-#filtros-reserva-sala {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-

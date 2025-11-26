@@ -59,7 +59,7 @@
     <% } %>
 <header>
     <a href="dashboard" class="btn-volver ">Volver al inicio</a>
-    <a href="mis-reservas" class="btn-volver ">Rservas terminadas</a>
+    <a href="mis-reservas" class="btn-volver ">Reservas terminadas</a>
 </header>
 <input type="hidden" id="mostrarReservaActiva" value="<%= reservaActiva != null ? "conReservaActiva" : "sinReservaActiva" %>" >
 

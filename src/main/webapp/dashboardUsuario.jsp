@@ -20,6 +20,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <title>Pagina Principal</title>
 </head>
@@ -39,19 +40,13 @@
 
 <aside id="sidebar">
     <div id="columna_contenido">
-        <div>
-            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-star"></i>
             <a href="" id="resenia">Reseñas</a>
         </div>
-        <div>
-            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-handshake fa-2x"></i>
             <a href="" id="prestamo">Prestamos</a>
-        </div>
-        <div id="mensaje-error">
-
-        </div>
-        <div id="link">
-
         </div>
     </div>
 </aside>
@@ -107,52 +102,43 @@
 
 <script src="libroapp.js"></script>
 <script>
-    const reseniA = document.getElementById('resenia');
-    const seccionLink = document.getElementById('link');
-    const PrestamoA = document.getElementById('prestamo');
+    // ================== MODAL ==================
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('modal-error');
+        const modalMensaje = document.getElementById('modal-mensaje');
+        const modalCerrar = document.querySelector('.modalError-close');
 
+        function mostrarModal(mensaje) {
+            modalMensaje.innerText = mensaje;
+            modal.style.display = 'block';
+        }
 
-    reseniA.addEventListener('click', (e) =>{
-        e.preventDefault();
-        const error = document.getElementById('mensaje-error');
-        const mensaje = document.createElement('p');
-        error.innerHTML = "";
-        seccionLink.innerHTML = "";
-        mensaje.innerText="Necesitas iniciar sesión para ver las reseñas de la comunidad!!!";
-        mensaje.style.fontSize = "24px";
-        const linkIS = document.createElement('a');
-        linkIS.innerText="Iniciar Sesión";
-        linkIS.href="login-lector";
+        modalCerrar.addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', (e) => { if (e.target == modal) modal.style.display = 'none'; });
 
-        error.appendChild(mensaje);
-        seccionLink.appendChild(linkIS);
+        const linksProtegidos = [
+            { id: 'resenia', mensaje: 'Necesitas iniciar sesión para ver las reseñas de la comunidad!!!' },
+            { id: 'prestamo', mensaje: 'Necesitas iniciar sesión para realizar un prestamo de libro!!!' }
+        ];
 
-    })
+        linksProtegidos.forEach(link => {
+            const elem = document.getElementById(link.id);
+            if (elem) {
+                elem.addEventListener('click', e => {
+                    e.preventDefault();
+                    mostrarModal(link.mensaje);
+                });
+            }
+        });
+    });
 
-    PrestamoA.addEventListener('click',(e) =>{
-        e.preventDefault();
-        const error = document.getElementById('mensaje-error');
-        const mensaje = document.createElement('p');
-        error.innerHTML = "";
-        seccionLink.innerHTML = "";
-        mensaje.innerText="Necesitas iniciar sesión para realizar un prestamo de libro!!!";
-        mensaje.style.fontSize = "24px";
-        const linkIS = document.createElement('a');
-        linkIS.innerText="Iniciar Sesión";
-        linkIS.href="login-lector";
-
-        error.appendChild(mensaje);
-        seccionLink.appendChild(linkIS);
-
-
-    })
-
-
+    // ================== SIDEBAR TOGGLE ==================
     const sidebar = document.getElementById("sidebar");
     function abrirBarra() {
-        sidebar.classList.toggle('show')
+        sidebar.classList.toggle('show');
     }
 
+    // ================== FILTRADO DE LIBROS ==================
     async function enviarGenero() {
         const genero = document.getElementById('lista').value;
         if (genero == "1") {
@@ -161,21 +147,34 @@
             return;
         }
 
-        fetch('librosGenero', {
-            method: 'POST',
-            headers:{ 'Content-Type':'application/x-www-form-urlencoded' },
-            body: 'genero=' + encodeURIComponent(genero)
-        })
-            .then(async response => {
-                if (!response.ok) throw new Error('Error en la respuesta del servidor');
-                librosFiltrados = await response.json();
-                offset = 0;
-                mostrarLibros();
-            })
+        try {
+            const response = await fetch('librosGenero', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'genero=' + encodeURIComponent(genero)
+            });
+
+            if (!response.ok) throw new Error('Error en la respuesta del servidor');
+
+            librosFiltrados = await response.json();
+            offset = 0;
+            mostrarLibros();
+        } catch (error) {
+            console.error(error);
+        }
     }
+
 </script>
 
 
+<div id="modal-error" class="modalError">
+    <div class="modalError-content">
+        <span class="modalError-close">&times;</span>
+        <h2 id="modal-error-title">Atención</h2>
+        <p id="modal-mensaje">Debés iniciar sesión para continuar.</p>
+        <a id="modal-link" href="login-lector" class="button">Iniciar Sesión</a>
+    </div>
+</div>
 
 </body>
 </html>

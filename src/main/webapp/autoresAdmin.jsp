@@ -13,6 +13,7 @@
     <title>Generos</title>
     <!-- Estilos simples para los botones y tabla -->
     <style><%@include file="./WEB-INF/estilo/estiloscrud.css"%></style>
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
 </head>
 <body>
 <nav>

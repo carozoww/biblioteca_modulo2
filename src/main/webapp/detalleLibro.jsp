@@ -29,7 +29,6 @@
 
     boolean tienePrestamo = prestamoDAO.prestamoActivoPorLector(idLector);
     boolean estaPenalizado = penadao.tienePenalizacionActiva(idLector);
-
 %>
 
 <!DOCTYPE html>
@@ -37,14 +36,14 @@
 <head>
     <meta charset="UTF-8">
     <title><%= libro.getTitulo() %> - Detalles</title>
-    <style><%@include file="./WEB-INF/estilo/estilosDetalleLibro.css"%></style>
+    <style><%@ include file="./WEB-INF/estilo/estilosDetalleLibro.css" %></style>
 </head>
 <body>
 
 <nav id="navbar">
     <div id="logoynombre">
         <a href="dashboard">
-            <img src="imgs/logo.jpg" width="100" height="100" alt="Logo Biblio-Tech-a">
+            <img src="imgs/logo.jpg" alt="Logo Biblio-Tech-a">
         </a>
         <h1>Biblio-Tech-a</h1>
     </div>
@@ -57,54 +56,47 @@
 <main id="detalle-libro">
     <div class="container">
 
-
         <h2 class="titulo-libro"><%= libro.getTitulo() %></h2>
-        <%if(libro.getImagen_url() != null){ %>
-        <img src="<%=libro.getImagen_url()%>" width="300" heigth="375px" class="imagen">
-        <%}else{%>
-        <img src="imgs/libro.jpg" width="300" heigth="375px" class="imagen">
-        <%}%>
-        <div class="info-libro">
-            <p><span class="label"> <b>Número de páginas:</b></span> <%=libro.getNumpaginas()%></p>
 
-            <p><span class="label"><b>Autores:</b></span>
+        <div class="libro-header">
+            <img src="<%=libro.getImagen_url()!=null ? libro.getImagen_url() : "imgs/libro.jpg"%>" class="imagen">
 
-                <% if(!autores.isEmpty()){
-                    for(Autor a : autores){ %>
-                <%= a.getNombre() %> <%= a.getApellido() %><% if(autores.indexOf(a) < autores.size() - 1){ %>, <% } %>
-                <%
-                    }
-                }else{%>
-                Sin autores asignados
-                <%}
-                %>
-            </p>
+            <div class="info-libro">
+                <p><b>Número de páginas:</b> <%= libro.getNumpaginas() %></p>
 
-            <p><span class="label"><b>Generos:</b></span>
+                <p><b>Autores:</b>
+                    <% if(!autores.isEmpty()){
+                        for(Autor a : autores){ %>
+                    <%= a.getNombre() %> <%= a.getApellido() %><% if(autores.indexOf(a) < autores.size() - 1){ %>, <% } %>
+                    <% }
+                    } else { %>
+                    Sin autores asignados
+                    <% } %>
+                </p>
 
-                <% if(!generos.isEmpty()){
-                    for(Genero g : generos){ %>
-                <%= g.getNombre() %> <% if(generos.indexOf(g) < generos.size() - 1){ %>, <% } %>
-                <%
-                    }
-                }else{%>
-                Sin generos asignados
-                <%}    %>
-            </p>
+                <p><b>Géneros:</b>
+                    <% if(!generos.isEmpty()){
+                        for(Genero g : generos){ %>
+                    <%= g.getNombre() %><% if(generos.indexOf(g) < generos.size() - 1){ %>, <% } %>
+                    <% }
+                    } else { %>
+                    Sin géneros asignados
+                    <% } %>
+                </p>
 
-            <p><span class="label"> <b>Editorial:</b></span>
-                <% for(Editorial e : editoriales){ %>
-                <%= e.getNombre() %>
-                <% } %>
-            </p>
+                <p><b>Editorial:</b>
+                    <% for(Editorial e : editoriales){ %>
+                    <%= e.getNombre() %>
+                    <% } %>
+                </p>
 
-            <p><span class="label"><b>ISBN:</b></span> <%= libro.getIsbn() %></p>
-            <p><span class="label"><b>Fecha de publicación:</b></span> <%= libro.getFechaPublicacion() %></p>
-            <div>
-                <label><b>Sinopsis:</b></label>
-                <p><%=libro.getSinopsis()%> </p>
+                <p><b>ISBN:</b> <%= libro.getIsbn() %></p>
+                <p><b>Fecha de publicación:</b> <%= libro.getFechaPublicacion() %></p>
+
+                <div style="max-height:150px; overflow-y:auto; margin-top:10px;">
+                    <p><b>Sinopsis:</b> <%= libro.getSinopsis() %></p>
+                </div>
             </div>
-
         </div>
 
         <div class="acciones">
@@ -120,7 +112,7 @@
                     } else if (tienePrestamo) {
                         textoBoton = "Ya tenés un préstamo";
                     } else if(estaPenalizado){
-                        textoBoton = "Estas penalizado";
+                        textoBoton = "Estás penalizado";
                     } else{
                         textoBoton = "Reservar";
                     }

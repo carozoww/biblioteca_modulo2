@@ -1,7 +1,9 @@
+/* Estilos generales */
 body {
     background-color: #f7f9fc;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     color: #333;
 }
 
@@ -9,49 +11,51 @@ body {
     display: flex;
     top: 0;
     position: sticky;
-    grid-area: navbar;
-    background-color: #BF5656;
+    background-color: #2F3A45; /* Navbar moderno */
     color: white;
-    padding: 1em;
+    padding: 1em 2em;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 #logoynombre {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 #logoynombre img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    transition: transform 0.2s ease;
 }
 
 #logoynombre h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
     color: white;
 }
 
 #elementos_derecha a {
-    float: left;
     color: white;
-    text-align: center;
-    padding: 12px;
     text-decoration: none;
-    font-size: 25px;
-    line-height: 25px;
-    border-radius: 4px;
+    font-size: 1.1rem;
+    margin-left: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #3A6B6B; /* Botones modernos */
+    border: 2px solid #2F3A45;
+    transition: 0.2s ease;
 }
 
 #elementos_derecha a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #7AB2A7;
+    color: #1F2B30;
 }
 
+/* Contenedor principal del detalle */
 #detalle-libro {
     display: flex;
     justify-content: center;
@@ -59,60 +63,79 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color: #FAF8F5;
     border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     padding: 30px;
     width: 100%;
-    max-width: 600px;
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+/* Título */
 .titulo-libro {
     font-size: 2rem;
-    color: #BF5656;
-    margin-bottom: 40px;
-
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    color: #3A6B6B;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
+/* Sección imagen + info */
+.libro-header {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
 
+.libro-header .imagen {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Información del libro */
 .info-libro {
-    text-align: left;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 400px;
 }
-.imagen{
-    margin-bottom:20px;
-}
-
 
 .info-libro p {
-    font-size: 18px;
-    margin: 8px 0;
+    margin: 0;
+    font-size: 16px;
 }
 
 .info-libro b {
-    color: #BF5656;
-    font-size: 18px;
+    color: #3A6B6B;
 }
 
+/* Sinopsis más destacada */
+.info-libro .sinopsis {
+    margin-top: 10px;
+    line-height: 1.5;
+}
 
+/* Acciones (botones) */
 .acciones {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    margin-top: 10px;
 }
 
 .btn-reservar {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
     border: none;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 12px;
     font-size: 1rem;
     cursor: pointer;
@@ -121,15 +144,15 @@ body {
 }
 
 .btn-reservar:hover {
-    background-color: #FEACAC;
-    color: #BF5656;
+    background-color: #7AB2A7;
+    color: #1F2B30;
 }
 
 .btn-disabled {
     background-color: #ccc;
     color: #666;
     border: none;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 12px;
     font-size: 1rem;
     cursor: not-allowed;
@@ -137,15 +160,40 @@ body {
 
 .btn-volver {
     text-decoration: none;
-    color: #BF5656;
+    color: #3A6B6B;
     font-weight: bold;
-    border: 2px solid #BF5656;
+    border: 2px solid #3A6B6B;
     border-radius: 12px;
-    padding: 8px 20px;
+    padding: 10px 25px;
     transition: 0.2s ease;
 }
 
 .btn-volver:hover {
-    background-color: #BF5656;
+    background-color: #3A6B6B;
     color: white;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .libro-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .libro-header .imagen {
+        width: 300px;
+        height: 400px;
+    }
+
+    .info-libro {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .libro-header .imagen {
+        width: 250px;
+        height: 350px;
+    }
 }

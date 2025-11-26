@@ -23,6 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="imgs/logo.jpg">
     <style><%@include file="./WEB-INF/estilo/otrocss.css"%></style>
     <style><%@include file="./WEB-INF/estilo/estiloReview.css"%></style>
     <title>Dashboard</title>
@@ -43,20 +44,20 @@
 
 <aside id="sidebar">
     <div id="columna_contenido">
-        <div>
-            <img src="imgs/libros.svg" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-book fa-2x"></i>
             <a href="">Libros</a>
         </div>
-        <div>
-            <img src="imgs/resenia.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-star fa-2x"></i>
             <a href="#" id="linkResenas">Reseñas</a>
         </div>
-        <div>
-            <img src="imgs/prestamo.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-handshake fa-2x"></i>
             <a href="prestamos?accion=listar">Préstamos</a>
         </div>
-        <div>
-            <img src="imgs/room.png" alt="" width="50px" height="50px">
+        <div class="sidebar-item">
+            <i class="fa-solid fa-door-open fa-2x"></i>
             <a href="salas">Salas</a>
         </div>
     </div>
