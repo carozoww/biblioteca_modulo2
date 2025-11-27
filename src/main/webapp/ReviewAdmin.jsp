@@ -10,8 +10,10 @@
 </head>
 <body>
 
+<div id="botonesHeader">
 <h1>Reseñas</h1>
-
+<a href="dashboardAdmin" class="btn btn-volver">Volver al inicio</a>
+</div>
 
 <div id="reviewsList"></div>
 

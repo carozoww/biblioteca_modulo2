@@ -187,6 +187,20 @@ button:hover {
     box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
+.btn-volver {
+    background-color: #3A6B6B;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #7AB2A7;
+    color: #1F2B30;
+}
+
 #botonesHeader{
     display: flex;
     justify-content: space-between;
